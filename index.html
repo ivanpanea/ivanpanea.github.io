@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Иван Паня — № 7, округ № 2, Комрат</title>
+<meta name="description" content="Иван Паня, независимый кандидат в Народное Собрание Гагаузии, округ № 2, мун. Комрат. Номер в бюллетене — 7. Выборы 15 ноября 2026.">
+<meta property="og:title" content="Иван Паня — № 7 в бюллетене">
+<meta property="og:description" content="Независимый кандидат в Народное Собрание Гагаузии. Округ № 2 · мун. Комрат. Смотрите мои видео в соцсетях.">
+<meta property="og:image" content="img/ivan-panea.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#012147">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=PT+Serif:wght@400;700&display=swap&subset=cyrillic" rel="stylesheet">
+<style>
+  :root {
+    --navy: #012147;
+    --navy-2: #0b2d5a;
+    --gold: #d89230;
+    --gold-text: #a86c14;
+    --cream: #faf3e8;
+    --ink: #1b2433;
+    --muted: #4a5568;
+    --line: #e6dccb;
+    --bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 400 18px/1.5 "PT Serif", Georgia, serif;
+  }
+  .wrap { max-width: 560px; margin: 0 auto; padding: 0 16px; }
+  h1, h2, h3, .btn, .kicker, .label { font-family: Montserrat, Arial, sans-serif; }
+
+  /* ---------- Шапка ---------- */
+  .kicker {
+    display: flex; align-items: center; gap: 10px; justify-content: center;
+    font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--navy); padding: 18px 0 10px;
+  }
+  .kicker::before, .kicker::after { content: ""; flex: 1; height: 1.5px; background: var(--gold); max-width: 60px; }
+
+  .hero { display: grid; grid-template-columns: 1fr 50%; align-items: end; gap: 6px; }
+  .hero-text { padding-bottom: 18px; }
+  .hero h1 {
+    margin: 0; font-weight: 900; color: var(--navy);
+    font-size: clamp(36px, 11vw, 58px); line-height: .95; letter-spacing: -.01em;
+  }
+  .label { margin: 10px 0 2px; font-size: 12px; font-weight: 800; letter-spacing: .16em; color: var(--gold-text); text-transform: uppercase; }
+  .district { font-family: Montserrat, Arial, sans-serif; font-weight: 700; font-size: 15px; color: var(--navy); margin: 0; }
+  .logo { display: block; width: 100%; max-width: 210px; height: auto; margin-top: 14px; }
+  .photo { width: 100%; height: auto; display: block; }
+  .hero-bar { height: 4px; background: var(--gold); }
+
+  .number {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--navy); color: #fff; padding: 14px 18px; margin-top: 0;
+  }
+  .number .n {
+    font: 900 44px/1 Montserrat, Arial, sans-serif; color: #fff;
+    border: 1.5px solid var(--gold); padding: 6px 14px 4px;
+  }
+  .number p { margin: 0; font: 700 15px/1.35 Montserrat, Arial, sans-serif; }
+  .number p span { color: var(--gold); }
+
+  /* ---------- Соцсети ---------- */
+  section { padding: 28px 0 8px; }
+  h2 {
+    margin: 0 0 6px; font-size: 21px; font-weight: 900; color: var(--navy);
+    text-transform: uppercase; letter-spacing: .01em; line-height: 1.15;
+  }
+  .lead { margin: 0 0 18px; color: var(--muted); font-size: 17px; }
+
+  .links { display: grid; gap: 12px; }
+  .btn {
+    display: flex; align-items: center; gap: 14px;
+    min-height: 64px; padding: 12px 18px; border-radius: 14px;
+    text-decoration: none; color: #fff; font-weight: 800; font-size: 18px;
+    background: var(--navy); border: 2px solid var(--navy);
+    transition: transform .08s ease, background .15s ease;
+  }
+  .btn:active { transform: scale(.985); }
+  .btn:hover { background: var(--navy-2); }
+  .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .btn svg { width: 30px; height: 30px; flex: none; }
+  .btn .txt { flex: 1; display: flex; flex-direction: column; line-height: 1.15; }
+  .btn small { font-weight: 600; font-size: 13px; opacity: .8; margin-top: 3px; }
+  .btn .arrow { color: var(--gold); font-size: 22px; }
+  .btn-call { background: var(--cream); color: var(--navy); border-color: var(--gold); }
+  .btn-call:hover { background: #f5e9d6; }
+
+  /* ---------- Тезисы ---------- */
+  .theses { list-style: none; margin: 0; padding: 0; counter-reset: t; }
+  .theses li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid var(--line); }
+  .theses li:first-child { border-top: 0; }
+  .theses li::before {
+    counter-increment: t; content: counter(t);
+    width: 40px; height: 40px; display: grid; place-items: center;
+    background: var(--navy); color: var(--gold); font: 900 20px Montserrat, Arial, sans-serif;
+  }
+  .theses h3 { margin: 2px 0 4px; font-size: 15px; font-weight: 800; color: var(--navy); text-transform: uppercase; line-height: 1.25; }
+  .theses p { margin: 0; font-size: 17px; }
+
+  .steps { background: var(--cream); border-left: 5px solid var(--gold); padding: 18px 18px 6px; margin-top: 8px; }
+  .steps h3 { margin: 0 0 4px; font: 800 17px/1.25 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .steps p { margin: 0 0 14px; color: var(--muted); font-size: 16px; }
+  .steps h3::before { content: "◆ "; color: var(--gold); font-size: 13px; vertical-align: 2px; }
+
+  /* ---------- Голосование ---------- */
+  .vote { background: var(--navy); color: #fff; margin-top: 30px; padding: 26px 0 28px; }
+  .vote h2 { color: #fff; font-size: 25px; }
+  .vote .date { margin: 4px 0 16px; color: var(--gold); font: 700 15px Montserrat, Arial, sans-serif; }
+  .ballot {
+    display: flex; align-items: center; gap: 14px; background: #fff; color: var(--navy);
+    border: 2px solid var(--gold); padding: 12px 14px;
+  }
+  .ballot .no { font: 900 40px/1 Montserrat, Arial, sans-serif; white-space: nowrap; }
+  .ballot .no sup { font-size: 15px; color: var(--gold-text); vertical-align: 18px; margin-right: 2px; }
+  .ballot .who { flex: 1; font: 900 18px/1.1 Montserrat, Arial, sans-serif; }
+  .ballot .who small { display: block; font-size: 11px; font-weight: 800; letter-spacing: .08em; margin-top: 4px; }
+  .ballot .check {
+    width: 46px; height: 46px; border-radius: 50%; border: 2px solid var(--navy); flex: none;
+    display: grid; place-items: center;
+  }
+  .ballot .check svg { width: 24px; height: 24px; }
+
+  footer { padding: 18px 0 28px; font: 600 12px/1.55 Montserrat, Arial, sans-serif; color: var(--muted); text-align: center; }
+  footer strong { color: var(--ink); }
+
+  @media (max-width: 360px) {
+    .hero { grid-template-columns: 1fr 40%; }
+    .ballot .no { font-size: 32px; }
+    .ballot .who { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">Выборы в Народное Собрание Гагаузии</div>
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Иван<br>Паня</h1>
+        <p class="label">Независимый кандидат</p>
+        <p class="district">Округ № 2 · мун. Комрат</p>
+        <img class="logo" src="img/logo.png" alt="Логотип ИП" width="509" height="234">
+      </div>
+      <img class="photo" src="img/ivan-panea.jpg" alt="Иван Паня" width="584" height="620">
+    </div>
+  </div>
+  <div class="wrap"><div class="hero-bar"></div></div>
+  <div class="wrap">
+    <div class="number">
+      <span class="n">7</span>
+      <p>Мой номер в бюллетене.<br><span>Выборы 15 ноября 2026</span></p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section aria-labelledby="video">
+    <h2 id="video">Смотрите мои видео</h2>
+    <p class="lead">Как именно я собираюсь решать проблемы округа законными методами. Выберите удобную соцсеть:</p>
+
+    <div class="links">
+      <a class="btn" href="https://www.facebook.com/ivan.pana.2025/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#fff" d="M17.6 26v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.6 1.6-1.6h1.7V8.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4h-2.8v3.2h2.8V26h3.4z"/></svg>
+        <span class="txt">Facebook<small>ivan.pana.2025</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="btn" href="https://www.tiktok.com/@ivanpanea" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#000"/><path fill="#25F4EE" d="M13.4 14.2v-1.1a7 7 0 0 0-6.2 7 7 7 0 0 0 3 5.7 7 7 0 0 1 3.2-11.6z"/><path fill="#FE2C55" d="M19.6 7.5h-2.4v13.3a2.7 2.7 0 1 1-1.9-2.6v-2.7a5.3 5.3 0 1 0 4.6 5.3v-6.7a8 8 0 0 0 4.4 1.3v-2.7a4.6 4.6 0 0 1-4.7-5.2z"/><path fill="#fff" d="M18.6 6.5h-2.4v13.3a2.7 2.7 0 1 1-1.9-2.6v-2.7a5.3 5.3 0 1 0 4.6 5.3v-6.7a8 8 0 0 0 4.4 1.3V11.7a4.6 4.6 0 0 1-4.7-5.2z"/></svg>
+        <span class="txt">TikTok<small>@ivanpanea</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="btn" href="https://www.instagram.com/panea_vanea/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".35" stop-color="#FA7E1E"/><stop offset=".6" stop-color="#D62976"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#ig)"/><rect x="7.5" y="7.5" width="17" height="17" rx="5" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="16" cy="16" r="4" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="21.2" cy="10.8" r="1.3" fill="#fff"/></svg>
+        <span class="txt">Instagram<small>panea_vanea</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="btn" href="https://t.me/IvanPanea" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#29A9EB"/><path fill="#fff" d="M7.2 15.6l15.4-6c.7-.3 1.4.2 1.1 1.4l-2.6 12.4c-.2.9-.7 1.1-1.5.7l-4-3-1.9 1.9c-.2.2-.4.4-.9.4l.3-4.1 7.5-6.8c.3-.3-.1-.5-.5-.2l-9.3 5.9-4-1.3c-.9-.3-.9-.9.2-1.3z"/></svg>
+        <span class="txt">Telegram<small>t.me/IvanPanea</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <!-- ТЕЛЕФОН: замените +373XXXXXXXX на номер и уберите комментарий вокруг кнопки
+      <a class="btn btn-call" href="tel:+373XXXXXXXX">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#d89230"/><path fill="#fff" d="M12.2 8.5l1.7 3.6c.2.5.1 1-.3 1.4l-1.3 1.2a10 10 0 0 0 5 5l1.2-1.3c.4-.4.9-.5 1.4-.3l3.6 1.7c.5.2.7.7.6 1.2l-.5 2.4c-.1.5-.6.9-1.1.9A15 15 0 0 1 7.6 9.4c0-.5.4-1 .9-1.1l2.4-.5c.5-.1 1 .1 1.3.7z"/></svg>
+        <span class="txt">Позвонить<small>звонки и сообщения</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      -->
+    </div>
+  </section>
+
+  <section aria-labelledby="theses">
+    <h2 id="theses">Мои основные тезисы</h2>
+    <p class="lead">В округе есть проблемы. Я знаю, как решать их законными методами.</p>
+    <ol class="theses">
+      <li><div><h3>Реальная поддержка семьям, пенсионерам и людям с инвалидностью</h3><p>Мои первые законопроекты — ниже.</p></div></li>
+      <li><div><h3>Реальные полномочия Гагаузской автономии</h3><p>Буду защищать их правовыми методами.</p></div></li>
+      <li><div><h3>Власть должна отвечать людям</h3><p>Буду добиваться ответов по существу и в срок.</p></div></li>
+      <li><div><h3>Дороги, тротуары, вода и освещение</h3><p>Знаю, как добиваться ремонта и контролировать его.</p></div></li>
+      <li><div><h3>Будущее талантливой молодёжи Гагаузии</h3><p>Буду добиваться поддержки молодых.</p></div></li>
+    </ol>
+
+    <div class="steps">
+      <p class="label" style="margin:0 0 10px">Мои первые шаги</p>
+      <h3>Социальный транспорт</h3>
+      <p>Бесплатный проезд для социально уязвимых слоёв населения.</p>
+      <h3>Зимняя помощь</h3>
+      <p>Рост выплат в зимний период с 400 до 2000 лей в месяц.</p>
+      <h3>Общественная приёмная</h3>
+      <p>Бесплатные юридические консультации жителям округа.</p>
+    </div>
+  </section>
+</main>
+
+<section class="vote" aria-labelledby="vote">
+  <div class="wrap">
+    <h2 id="vote">Голосуйте за Ивана Паню!</h2>
+    <p class="date">15 ноября 2026 · ваш кандидат в бюллетене:</p>
+    <div class="ballot">
+      <span class="no"><sup>№</sup>7</span>
+      <span class="who">Иван Паня<small>Независимый кандидат</small></span>
+      <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#012147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <strong>Publicitate electorală / Избирательная реклама</strong><br>
+  Заказчик: Иван Паня (Panea Ivan), независимый кандидат.<br>
+  Achitat din fondul electoral / Оплачено из избирательного фонда.
+</footer>
+
+</body>
+</html>
