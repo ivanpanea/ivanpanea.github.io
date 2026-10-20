@@ -127,6 +127,10 @@
   }
   .ballot .check svg { width: 24px; height: 24px; }
 
+  .tagline { margin: 22px 0 0; font: 800 clamp(22px, 6.4vw, 30px)/1.2 Montserrat, Arial, sans-serif; color: var(--navy); text-align: center; }
+  .contact ul { list-style: none; margin: 0 0 12px; padding: 0; }
+  .contact li { font: 700 16px/1.4 Montserrat, Arial, sans-serif; color: var(--navy); padding: 4px 0 4px 22px; position: relative; }
+  .contact li::before { content: "◆"; color: var(--gold); position: absolute; left: 0; font-size: 13px; top: 6px; }
   footer { padding: 18px 0 28px; font: 600 12px/1.55 Montserrat, Arial, sans-serif; color: var(--muted); text-align: center; }
   footer strong { color: var(--ink); }
 
@@ -147,9 +151,9 @@
         <h1>Иван<br>Паня</h1>
         <p class="label">Независимый кандидат</p>
         <p class="district">Округ № 2 · мун. Комрат</p>
-        <img class="logo" src="img/logo.png" alt="Логотип ИП" width="509" height="234">
+        <img class="logo" src="img/logo.png" alt="Логотип ИП" width="900" height="398">
       </div>
-      <img class="photo" src="img/ivan-panea.jpg" alt="Иван Паня" width="584" height="620">
+      <img class="photo" src="img/ivan-panea.jpg" alt="Иван Паня" width="720" height="777">
     </div>
   </div>
   <div class="wrap"><div class="hero-bar"></div></div>
@@ -158,14 +162,40 @@
       <span class="n">7</span>
       <p>Мой номер в бюллетене.<br><span>Выборы 15 ноября 2026</span></p>
     </div>
+    <p class="tagline">Работа депутата начинается рядом с жителями Гагаузии</p>
   </div>
 </header>
 
 <main class="wrap">
 
+  <section aria-labelledby="steps">
+    <h2 id="steps">Мои основные шаги</h2>
+    <p class="lead">Мои первые законопроекты.</p>
+    <div class="steps">
+      <h3>Социальный транспорт</h3>
+      <p>Бесплатный проезд для социально уязвимых слоёв населения.</p>
+      <h3>Зимняя помощь</h3>
+      <p>Рост выплат в зимний период с 400 до 2000 лей в месяц.</p>
+      <h3>Общественная приёмная</h3>
+      <p>Бесплатные юридические консультации жителям округа.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="theses">
+    <h2 id="theses">Мои основные тезисы</h2>
+    <p class="lead">В округе есть проблемы. Я знаю, как решать их законными методами.</p>
+    <ol class="theses">
+      <li><div><h3>Реальная поддержка семьям, пенсионерам и людям с инвалидностью</h3><p>Мои первые законопроекты — в блоке «Мои основные шаги» выше.</p></div></li>
+      <li><div><h3>Реальные полномочия Гагаузской автономии</h3><p>Буду защищать их правовыми методами.</p></div></li>
+      <li><div><h3>Власть должна отвечать людям</h3><p>Буду добиваться ответов по существу и в срок.</p></div></li>
+      <li><div><h3>Дороги, тротуары, вода и освещение</h3><p>Знаю, как добиваться ремонта и контролировать его.</p></div></li>
+      <li><div><h3>Будущее талантливой молодёжи Гагаузии</h3><p>Буду добиваться поддержки молодых.</p></div></li>
+    </ol>
+
+  </section>
   <section aria-labelledby="video">
-    <h2 id="video">Смотрите мои видео</h2>
-    <p class="lead">Как именно я собираюсь решать проблемы округа законными методами. Выберите удобную соцсеть:</p>
+    <h2 id="video">Как я это сделаю</h2>
+    <p class="lead">Конкретные решения по каждому тезису и ответы на ваши вопросы — в моих видео. Выберите удобную соцсеть:</p>
 
     <div class="links">
       <a class="btn" href="https://www.facebook.com/ivan.pana.2025/" target="_blank" rel="noopener">
@@ -198,25 +228,15 @@
     </div>
   </section>
 
-  <section aria-labelledby="theses">
-    <h2 id="theses">Мои основные тезисы</h2>
-    <p class="lead">В округе есть проблемы. Я знаю, как решать их законными методами.</p>
-    <ol class="theses">
-      <li><div><h3>Реальная поддержка семьям, пенсионерам и людям с инвалидностью</h3><p>Мои первые законопроекты — ниже.</p></div></li>
-      <li><div><h3>Реальные полномочия Гагаузской автономии</h3><p>Буду защищать их правовыми методами.</p></div></li>
-      <li><div><h3>Власть должна отвечать людям</h3><p>Буду добиваться ответов по существу и в срок.</p></div></li>
-      <li><div><h3>Дороги, тротуары, вода и освещение</h3><p>Знаю, как добиваться ремонта и контролировать его.</p></div></li>
-      <li><div><h3>Будущее талантливой молодёжи Гагаузии</h3><p>Буду добиваться поддержки молодых.</p></div></li>
-    </ol>
-
-    <div class="steps">
-      <p class="label" style="margin:0 0 10px">Мои первые шаги</p>
-      <h3>Социальный транспорт</h3>
-      <p>Бесплатный проезд для социально уязвимых слоёв населения.</p>
-      <h3>Зимняя помощь</h3>
-      <p>Рост выплат в зимний период с 400 до 2000 лей в месяц.</p>
-      <h3>Общественная приёмная</h3>
-      <p>Бесплатные юридические консультации жителям округа.</p>
+  <section aria-labelledby="contact">
+    <h2 id="contact">Звоните и обращайтесь</h2>
+    <div class="steps contact">
+      <ul>
+        <li>Узнать подробности о моей программе</li>
+        <li>Узнать обо мне и моей работе</li>
+        <li>Рассказать о проблеме в вашем районе</li>
+      </ul>
+      <p>Пишите мне в Telegram или в личные сообщения в Facebook — я отвечу.</p>
     </div>
   </section>
 </main>
