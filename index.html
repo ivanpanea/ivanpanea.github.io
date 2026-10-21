@@ -14,10 +14,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#012147">
-<link rel="icon" href="img/logo.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/icon-512.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=PT+Serif:wght@400;700&display=swap&subset=cyrillic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #012147;
@@ -31,24 +32,29 @@
     --bg: #ffffff;
   }
   * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0; background: var(--bg); color: var(--ink);
     font: 400 18px/1.5 "PT Serif", Georgia, serif;
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
   }
   .wrap { max-width: 560px; margin: 0 auto; padding: 0 16px; }
   h1, h2, h3, .btn, .kicker, .label { font-family: Montserrat, Arial, sans-serif; }
 
   /* ---------- Шапка ---------- */
+  .hero {
+    display: grid; grid-template-columns: 1fr 50%; column-gap: 6px; row-gap: 0; align-items: end;
+    grid-template-areas: "kick kick" "text photo" "bar bar" "num num";
+  }
   .kicker {
+    grid-area: kick;
     display: flex; align-items: center; gap: 10px; justify-content: center;
     font-size: 14px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase;
     color: var(--navy); padding: 18px 0 10px;
   }
   .kicker::before, .kicker::after { content: ""; flex: 1; height: 1.5px; background: var(--gold); max-width: 60px; }
-
-  .hero { display: grid; grid-template-columns: 1fr 50%; align-items: end; gap: 6px; }
-  .hero-text { padding-bottom: 18px; }
+  .hero-text { grid-area: text; padding-bottom: 18px; }
   .hero h1 {
     margin: 0; font-weight: 900; color: var(--navy);
     font-size: clamp(36px, 11vw, 58px); line-height: .95; letter-spacing: -.01em;
@@ -56,10 +62,11 @@
   .label { margin: 10px 0 2px; font-size: 14px; font-weight: 800; letter-spacing: .1em; color: var(--gold-text); text-transform: uppercase; }
   .district { font-family: Montserrat, Arial, sans-serif; font-weight: 700; font-size: 15px; color: var(--navy); margin: 0; }
   .logo { display: block; width: 100%; max-width: 210px; height: auto; margin-top: 14px; }
-  .photo { width: 100%; height: auto; display: block; }
-  .hero-bar { height: 4px; background: var(--gold); }
+  .photo { grid-area: photo; width: 100%; height: auto; display: block; }
+  .hero-bar { grid-area: bar; height: 4px; background: var(--gold); }
 
   .number {
+    grid-area: num;
     display: flex; align-items: center; gap: 14px;
     background: var(--navy); color: #fff; padding: 14px 18px; margin-top: 0;
   }
@@ -70,7 +77,14 @@
   .number p { margin: 0; font: 700 15px/1.35 Montserrat, Arial, sans-serif; }
   .number p span { color: var(--gold); }
 
-  /* ---------- Соцсети ---------- */
+  /* ---------- Слоган и видео ---------- */
+  .tagline { margin: 22px 0 0; font: 800 clamp(22px, 6.4vw, 30px)/1.2 Montserrat, Arial, sans-serif; color: var(--navy); text-align: center; }
+  .video { margin-top: 18px; }
+  .video video { display: block; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 6px auto 0; border-radius: 14px; background: #000; object-fit: cover; }
+  .vnote { max-width: 340px; margin: 10px auto 0; text-align: center; font: 700 16px/1.45 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .vnote b { display: block; color: var(--gold-text); text-transform: uppercase; letter-spacing: .04em; font-size: 15px; }
+
+  /* ---------- Секции ---------- */
   section { padding: 28px 0 8px; }
   h2 {
     margin: 0 0 6px; font-size: 21px; font-weight: 900; color: var(--navy);
@@ -78,6 +92,21 @@
   }
   .lead { margin: 0 0 18px; color: var(--muted); font-size: 17px; }
 
+  /* ---------- Встречи ---------- */
+  .events { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .events-empty { margin: 0; padding: 16px 18px; background: var(--cream); border-left: 5px solid var(--gold); font: 700 16px/1.45 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .meet { display: grid; grid-template-columns: 96px 1fr; gap: 14px; border: 2px solid var(--navy); border-radius: 12px; overflow: hidden; }
+  .when { background: var(--navy); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px 6px; text-align: center; }
+  .when b { font: 900 40px/1 Montserrat, Arial, sans-serif; }
+  .when span { font: 700 14px/1.3 Montserrat, Arial, sans-serif; margin: 4px 0; }
+  .when em { font: 900 18px/1 Montserrat, Arial, sans-serif; color: var(--gold); font-style: normal; }
+  .where { padding: 12px 12px 14px 0; }
+  .where .lbl { margin: 0; font: 800 14px Montserrat, Arial, sans-serif; letter-spacing: .1em; color: var(--gold-text); text-transform: uppercase; }
+  .where .addr { margin: 4px 0 10px; font: 700 16px/1.35 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .maplink { display: inline-flex; align-items: center; min-height: 48px; background: var(--gold); color: var(--navy); text-decoration: none; font: 800 14px Montserrat, Arial, sans-serif; padding: 10px 14px; border-radius: 8px; }
+  .map { display: block; width: 100%; height: 240px; border: 2px solid var(--navy); border-radius: 12px; margin-top: 10px; }
+
+  /* ---------- Кнопки ---------- */
   .links { display: grid; gap: 12px; }
   .btn {
     display: flex; align-items: center; gap: 14px;
@@ -95,8 +124,17 @@
   .btn .arrow { color: var(--gold); font-size: 22px; }
   .btn-call { background: var(--cream); color: var(--navy); border-color: var(--gold); }
   .btn-call:hover { background: #f5e9d6; }
+  .btn-viber { background: #fff; color: var(--navy); border-color: #7360F2; }
+  .btn-wa { background: #fff; color: var(--navy); border-color: #25D366; }
+  .btn-tg { background: #fff; color: var(--navy); border-color: #29A9EB; }
+  .btn-viber:hover, .btn-wa:hover, .btn-tg:hover { background: #f6f6fb; }
 
-  /* ---------- Тезисы ---------- */
+  /* ---------- Шаги и тезисы ---------- */
+  .steps { background: var(--cream); border-left: 5px solid var(--gold); padding: 18px 18px 6px; margin-top: 8px; }
+  .steps h3 { margin: 0 0 4px; font: 800 17px/1.25 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .steps p { margin: 0 0 14px; color: var(--muted); font-size: 16px; }
+  .steps h3::before { content: "◆ "; color: var(--gold); font-size: 13px; vertical-align: 2px; }
+
   .theses { list-style: none; margin: 0; padding: 0; counter-reset: t; }
   .theses > li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid var(--line); }
   .theses > li:first-child { border-top: 0; }
@@ -108,10 +146,18 @@
   .theses h3 { margin: 2px 0 4px; font-size: 15px; font-weight: 800; color: var(--navy); text-transform: uppercase; line-height: 1.25; }
   .theses p { margin: 0; font-size: 17px; }
 
-  .steps { background: var(--cream); border-left: 5px solid var(--gold); padding: 18px 18px 6px; margin-top: 8px; }
-  .steps h3 { margin: 0 0 4px; font: 800 17px/1.25 Montserrat, Arial, sans-serif; color: var(--navy); }
-  .steps p { margin: 0 0 14px; color: var(--muted); font-size: 16px; }
-  .steps h3::before { content: "◆ "; color: var(--gold); font-size: 13px; vertical-align: 2px; }
+  /* ---------- Обо мне ---------- */
+  .about p { margin: 0 0 12px; }
+  .about .hello { font: 800 17px/1.3 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .about .goal { background: var(--cream); border-left: 5px solid var(--gold); padding: 14px 16px; }
+  .about .motto { font: 800 15px/1.45 Montserrat, Arial, sans-serif; color: var(--navy); }
+
+  /* ---------- Контакты ---------- */
+  .contact ul { list-style: none; margin: 0 0 12px; padding: 0; }
+  .contact li { font: 700 16px/1.4 Montserrat, Arial, sans-serif; color: var(--navy); padding: 4px 0 4px 22px; position: relative; }
+  .contact li::before { content: "◆"; color: var(--gold); position: absolute; left: 0; font-size: 13px; top: 6px; }
+  .contact .phone { display: flex; align-items: center; min-height: 48px; font: 900 clamp(26px, 8vw, 34px)/1.1 Montserrat, Arial, sans-serif; color: var(--navy); text-decoration: none; margin: 4px 0 8px; white-space: nowrap; }
+  .contact-links { margin-top: 12px; }
 
   /* ---------- Голосование ---------- */
   .vote { background: var(--navy); color: #fff; margin-top: 30px; padding: 26px 0 28px; }
@@ -131,61 +177,10 @@
   }
   .ballot .check svg { width: 24px; height: 24px; }
 
-  .tagline { margin: 22px 0 0; font: 800 clamp(22px, 6.4vw, 30px)/1.2 Montserrat, Arial, sans-serif; color: var(--navy); text-align: center; }
-  .contact ul { list-style: none; margin: 0 0 12px; padding: 0; }
-  .contact li { font: 700 16px/1.4 Montserrat, Arial, sans-serif; color: var(--navy); padding: 4px 0 4px 22px; position: relative; }
-  .contact li::before { content: "◆"; color: var(--gold); position: absolute; left: 0; font-size: 13px; top: 6px; }
-  .how { margin-top: 10px; }
-  .how summary {
-    display: inline-flex; align-items: center; gap: 8px; cursor: pointer; list-style: none;
-    font: 800 14px/1 Montserrat, Arial, sans-serif; color: var(--navy);
-    background: var(--cream); border: 1.5px solid var(--gold); border-radius: 999px; padding: 10px 16px;
-  }
-  .how summary::-webkit-details-marker { display: none; }
-  .how summary::after { content: "▾"; color: var(--gold-text); }
-  .how[open] summary::after { content: "▴"; }
-  .how .intro { font-style: italic; color: var(--muted); font-size: 16px; margin: 12px 0 8px; }
-  .how ul { margin: 0; padding: 0; list-style: none; }
-  .how li { position: relative; padding: 5px 0 5px 20px; font-size: 16px; line-height: 1.45; }
-  .how li::before { content: "◆"; color: var(--gold); position: absolute; left: 0; top: 7px; font-size: 11px; }
-  .how .pos { margin: 10px 0 4px; border-left: 4px solid var(--gold); padding: 4px 0 4px 12px; font: 700 14px/1.4 Montserrat, Arial, sans-serif; color: var(--navy); }
-  .how .pos b { color: var(--gold-text); text-transform: uppercase; letter-spacing: .04em; }
-  .about p { margin: 0 0 12px; }
-  .about .hello { font: 800 17px/1.3 Montserrat, Arial, sans-serif; color: var(--navy); }
-  .about .goal { background: var(--cream); border-left: 5px solid var(--gold); padding: 14px 16px; }
-  .about .motto { font: 800 15px/1.45 Montserrat, Arial, sans-serif; color: var(--navy); }
-  .contact .phone { display: flex; align-items: center; min-height: 48px; font: 900 clamp(26px, 8vw, 34px)/1.1 Montserrat, Arial, sans-serif; color: var(--navy); text-decoration: none; margin: 4px 0 8px; white-space: nowrap; }
-  .testbar { background: #ffe9a8; color: #5a4300; text-align: center; font: 800 12px/1.4 Montserrat, Arial, sans-serif; padding: 8px 16px; }
-  .new { display: inline-block; vertical-align: middle; background: #e0332b; color: #fff; font: 800 10px/1 Montserrat, Arial, sans-serif; letter-spacing: .06em; padding: 4px 6px; border-radius: 4px; margin: 0 4px; }
-  .video { margin-top: 18px; }
-  .video video { display: block; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 6px auto 0; border-radius: 14px; background: #000; object-fit: cover; }
-  .vnote { max-width: 340px; margin: 10px auto 0; text-align: center; font: 700 16px/1.45 Montserrat, Arial, sans-serif; color: var(--navy); }
-  .vnote b { display: block; color: var(--gold-text); text-transform: uppercase; letter-spacing: .04em; font-size: 15px; }
-  .vframe { position: relative; aspect-ratio: 16/9; background: linear-gradient(135deg, var(--navy), #0b3f7a); border-radius: 12px; display: grid; place-items: center; color: #fff; overflow: hidden; margin-top: 6px; }
-  .play { width: 64px; height: 64px; border-radius: 50%; background: var(--gold); display: grid; place-items: center; font-size: 26px; padding-left: 5px; }
-  .vcap { position: absolute; left: 14px; bottom: 12px; font: 800 15px/1.2 Montserrat, Arial, sans-serif; }
-  .vcap small { display: block; font-weight: 600; font-size: 14px; opacity: .85; }
-  .meet { display: grid; grid-template-columns: 96px 1fr; gap: 14px; border: 2px solid var(--navy); border-radius: 12px; overflow: hidden; }
-  .when { background: var(--navy); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px 6px; text-align: center; }
-  .when b { font: 900 40px/1 Montserrat, Arial, sans-serif; }
-  .when span { font: 700 14px/1.3 Montserrat, Arial, sans-serif; margin: 4px 0; }
-  .when em { font: 900 18px/1 Montserrat, Arial, sans-serif; color: var(--gold); font-style: normal; }
-  .where { padding: 12px 12px 14px 0; }
-  .where .lbl { margin: 0; font: 800 14px Montserrat, Arial, sans-serif; letter-spacing: .1em; color: var(--gold-text); text-transform: uppercase; }
-  .where .addr { margin: 4px 0 10px; font: 700 16px/1.35 Montserrat, Arial, sans-serif; color: var(--navy); }
-  .maplink { display: inline-flex; align-items: center; min-height: 48px; background: var(--gold); color: var(--navy); text-decoration: none; font: 800 14px Montserrat, Arial, sans-serif; padding: 10px 14px; border-radius: 8px; }
-  .map { display: block; width: 100%; height: 240px; border: 2px solid var(--navy); border-radius: 12px; margin-top: 10px; }
-  .btn-viber { background: #fff; color: var(--navy); border-color: #7360F2; }
-  .btn-wa { background: #fff; color: var(--navy); border-color: #25D366; }
-  .btn-tg { background: #fff; color: var(--navy); border-color: #29A9EB; }
-  .btn-viber:hover, .btn-wa:hover, .btn-tg:hover { background: #f6f6fb; }
-  .ogcard { border: 1px solid #d5d9e0; border-radius: 12px; overflow: hidden; background: #f3f5f8; }
-  .ogcard img { display: block; width: 100%; height: auto; }
-  .ogcard div { padding: 10px 12px; font-family: Arial, sans-serif; }
-  .ogcard b { display: block; font-size: 15px; color: #111; }
-  .ogcard span { display: block; font-size: 13px; color: #555; margin: 2px 0; }
-  .ogcard small { font-size: 12px; color: #888; }
-  body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  footer { padding: 18px 0 28px; font: 600 14px/1.55 Montserrat, Arial, sans-serif; color: var(--muted); text-align: center; }
+  footer strong { color: var(--ink); }
+
+  /* ---------- Нижняя панель связи ---------- */
   .dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: grid; grid-template-columns: 1fr repeat(3, 56px); gap: 8px;
     padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); border-top: 1px solid var(--line);
     box-shadow: 0 -6px 18px rgba(1,33,71,.10); }
@@ -200,41 +195,116 @@
   .dock a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
   @media (max-width: 340px) { .dock { grid-template-columns: 1fr repeat(3, 48px); gap: 6px; } .dock a { font-size: 15px; } }
   @media (min-width: 600px) { .dock { max-width: 560px; margin: 0 auto; border-radius: 16px 16px 0 0; } }
-  footer { padding: 18px 0 28px; font: 600 14px/1.55 Montserrat, Arial, sans-serif; color: var(--muted); text-align: center; }
-  footer strong { color: var(--ink); }
 
   @media (max-width: 360px) {
     .hero { grid-template-columns: 1fr 40%; }
     .ballot .no { font-size: 32px; }
     .ballot .who { font-size: 15px; }
   }
+
+  /* ================= Десктоп ================= */
+  @media (min-width: 900px) {
+    body { padding-bottom: 0; }
+    .dock { display: none; }
+    .wrap { max-width: 1040px; padding: 0 24px; }
+    section { padding: 48px 0 8px; }
+    h2 { font-size: 26px; margin-bottom: 10px; }
+    .lead { max-width: 720px; }
+
+    /* шапка: слева текст и номер, справа фото на золотой полосе */
+    .hero {
+      grid-template-columns: 1fr 1fr; column-gap: 48px;
+      grid-template-areas: "kick photo" "text photo" "num photo" "bar bar";
+      grid-template-rows: auto auto 1fr auto;
+    }
+    .kicker { justify-content: flex-start; align-self: start; padding: 40px 0 18px; font-size: 15px; }
+    .kicker::before { display: none; }
+    .kicker::after { max-width: 80px; }
+    .hero-text { align-self: start; padding-bottom: 28px; }
+    .hero h1 { font-size: 78px; }
+    .label { margin-top: 18px; font-size: 16px; }
+    .district { font-size: 18px; }
+    .logo { max-width: 260px; margin-top: 22px; }
+    .number { align-self: end; padding: 18px 22px; }
+    .number .n { font-size: 52px; }
+    .number p { font-size: 18px; }
+    .photo { align-self: end; justify-self: center; max-width: 500px; }
+
+    /* слоган + видео */
+    .promo {
+      display: grid; grid-template-columns: 1fr 340px; column-gap: 64px; align-items: center;
+      grid-template-areas: "tag vid" "note vid"; padding-top: 48px;
+    }
+    .promo .video { display: contents; }
+    .tagline { grid-area: tag; margin: 0; align-self: end; text-align: left; font-size: 44px; line-height: 1.15; }
+    .video video { grid-area: vid; margin: 0; }
+    .vnote { grid-area: note; align-self: start; margin: 22px 0 0; max-width: none; text-align: left; font-size: 19px; }
+    .vnote b { font-size: 17px; margin-bottom: 4px; }
+
+    /* встречи: карточка и карта рядом */
+    .meet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+    .events, .events-empty { grid-column: 1; align-self: start; }
+    .map { grid-column: 2; grid-row: 1 / span 2; margin-top: 0; height: 100%; min-height: 280px; }
+    .meet { grid-template-columns: 120px 1fr; gap: 20px; min-height: 180px; }
+    .when b { font-size: 48px; }
+    .where { padding: 18px 18px 18px 0; }
+    .where .addr { font-size: 19px; }
+
+    /* шаги и тезисы рядом */
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .cols .lead { max-width: none; }
+
+    /* соцсети сеткой 2×2 */
+    .social { grid-template-columns: 1fr 1fr; max-width: 820px; }
+
+    /* обо мне */
+    .about { max-width: 720px; }
+
+    /* контакты: слева телефон, справа кнопки 2×2 */
+    .contact-grid { display: grid; grid-template-columns: 4fr 7fr; gap: 28px; align-items: start; }
+    .contact-links { margin-top: 8px; }
+    .contact-links .btn { padding: 12px 14px; gap: 10px; font-size: 17px; }
+
+    /* голосование: полоса на всю ширину, бюллетень по центру */
+    .vote { margin-top: 64px; padding: 48px 0 52px; text-align: center; }
+    .vote h2 { font-size: 34px; }
+    .vote .date { font-size: 17px; margin-bottom: 22px; }
+    .ballot { max-width: 560px; margin: 0 auto; text-align: left; }
+    footer { padding: 24px 24px 40px; }
+  }
+  /* кнопки контактов сеткой 2×2 — когда хватает ширины, чтобы подписи не переносились */
+  @media (min-width: 1100px) {
+    .contact-links { grid-template-columns: 1fr 1fr; }
+  }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="wrap">
+  <div class="wrap hero">
     <div class="kicker">Выборы в Народное Собрание Гагаузии</div>
-    <div class="hero">
-      <div class="hero-text">
-        <h1>Иван<br>Паня</h1>
-        <p class="label">Независимый кандидат</p>
-        <p class="district">Округ № 2 · мун. Комрат</p>
-        <img class="logo" src="img/logo.png" alt="Логотип ИП" width="900" height="398">
-      </div>
-      <img class="photo" src="img/ivan-panea.jpg" alt="Иван Паня" width="720" height="777">
+    <div class="hero-text">
+      <h1>Иван<br>Паня</h1>
+      <p class="label">Независимый кандидат</p>
+      <p class="district">Округ № 2 · мун. Комрат</p>
+      <img class="logo" src="img/logo.png" alt="Логотип ИП" width="900" height="398">
     </div>
-  </div>
-  <div class="wrap"><div class="hero-bar"></div></div>
-  <div class="wrap">
+    <img class="photo" src="img/ivan-panea.jpg" alt="Иван Паня" width="720" height="777">
+    <div class="hero-bar"></div>
     <div class="number">
       <span class="n">7</span>
       <p>Мой номер в бюллетене.<br><span>Выборы 15 ноября 2026</span></p>
     </div>
+  </div>
+  <div class="wrap promo">
     <p class="tagline">Работа депутата начинается рядом с жителями Гагаузии</p>
+    <!-- Как заменить видео:
+         1) положите новый файл в папку video/ и укажите его в src у <source>;
+         2) сохраните кадр-обложку (вертикальный, 540×960) в img/ и укажите его в poster;
+         3) обновите aria-label у <video> и подпись в <p class="vnote"> (без слов «сегодня», «завтра»). -->
     <div class="video">
       <video controls playsinline preload="none" poster="img/video-poster.jpg" aria-label="Иван Паня — анонс дебатов на ГРТ">
-        <source src="video/ivan-panea-debaty.mp4" type="video/mp4">
+        <source src="video/ivan-panea-debaty-720.mp4" type="video/mp4">
       </video>
       <p class="vnote"><b>Дебаты · 21 октября</b>19:00 — радио GRT FM<br>20:00 — телеканал TV-Găgăuzia</p>
     </div>
@@ -246,17 +316,28 @@
   <section aria-labelledby="meet">
     <h2 id="meet">Встречи с жителями</h2>
     <p class="lead">Приходите, поговорим о проблемах района. Задайте вопросы и расскажите, что нужно исправить.</p>
-    <div class="meet">
-      <div class="when"><b>22</b><span>октября<br>четверг</span><em>17:30</em></div>
-      <div class="where">
-        <p class="lbl">Где</p>
-        <p class="addr">Угол улиц Шевченко и Одесской, возле автомойки</p>
-        <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=46.29895097256761,28.63729158265789" target="_blank" rel="noopener">Как добраться ›</a>
-      </div>
+    <!-- Как добавить встречу: скопировать блок <li class="event">, поменять data-date / data-time / адрес / координаты
+         (data-lat, data-lng). Число, месяц, день недели, время и ссылка «Как добраться» подставятся сами;
+         прошедшие встречи скрываются со следующего дня, карта показывает ближайшую. -->
+    <div class="meet-grid">
+      <ul class="events">
+        <li class="event" data-date="2026-10-22" data-time="17:30" data-lat="46.298951" data-lng="28.637292">
+          <div class="meet">
+            <div class="when"><b>22</b><span>октября<br>четверг</span><em>17:30</em></div>
+            <div class="where">
+              <p class="lbl">Где</p>
+              <p class="addr">Угол улиц Шевченко и Одесской, возле автомойки</p>
+              <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=46.298951,28.637292" target="_blank" rel="noopener">Как добраться ›</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <p class="events-empty" hidden>Расписание ближайших встреч появится здесь. Следите за анонсами в соцсетях</p>
+      <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=28.633292%2C46.296451%2C28.641292%2C46.301451&amp;layer=mapnik&amp;marker=46.298951%2C28.637292" title="Место встречи на карте" loading="lazy"></iframe>
     </div>
-    <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=28.633292%2C46.296451%2C28.641292%2C46.301451&amp;layer=mapnik&amp;marker=46.298951%2C28.637292" title="Место встречи на карте" loading="lazy"></iframe>
   </section>
 
+  <div class="cols">
   <section aria-labelledby="steps">
     <h2 id="steps">Мои основные шаги</h2>
     <div class="steps">
@@ -273,19 +354,20 @@
     <h2 id="theses">Мои основные тезисы</h2>
     <p class="lead">В округе есть проблемы. Я знаю, как решать их законными методами.</p>
     <ol class="theses">
-      <li><div><h3>Реальная поддержка семьям, пенсионерам и людям с инвалидностью</h3><p>Мои первые шаги — выше.</p></div></li>
+      <li><div><h3>Реальная поддержка семьям, пенсионерам и людям с инвалидностью</h3><p>Конкретные шаги — в разделе «Мои основные шаги».</p></div></li>
       <li><div><h3>Реальные полномочия Гагаузской автономии</h3><p>Буду защищать их правовыми методами.</p></div></li>
       <li><div><h3>Власть должна отвечать людям</h3><p>Буду добиваться ответов по существу и в срок.</p></div></li>
       <li><div><h3>Дороги, тротуары, вода и освещение</h3><p>Знаю, как добиваться ремонта и контролировать его.</p></div></li>
       <li><div><h3>Будущее талантливой молодёжи Гагаузии</h3><p>Буду добиваться поддержки молодых.</p></div></li>
     </ol>
   </section>
+  </div>
 
   <section aria-labelledby="video">
     <h2 id="video">Следите за моей работой</h2>
     <p class="lead">Открыто рассказываю, что делаю для округа, разбираю проблемы жителей и отвечаю на ваши вопросы. Подпишитесь там, где вам удобно:</p>
 
-    <div class="links">
+    <div class="links social">
       <a class="btn" href="https://www.facebook.com/ivan.pana.2025/" target="_blank" rel="noopener">
         <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#fff" d="M17.6 26v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.6 1.6-1.6h1.7V8.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4h-2.8v3.2h2.8V26h3.4z"/></svg>
         <span class="txt">Facebook<small>ivan.pana.2025</small></span>
@@ -322,6 +404,7 @@
 
   <section aria-labelledby="contact">
     <h2 id="contact">Звоните и обращайтесь</h2>
+    <div class="contact-grid">
     <div class="steps contact">
       <ul>
         <li>Узнать подробности о моей программе</li>
@@ -331,7 +414,7 @@
       <a class="phone" href="tel:+37379168917">+373 79 16 89 17</a>
       <p>Звонки и сообщения. На этом номере есть Viber, WhatsApp и Telegram.</p>
     </div>
-    <div class="links" style="margin-top:12px">
+    <div class="links contact-links">
       <a class="btn btn-call" href="tel:+37379168917">
         <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#d89230"/><path fill="#fff" d="M12.2 8.5l1.7 3.6c.2.5.1 1-.3 1.4l-1.3 1.2a10 10 0 0 0 5 5l1.2-1.3c.4-.4.9-.5 1.4-.3l3.6 1.7c.5.2.7.7.6 1.2l-.5 2.4c-.1.5-.6.9-1.1.9A15 15 0 0 1 7.6 9.4c0-.5.4-1 .9-1.1l2.4-.5c.5-.1 1 .1 1.3.7z"/></svg>
         <span class="txt">Позвонить<small>+373 79 16 89 17</small></span>
@@ -352,6 +435,7 @@
         <span class="txt">Написать в Telegram<small>+373 79 16 89 17</small></span>
         <span class="arrow" aria-hidden="true">›</span>
       </a>
+    </div>
     </div>
   </section>
 </main>
@@ -380,5 +464,59 @@
   <a class="ic wa" href="https://wa.me/37379168917" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" title="WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 6.6a9.3 9.3 0 0 0-8 14.1L6.8 25.3l4.7-1.2A9.3 9.3 0 1 0 16 6.6zm5.2 13c-.2.6-1.2 1.2-1.8 1.3-.5.1-1 .1-1.7-.1-3.5-1.1-5.6-4.5-5.8-4.7-.2-.2-1.2-1.7-1.2-3.1s.8-2.2 1.1-2.6c.2-.3.6-.3.8-.3h.6c.2 0 .4 0 .7.6l.9 2.1c.1.2.1.4 0 .6l-.3.5-.5.5c-.1.1-.3.3-.1.7.2.3.9 1.5 1.9 2.4 1.3 1.1 2.4 1.5 2.7 1.7.3.1.6.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.8-.2 1.6z"/></svg></a>
   <a class="ic tg" href="https://t.me/+37379168917" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M6.2 15.4l17.2-6.7c.8-.3 1.5.2 1.2 1.5l-2.9 13.8c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.5.5-1 .5l.4-4.6 8.3-7.5c.4-.3-.1-.5-.6-.2l-10.3 6.5-4.4-1.4c-1-.3-1-1 .4-1.5z"/></svg></a>
 </nav>
+<script>
+/* Встречи: скрыть прошедшие (по дате в Europe/Chisinau), отсортировать,
+   подставить дату/время/ссылку из data-атрибутов, показать карту ближайшей. */
+(function () {
+  var list = document.querySelector('.events');
+  if (!list) return;
+  var MONTHS = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+  var DAYS = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function today() {
+    try {
+      var parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Chisinau', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());
+      var v = {};
+      parts.forEach(function (p) { v[p.type] = p.value; });
+      return v.year + '-' + v.month + '-' + v.day;
+    } catch (e) {
+      var d = new Date();
+      return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+    }
+  }
+  var now = today();
+  var upcoming = [];
+  Array.prototype.forEach.call(list.querySelectorAll('.event'), function (li) {
+    var date = li.getAttribute('data-date') || '';
+    if (date < now) { li.hidden = true; return; }
+    var p = date.split('-'), y = +p[0], m = +p[1], d = +p[2];
+    var time = li.getAttribute('data-time') || '';
+    var lat = li.getAttribute('data-lat'), lng = li.getAttribute('data-lng');
+    var b = li.querySelector('.when b'), span = li.querySelector('.when span'), em = li.querySelector('.when em'), a = li.querySelector('.maplink');
+    if (b && d) b.textContent = d;
+    if (span && m) span.innerHTML = MONTHS[m - 1] + '<br>' + DAYS[new Date(Date.UTC(y, m - 1, d)).getUTCDay()];
+    if (em) em.textContent = time;
+    if (a && lat && lng) a.href = 'https://www.google.com/maps/search/?api=1&query=' + lat + ',' + lng;
+    upcoming.push({ li: li, key: date + ' ' + time, lat: +lat, lng: +lng });
+  });
+  upcoming.sort(function (x, y) { return x.key < y.key ? -1 : x.key > y.key ? 1 : 0; });
+  upcoming.forEach(function (e) { list.appendChild(e.li); });
+  var map = document.querySelector('.map'), empty = document.querySelector('.events-empty');
+  if (!upcoming.length) {
+    list.hidden = true;
+    if (empty) empty.hidden = false;
+    if (map) map.hidden = true;
+    return;
+  }
+  var e = upcoming[0];
+  if (map && isFinite(e.lat) && isFinite(e.lng)) {
+    var src = 'https://www.openstreetmap.org/export/embed.html?bbox=' +
+      (e.lng - 0.004).toFixed(6) + '%2C' + (e.lat - 0.0025).toFixed(6) + '%2C' +
+      (e.lng + 0.004).toFixed(6) + '%2C' + (e.lat + 0.0025).toFixed(6) +
+      '&layer=mapnik&marker=' + e.lat.toFixed(6) + '%2C' + e.lng.toFixed(6);
+    if (map.getAttribute('src') !== src) map.setAttribute('src', src);
+  }
+})();
+</script>
 </body>
 </html>
