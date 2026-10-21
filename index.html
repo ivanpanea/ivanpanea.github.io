@@ -94,9 +94,9 @@
 
   /* ---------- Тезисы ---------- */
   .theses { list-style: none; margin: 0; padding: 0; counter-reset: t; }
-  .theses li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid var(--line); }
-  .theses li:first-child { border-top: 0; }
-  .theses li::before {
+  .theses > li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid var(--line); }
+  .theses > li:first-child { border-top: 0; }
+  .theses > li::before {
     counter-increment: t; content: counter(t);
     width: 40px; height: 40px; display: grid; place-items: center;
     background: var(--navy); color: var(--gold); font: 900 20px Montserrat, Arial, sans-serif;
@@ -131,6 +131,26 @@
   .contact ul { list-style: none; margin: 0 0 12px; padding: 0; }
   .contact li { font: 700 16px/1.4 Montserrat, Arial, sans-serif; color: var(--navy); padding: 4px 0 4px 22px; position: relative; }
   .contact li::before { content: "◆"; color: var(--gold); position: absolute; left: 0; font-size: 13px; top: 6px; }
+  .how { margin-top: 10px; }
+  .how summary {
+    display: inline-flex; align-items: center; gap: 8px; cursor: pointer; list-style: none;
+    font: 800 14px/1 Montserrat, Arial, sans-serif; color: var(--navy);
+    background: var(--cream); border: 1.5px solid var(--gold); border-radius: 999px; padding: 10px 16px;
+  }
+  .how summary::-webkit-details-marker { display: none; }
+  .how summary::after { content: "▾"; color: var(--gold-text); }
+  .how[open] summary::after { content: "▴"; }
+  .how .intro { font-style: italic; color: var(--muted); font-size: 16px; margin: 12px 0 8px; }
+  .how ul { margin: 0; padding: 0; list-style: none; }
+  .how li { position: relative; padding: 5px 0 5px 20px; font-size: 16px; line-height: 1.45; }
+  .how li::before { content: "◆"; color: var(--gold); position: absolute; left: 0; top: 7px; font-size: 11px; }
+  .how .pos { margin: 10px 0 4px; border-left: 4px solid var(--gold); padding: 4px 0 4px 12px; font: 700 14px/1.4 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .how .pos b { color: var(--gold-text); text-transform: uppercase; letter-spacing: .04em; }
+  .about p { margin: 0 0 12px; }
+  .about .hello { font: 800 17px/1.3 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .about .goal { background: var(--cream); border-left: 5px solid var(--gold); padding: 14px 16px; }
+  .about .motto { font: 800 15px/1.45 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .contact .phone { display: block; font: 900 clamp(26px, 8vw, 34px)/1.1 Montserrat, Arial, sans-serif; color: var(--navy); text-decoration: none; margin: 4px 0 8px; white-space: nowrap; }
   footer { padding: 18px 0 28px; font: 600 12px/1.55 Montserrat, Arial, sans-serif; color: var(--muted); text-align: center; }
   footer strong { color: var(--ink); }
 
@@ -181,21 +201,57 @@
     </div>
   </section>
 
+  <section aria-labelledby="about">
+    <h2 id="about">Обо мне</h2>
+    <div class="about">
+      <p class="hello">Уважаемые жители округа № 2!</p>
+      <p>Я родился и вырос в Комрате. Окончил Комратский государственный университет по специальности «Право». С ноября 2023 года я — муниципальный советник Комрата.</p>
+      <p>В Народное Собрание я иду не ради кресла и не ради нового статуса. Я иду, чтобы работать с людьми, защищать Гагаузскую автономию и добиваться её развития.</p>
+      <p class="goal"><b>Моя главная цель.</b> Депутатский мандат для меня — не привилегия, а ответственность перед людьми. Я не буду обещать того, что не входит в полномочия депутата. Но всё, что позволяет закон, я буду использовать для защиты ваших интересов.</p>
+      <p class="motto">Защита Гагаузии. Верховенство закона. Развитие Комрата. Поддержка молодёжи и семьи. Реальная помощь людям.</p>
+    </div>
+  </section>
+
   <section aria-labelledby="theses">
     <h2 id="theses">Мои основные тезисы</h2>
-    <p class="lead">В округе есть проблемы. Я знаю, как решать их законными методами.</p>
+    <p class="lead">В округе есть проблемы. Я знаю, как решать их законными методами. Нажмите «Как я это сделаю» под каждым тезисом.</p>
     <ol class="theses">
-      <li><div><h3>Реальная поддержка семьям, пенсионерам и людям с инвалидностью</h3><p>Мои первые законопроекты — в блоке «Мои основные шаги» выше.</p></div></li>
-      <li><div><h3>Реальные полномочия Гагаузской автономии</h3><p>Буду защищать их правовыми методами.</p></div></li>
-      <li><div><h3>Власть должна отвечать людям</h3><p>Буду добиваться ответов по существу и в срок.</p></div></li>
-      <li><div><h3>Дороги, тротуары, вода и освещение</h3><p>Знаю, как добиваться ремонта и контролировать его.</p></div></li>
-      <li><div><h3>Будущее талантливой молодёжи Гагаузии</h3><p>Буду добиваться поддержки молодых.</p></div></li>
+      <li><div><h3>Реальная поддержка семьям, пенсионерам и людям с инвалидностью</h3><p>Мои первые законопроекты — в блоке «Мои основные шаги» выше.</p>
+        <details class="how"><summary>Как я это сделаю</summary>
+          <p class="intro">Крепкая семья, православная вера, уважение к родителям и старшим — основа нашей жизни.</p>
+          <ul><li><b>Инициировать законопроект о социальном транспорте</b> — бесплатном проезде для социально уязвимых слоёв населения.</li><li><b>Внести законопроект об увеличении помощи в зимний период</b> из бюджета Гагаузии для семей с пенсионерами и людьми с инвалидностью — с 400 до 2000 лей в месяц.</li><li>Внести законопроект о фонде помощи онкобольным и тяжелобольным жителям Гагаузии на лечение, операции и лекарства.</li><li>Добиваться улучшения поддержки молодых, многодетных и малообеспеченных семей, пенсионеров и людей с инвалидностью.</li></ul>
+          <p class="pos"><b>Моя позиция:</b> сильная семья, уважение к вере, забота о старших и помощь нуждающимся — основы крепкого общества.</p>
+        </details></div></li>
+      <li><div><h3>Реальные полномочия Гагаузской автономии</h3><p>Буду защищать их правовыми методами.</p>
+        <details class="how"><summary>Как я это сделаю</summary>
+          <p class="intro">Особый статус Гагаузии закреплён статьёй 111 Конституции Молдовы и Законом № 344-XIII от 23.12.1994 «Об особом правовом статусе Гагаузии (Гагауз Ери)».</p>
+          <ul><li>Публиковать правовое заключение по каждому законопроекту Парламента, затрагивающему полномочия Гагаузии.</li><li>Составить открытый перечень урезанных полномочий автономии и добиваться их восстановления.</li><li>Добиваться, чтобы органы власти работали с жителями на трёх официальных языках — гагаузском, русском и молдавском.</li></ul>
+          <p class="pos"><b>Моя позиция:</b> у автономии должны быть реальные полномочия, а её права и гарантии должны соблюдаться.</p>
+        </details></div></li>
+      <li><div><h3>Власть должна отвечать людям</h3><p>Буду добиваться ответов по существу и в срок.</p>
+        <details class="how"><summary>Как я это сделаю</summary>
+          <p class="intro">Закон должен защищать человека, а не становиться инструментом давления на него.</p>
+          <ul><li>Проводить регулярные приёмы жителей округа № 2: разъяснять права, помогать составлять обращения и обжаловать незаконные решения.</li><li>Добиваться от должностных лиц ответов по существу и в установленные законом сроки.</li><li>Добиваться прозрачности бюджета Гагаузии: чтобы каждый житель мог увидеть, куда и на что потрачены публичные деньги.</li><li>Сократить лишние должности в органах власти автономии, а сэкономленные деньги направить на помощь людям.</li></ul>
+          <p class="pos"><b>Моя позиция:</b> закон должен быть одинаков для всех.</p>
+        </details></div></li>
+      <li><div><h3>Дороги, тротуары, вода и освещение</h3><p>Знаю, как добиваться ремонта и контролировать его.</p>
+        <details class="how"><summary>Как я это сделаю</summary>
+          <p class="intro">Развитие — это рабочие места, поддержка местного бизнеса, качественные дороги, тротуары, вода и освещение.</p>
+          <ul><li>Добиваться регионального финансирования ремонта дорог, тротуаров, водопровода, канализации и уличного освещения.</li><li>Контролировать качество, сроки и стоимость ремонтных работ за публичные деньги.</li><li>Поддерживать программы помощи малому бизнесу, фермерам и местным производителям.</li></ul>
+          <p class="pos"><b>Моя позиция:</b> развитие измеряется не отчётами, а тем, что реально изменилось в жизни людей.</p>
+        </details></div></li>
+      <li><div><h3>Будущее талантливой молодёжи Гагаузии</h3><p>Буду добиваться поддержки молодых.</p>
+        <details class="how"><summary>Как я это сделаю</summary>
+          <p class="intro">Будущее Гагаузии — это наша молодёжь.</p>
+          <ul><li>Добиваться внедрения региональной программы поддержки талантливых школьников, студентов и молодых специалистов.</li><li>Развивать молодёжное самоуправление — молодёжные советы и Молодёжный парламент Гагаузии.</li><li>Равные возможности изучения трёх официальных языков Гагаузии и особое внимание к развитию гагаузского.</li></ul>
+          <p class="pos"><b>Моя позиция:</b> молодёжь должна обрести своё будущее в Гагаузии.</p>
+        </details></div></li>
     </ol>
 
   </section>
   <section aria-labelledby="video">
-    <h2 id="video">Как я это сделаю</h2>
-    <p class="lead">Конкретные решения по каждому тезису и ответы на ваши вопросы — в моих видео. Выберите удобную соцсеть:</p>
+    <h2 id="video">Смотрите мои видео</h2>
+    <p class="lead">Подробно о программе и ответы на ваши вопросы. Выберите удобную соцсеть:</p>
 
     <div class="links">
       <a class="btn" href="https://www.facebook.com/ivan.pana.2025/" target="_blank" rel="noopener">
@@ -218,13 +274,6 @@
         <span class="txt">Telegram<small>t.me/IvanPanea</small></span>
         <span class="arrow" aria-hidden="true">›</span>
       </a>
-      <!-- ТЕЛЕФОН: замените +373XXXXXXXX на номер и уберите комментарий вокруг кнопки
-      <a class="btn btn-call" href="tel:+373XXXXXXXX">
-        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#d89230"/><path fill="#fff" d="M12.2 8.5l1.7 3.6c.2.5.1 1-.3 1.4l-1.3 1.2a10 10 0 0 0 5 5l1.2-1.3c.4-.4.9-.5 1.4-.3l3.6 1.7c.5.2.7.7.6 1.2l-.5 2.4c-.1.5-.6.9-1.1.9A15 15 0 0 1 7.6 9.4c0-.5.4-1 .9-1.1l2.4-.5c.5-.1 1 .1 1.3.7z"/></svg>
-        <span class="txt">Позвонить<small>звонки и сообщения</small></span>
-        <span class="arrow" aria-hidden="true">›</span>
-      </a>
-      -->
     </div>
   </section>
 
@@ -236,7 +285,15 @@
         <li>Узнать обо мне и моей работе</li>
         <li>Рассказать о проблеме в вашем районе</li>
       </ul>
-      <p>Пишите мне в Telegram или в личные сообщения в Facebook — я отвечу.</p>
+      <a class="phone" href="tel:+37379168917">+373 79 16 89 17</a>
+      <p>Звонки и сообщения. Также можно написать мне в Telegram или в личные сообщения в Facebook.</p>
+    </div>
+    <div class="links" style="margin-top:12px">
+      <a class="btn btn-call" href="tel:+37379168917">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#d89230"/><path fill="#fff" d="M12.2 8.5l1.7 3.6c.2.5.1 1-.3 1.4l-1.3 1.2a10 10 0 0 0 5 5l1.2-1.3c.4-.4.9-.5 1.4-.3l3.6 1.7c.5.2.7.7.6 1.2l-.5 2.4c-.1.5-.6.9-1.1.9A15 15 0 0 1 7.6 9.4c0-.5.4-1 .9-1.1l2.4-.5c.5-.1 1 .1 1.3.7z"/></svg>
+        <span class="txt">Позвонить<small>+373 79 16 89 17</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
     </div>
   </section>
 </main>
