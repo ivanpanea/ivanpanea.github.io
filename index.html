@@ -158,6 +158,9 @@
   .testbar { background: #ffe9a8; color: #5a4300; text-align: center; font: 800 12px/1.4 Montserrat, Arial, sans-serif; padding: 8px 16px; }
   .new { display: inline-block; vertical-align: middle; background: #e0332b; color: #fff; font: 800 10px/1 Montserrat, Arial, sans-serif; letter-spacing: .06em; padding: 4px 6px; border-radius: 4px; margin: 0 4px; }
   .video { margin-top: 18px; }
+  .video video { display: block; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 6px auto 0; border-radius: 14px; background: #000; object-fit: cover; }
+  .vnote { max-width: 340px; margin: 10px auto 0; text-align: center; font: 700 16px/1.45 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .vnote b { display: block; color: var(--gold-text); text-transform: uppercase; letter-spacing: .04em; font-size: 15px; }
   .vframe { position: relative; aspect-ratio: 16/9; background: linear-gradient(135deg, var(--navy), #0b3f7a); border-radius: 12px; display: grid; place-items: center; color: #fff; overflow: hidden; margin-top: 6px; }
   .play { width: 64px; height: 64px; border-radius: 50%; background: var(--gold); display: grid; place-items: center; font-size: 26px; padding-left: 5px; }
   .vcap { position: absolute; left: 14px; bottom: 12px; font: 800 15px/1.2 Montserrat, Arial, sans-serif; }
@@ -230,7 +233,10 @@
     </div>
     <p class="tagline">Работа депутата начинается рядом с жителями Гагаузии</p>
     <div class="video">
-      <div class="vframe"><span class="play" aria-hidden="true">▶</span><span class="vcap">Видео-обращение · 1 минута<small>скоро здесь</small></span></div>
+      <video controls playsinline preload="none" poster="img/video-poster.jpg" aria-label="Иван Паня — анонс дебатов на ГРТ">
+        <source src="video/ivan-panea-debaty.mp4" type="video/mp4">
+      </video>
+      <p class="vnote"><b>Дебаты · 21 октября</b>19:00 — радио GRT FM<br>20:00 — телеканал TV-Găgăuzia</p>
     </div>
   </div>
 </header>
