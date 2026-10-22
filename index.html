@@ -79,10 +79,30 @@
 
   /* ---------- Слоган и видео ---------- */
   .tagline { margin: 22px 0 0; font: 800 clamp(22px, 6.4vw, 30px)/1.2 Montserrat, Arial, sans-serif; color: var(--navy); text-align: center; }
-  .video { margin-top: 18px; }
-  .video video { display: block; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 6px auto 0; border-radius: 14px; background: #000; object-fit: cover; }
-  .vnote { max-width: 340px; margin: 10px auto 0; text-align: center; font: 700 16px/1.45 Montserrat, Arial, sans-serif; color: var(--navy); }
-  .vnote b { display: block; color: var(--gold-text); text-transform: uppercase; letter-spacing: .04em; font-size: 15px; }
+  .announce {
+    max-width: 340px; margin: 24px auto 0; padding: 26px 22px 22px; border-radius: 16px; text-align: center;
+    background: var(--navy); color: #fff; border: 3px solid var(--gold);
+    box-shadow: 0 10px 28px rgba(1,33,71,.18);
+  }
+  .announce p { margin: 0; }
+  .a-sym { display: block; width: 100%; max-width: 220px; height: auto; margin: 0 auto 18px; padding: 10px 14px; background: #fff; border-radius: 10px; }
+  .a-kicker { font: 800 15px/1.2 Montserrat, Arial, sans-serif; color: var(--gold); text-transform: uppercase; letter-spacing: .08em; }
+  .a-sub { margin-top: 6px !important; font: 700 15px/1.35 Montserrat, Arial, sans-serif; color: #dfe5ee; }
+  .a-who { margin-top: 12px !important; font: 900 24px/1.1 Montserrat, Arial, sans-serif; text-transform: uppercase; }
+  .a-who small { display: block; margin-bottom: 4px; font-size: 13px; font-weight: 800; letter-spacing: .08em; color: var(--gold); }
+  .a-badge { display: inline-block; margin-top: 14px !important; padding: 7px 16px; border-radius: 999px; background: var(--gold); color: var(--navy);
+    font: 900 18px/1 Montserrat, Arial, sans-serif; text-transform: uppercase; letter-spacing: .06em; }
+  .a-date { margin-top: 14px !important; font: 700 17px/1.2 Montserrat, Arial, sans-serif; }
+  .a-date b { display: block; font-size: 30px; font-weight: 900; text-transform: uppercase; }
+  .a-date span { display: block; margin-top: 4px; color: #dfe5ee; }
+  .a-time { margin: 10px 0 0 !important; font: 900 64px/1 Montserrat, Arial, sans-serif; color: var(--gold); letter-spacing: -.01em; }
+  .a-place { margin-top: 16px !important; padding-top: 16px; border-top: 1.5px solid rgba(216,146,48,.55); font: 800 18px/1.35 Montserrat, Arial, sans-serif; }
+  .a-text { margin-top: 10px !important; font-size: 16px; line-height: 1.45; color: #dfe5ee; }
+  .a-btn { display: flex; align-items: center; justify-content: center; min-height: 52px; margin-top: 18px; border-radius: 12px;
+    background: var(--gold); color: var(--navy); text-decoration: none; font: 800 17px/1 Montserrat, Arial, sans-serif; }
+  .a-btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  .a-sign { margin-top: 14px !important; font: 700 15px/1.3 Montserrat, Arial, sans-serif; color: #dfe5ee; }
+  .a-sign b { color: var(--gold); font-weight: 900; }
 
   /* ---------- Секции ---------- */
   section { padding: 28px 0 8px; }
@@ -163,15 +183,16 @@
   .vote h2 { color: #fff; font-size: 25px; }
   .vote .date { margin: 4px 0 16px; color: var(--gold); font: 700 15px Montserrat, Arial, sans-serif; }
   .ballot {
-    display: flex; align-items: center; gap: 14px; background: #fff; color: var(--navy);
-    border: 2px solid var(--gold); padding: 12px 14px;
+    display: flex; align-items: center; gap: 10px; background: #fff; color: var(--navy);
+    border: 2px solid var(--gold); padding: 12px 12px;
   }
-  .ballot .no { font: 900 40px/1 Montserrat, Arial, sans-serif; white-space: nowrap; }
+  .ballot .sym { display: block; width: 72px; height: auto; flex: none; }
+  .ballot .no { font: 900 36px/1 Montserrat, Arial, sans-serif; white-space: nowrap; border-left: 2px solid var(--gold); padding-left: 10px; }
   .ballot .no sup { font-size: 15px; color: var(--gold-text); vertical-align: 18px; margin-right: 2px; }
-  .ballot .who { flex: 1; font: 900 18px/1.1 Montserrat, Arial, sans-serif; }
-  .ballot .who small { display: block; font-size: 14px; font-weight: 800; letter-spacing: .02em; margin-top: 4px; }
+  .ballot .who { flex: 1; min-width: 0; font: 900 16px/1.1 Montserrat, Arial, sans-serif; text-transform: uppercase; border-right: 2px solid var(--gold); padding-right: 10px; white-space: nowrap; }
+  .ballot .who small { display: block; font-size: 11px; font-weight: 800; letter-spacing: 0; margin-top: 4px; white-space: normal; }
   .ballot .check {
-    width: 46px; height: 46px; border-radius: 50%; border: 2px solid var(--navy); flex: none;
+    width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--navy); flex: none;
     display: grid; place-items: center;
   }
   .ballot .check svg { width: 24px; height: 24px; }
@@ -193,12 +214,25 @@
   .dock .tg { background: #229ED9; }
   .dock a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
   @media (max-width: 340px) { .dock { grid-template-columns: 1fr repeat(3, 48px); gap: 6px; } .dock a { font-size: 15px; } }
+  @media (min-width: 600px) {
+    .ballot { gap: 14px; padding: 12px 16px; }
+    .ballot .sym { width: 100px; }
+    .ballot .no { font-size: 40px; padding-left: 14px; }
+    .ballot .who { font-size: 18px; padding-right: 14px; }
+    .ballot .who small { font-size: 13px; }
+    .ballot .check { width: 46px; height: 46px; }
+  }
   @media (min-width: 600px) { .dock { max-width: 560px; margin: 0 auto; border-radius: 16px 16px 0 0; } }
 
   @media (max-width: 360px) {
     .hero { grid-template-columns: 1fr 40%; }
-    .ballot .no { font-size: 32px; }
-    .ballot .who { font-size: 15px; }
+    .ballot { gap: 8px; padding: 10px 8px; }
+    .ballot .sym { width: 58px; }
+    .ballot .no { font-size: 30px; padding-left: 8px; }
+    .ballot .who { font-size: 14px; padding-right: 8px; }
+    .ballot .who small { font-size: 10px; }
+    .ballot .check { width: 34px; height: 34px; }
+    .ballot .check svg { width: 18px; height: 18px; }
   }
 
   /* ================= Десктоп ================= */
@@ -229,16 +263,13 @@
     .number p { font-size: 18px; }
     .photo { align-self: end; justify-self: center; max-width: 500px; }
 
-    /* слоган + видео */
+    /* слоган + анонс встречи */
     .promo {
-      display: grid; grid-template-columns: 1fr 340px; column-gap: 64px; align-items: center;
-      grid-template-areas: "tag vid" "note vid"; padding-top: 48px;
+      display: grid; grid-template-columns: 1fr 380px; column-gap: 64px; align-items: center;
+      grid-template-areas: "tag ann"; padding-top: 48px;
     }
-    .promo .video { display: contents; }
-    .tagline { grid-area: tag; margin: 0; align-self: end; text-align: left; font-size: 44px; line-height: 1.15; }
-    .video video { grid-area: vid; margin: 0; }
-    .vnote { grid-area: note; align-self: start; margin: 22px 0 0; max-width: none; text-align: left; font-size: 19px; }
-    .vnote b { font-size: 17px; margin-bottom: 4px; }
+    .tagline { grid-area: tag; margin: 0; text-align: left; font-size: 44px; line-height: 1.15; }
+    .announce { grid-area: ann; max-width: none; margin: 0; }
 
     /* встречи: карточка и карта рядом */
     .meet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
@@ -268,7 +299,11 @@
     .vote { margin-top: 64px; padding: 48px 0 52px; text-align: center; }
     .vote h2 { font-size: 34px; }
     .vote .date { font-size: 17px; margin-bottom: 22px; }
-    .ballot { max-width: 560px; margin: 0 auto; text-align: left; }
+    .ballot { max-width: 620px; margin: 0 auto; text-align: left; gap: 20px; padding: 14px 20px; }
+    .ballot .sym { width: 130px; }
+    .ballot .no { font-size: 48px; padding-left: 20px; }
+    .ballot .who { font-size: 22px; }
+    .ballot .who small { font-size: 14px; }
     footer { padding: 24px 24px 40px; }
   }
   /* кнопки контактов сеткой 2×2 — когда хватает ширины, чтобы подписи не переносились */
@@ -297,16 +332,24 @@
   </div>
   <div class="wrap promo">
     <p class="tagline">Работа депутата начинается рядом с жителями Гагаузии</p>
-    <!-- Как заменить видео:
-         1) положите новый файл в папку video/ и укажите его в src у <source>;
-         2) сохраните кадр-обложку (вертикальный, 540×960) в img/ и укажите его в poster;
-         3) обновите aria-label у <video> и подпись в <p class="vnote"> (без слов «сегодня», «завтра»). -->
-    <div class="video">
-      <video controls playsinline preload="none" poster="img/video-poster.jpg" aria-label="Иван Паня — анонс дебатов на ГРТ">
-        <source src="video/ivan-panea-debaty-720.mp4" type="video/mp4">
-      </video>
-      <p class="vnote"><b>Дебаты · 21 октября</b>19:00 — радио GRT FM<br>20:00 — телеканал TV-Găgăuzia</p>
-    </div>
+    <!-- Анонс ближайшей встречи. Данные берутся сами из списка «Встречи с жителями» ниже
+         (ближайшая актуальная встреча); метка «Сегодня» / «Завтра» ставится по дате, после встречи
+         карточка скрывается. Здесь править ничего не нужно — только добавлять встречи в список.
+         Видео о дебатах сохранено в video/ivan-panea-debaty-720.mp4 (обложка img/video-poster.jpg),
+         его можно вернуть сюда блоком <div class="video"><video …></div>. -->
+    <article class="announce" aria-labelledby="announce-title">
+      <img class="a-sym" src="img/logo.png" alt="Электоральный символ «ИП»" width="900" height="398">
+      <p class="a-kicker" id="announce-title">Встреча с избирателями</p>
+      <p class="a-sub">кандидата в депутаты от округа №&nbsp;2</p>
+      <p class="a-who"><small>Независимый кандидат</small>Паня Иван</p>
+      <p class="a-badge" hidden>Сегодня</p>
+      <p class="a-date"><b>22 октября</b><span>четверг</span></p>
+      <p class="a-time">17:30</p>
+      <p class="a-place">Угол улиц Шевченко и Одесской, возле автомойки</p>
+      <p class="a-text">Приходите, поговорим о проблемах района. Задайте вопросы и расскажите, что нужно исправить.</p>
+      <a class="a-btn" href="https://www.google.com/maps/search/?api=1&amp;query=46.298951,28.637292" target="_blank" rel="noopener">Как добраться ›</a>
+      <p class="a-sign"><b>№&nbsp;7</b> в бюллетене</p>
+    </article>
   </div>
 </header>
 
@@ -445,6 +488,7 @@
     <h2 id="vote">Голосуй за Ивана Паню!</h2>
     <p class="date">15 ноября 2026 · ваш кандидат в бюллетене:</p>
     <div class="ballot">
+      <img class="sym" src="img/logo.png" alt="Электоральный символ Ивана Пани — «ИП»" width="900" height="398">
       <span class="no"><sup>№</sup>7</span>
       <span class="who">Иван Паня<small>Независимый кандидат</small></span>
       <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#012147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -466,7 +510,8 @@
 </nav>
 <script>
 /* Встречи: скрыть прошедшие (по дате в Europe/Chisinau), отсортировать,
-   подставить дату/время/ссылку из data-атрибутов, показать карту ближайшей. */
+   подставить дату/время/ссылку из data-атрибутов, показать карту ближайшей
+   и заполнить анонс в шапке (метка «Сегодня» / «Завтра»). */
 (function () {
   var list = document.querySelector('.events');
   if (!list) return;
@@ -485,6 +530,25 @@
     }
   }
   var now = today();
+  function addDays(iso, n) {
+    var p = iso.split('-'), d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + n));
+    return d.getUTCFullYear() + '-' + pad(d.getUTCMonth() + 1) + '-' + pad(d.getUTCDate());
+  }
+  function fillAnnounce(ev) {
+    var ann = document.querySelector('.announce');
+    if (!ann) return;
+    var li = ev.li, date = li.getAttribute('data-date'), p = date.split('-');
+    var badge = ann.querySelector('.a-badge');
+    var label = date === now ? 'Сегодня' : date === addDays(now, 1) ? 'Завтра' : '';
+    badge.textContent = label;
+    badge.hidden = !label;
+    ann.querySelector('.a-date b').textContent = (+p[2]) + ' ' + MONTHS[+p[1] - 1];
+    ann.querySelector('.a-date span').textContent = DAYS[new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])).getUTCDay()];
+    ann.querySelector('.a-time').textContent = li.getAttribute('data-time') || '';
+    var addr = li.querySelector('.addr');
+    if (addr) ann.querySelector('.a-place').textContent = addr.textContent;
+    if (isFinite(ev.lat) && isFinite(ev.lng)) ann.querySelector('.a-btn').href = 'https://www.google.com/maps/search/?api=1&query=' + li.getAttribute('data-lat') + ',' + li.getAttribute('data-lng');
+  }
   var upcoming = [];
   Array.prototype.forEach.call(list.querySelectorAll('.event'), function (li) {
     var date = li.getAttribute('data-date') || '';
@@ -503,12 +567,15 @@
   upcoming.forEach(function (e) { list.appendChild(e.li); });
   var map = document.querySelector('.map'), empty = document.querySelector('.events-empty');
   if (!upcoming.length) {
+    var ann0 = document.querySelector('.announce');
+    if (ann0) ann0.hidden = true;
     list.hidden = true;
     if (empty) empty.hidden = false;
     if (map) map.hidden = true;
     return;
   }
   var e = upcoming[0];
+  fillAnnounce(e);
   if (map && isFinite(e.lat) && isFinite(e.lng)) {
     var src = 'https://www.openstreetmap.org/export/embed.html?bbox=' +
       (e.lng - 0.004).toFixed(6) + '%2C' + (e.lat - 0.0025).toFixed(6) + '%2C' +
