@@ -588,9 +588,20 @@
 <script>
 /* Счётчик посещений (GoatCounter, ivanpanea.goatcounter.com) без внешних скриптов:
    просмотр страницы при загрузке и нажатия на ссылки с атрибутом data-track.
-   Считает только на настоящем сайте — локальные просмотры не учитываются. */
+   Считает только на настоящем сайте — локальные просмотры не учитываются.
+   Свои заходы можно отключить в своём браузере: открыть сайт с адресом
+   https://ivanpanea.github.io/#toggle-goatcounter (повторный заход включает обратно). */
 (function () {
   if (location.hostname !== 'ivanpanea.github.io') return;
+  try {
+    if (location.hash === '#toggle-goatcounter') {
+      var off = localStorage.getItem('skipgc') === 't';
+      if (off) localStorage.removeItem('skipgc'); else localStorage.setItem('skipgc', 't');
+      alert(off ? 'Счётчик снова учитывает этот браузер.' : 'Готово: заходы с этого браузера больше не считаются.');
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+    if (localStorage.getItem('skipgc') === 't') return;
+  } catch (e) {}
   var URL = 'https://ivanpanea.goatcounter.com/count';
   function hit(path, title, isEvent) {
     var q = '?p=' + encodeURIComponent(path) +
