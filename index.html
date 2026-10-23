@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Иван Паня — № 7, округ № 2, Комрат</title>
-<meta name="description" content="Иван Паня, независимый кандидат в Народное Собрание Гагаузии, округ № 2, мун. Комрат. Номер в бюллетене — 7. Выборы 15 ноября 2026.">
-<meta property="og:title" content="Иван Паня — № 7 в бюллетене">
+<title>Иван Паня — независимый кандидат, округ № 2, Комрат</title>
+<meta name="description" content="Иван Паня, независимый кандидат в Народное Собрание Гагаузии, округ № 2, мун. Комрат. Выборы 15 ноября 2026.">
+<meta property="og:title" content="Иван Паня — независимый кандидат, округ № 2">
 <meta property="og:description" content="Независимый кандидат в Народное Собрание Гагаузии. Округ № 2 · мун. Комрат. Смотрите мои видео в соцсетях.">
-<meta property="og:image" content="https://ivanpanea.github.io/img/og-2.jpg">
-<meta property="og:image:alt" content="Иван Паня — независимый кандидат, округ № 2, Комрат. Электоральный символ «ИП», № 7 в бюллетене, выборы 15 ноября 2026">
+<meta property="og:image" content="https://ivanpanea.github.io/img/og-3.jpg">
+<meta property="og:image:alt" content="Иван Паня — независимый кандидат, округ № 2, Комрат. Электоральный символ «ИП». Голосуй 15 ноября 2026">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://ivanpanea.github.io/">
@@ -72,9 +72,10 @@
     background: var(--navy); color: #fff; padding: 14px 18px; margin-top: 0;
   }
   .number .n {
-    font: 900 44px/1 Montserrat, Arial, sans-serif; color: #fff;
-    border: 1.5px solid var(--gold); padding: 6px 14px 4px;
+    display: grid; place-items: center; flex: none; width: 54px; height: 54px; color: var(--gold);
+    border: 1.5px solid var(--gold);
   }
+  .number .n svg { width: 32px; height: 32px; }
   .number p { margin: 0; font: 700 15px/1.35 Montserrat, Arial, sans-serif; }
   .number p span { color: var(--gold); }
 
@@ -207,9 +208,7 @@
     border: 2px solid var(--gold); padding: 12px 12px;
   }
   .ballot .sym { display: block; width: 72px; height: auto; flex: none; }
-  .ballot .no { font: 900 36px/1 Montserrat, Arial, sans-serif; white-space: nowrap; border-left: 2px solid var(--gold); padding-left: 10px; }
-  .ballot .no sup { font-size: 15px; color: var(--gold-text); vertical-align: 18px; margin-right: 2px; }
-  .ballot .who { flex: 1; min-width: 0; font: 900 16px/1.1 Montserrat, Arial, sans-serif; text-transform: uppercase; border-right: 2px solid var(--gold); padding-right: 10px; white-space: nowrap; }
+  .ballot .who { flex: 1; min-width: 0; font: 900 18px/1.1 Montserrat, Arial, sans-serif; text-transform: uppercase; border-left: 2px solid var(--gold); border-right: 2px solid var(--gold); padding: 0 10px; white-space: nowrap; }
   .ballot .who small { display: block; font-size: 11px; font-weight: 800; letter-spacing: 0; margin-top: 4px; white-space: normal; }
   .ballot .check {
     width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--navy); flex: none;
@@ -237,8 +236,7 @@
   @media (min-width: 600px) {
     .ballot { gap: 14px; padding: 12px 16px; }
     .ballot .sym { width: 100px; }
-    .ballot .no { font-size: 40px; padding-left: 14px; }
-    .ballot .who { font-size: 18px; padding-right: 14px; }
+    .ballot .who { font-size: 20px; padding: 0 14px; }
     .ballot .who small { font-size: 13px; }
     .ballot .check { width: 46px; height: 46px; }
   }
@@ -248,8 +246,7 @@
     .hero { grid-template-columns: 1fr 40%; }
     .ballot { gap: 8px; padding: 10px 8px; }
     .ballot .sym { width: 58px; }
-    .ballot .no { font-size: 30px; padding-left: 8px; }
-    .ballot .who { font-size: 14px; padding-right: 8px; }
+    .ballot .who { font-size: 15px; padding: 0 8px; }
     .ballot .who small { font-size: 10px; }
     .ballot .check { width: 34px; height: 34px; }
     .ballot .check svg { width: 18px; height: 18px; }
@@ -279,7 +276,8 @@
     .district { font-size: 18px; }
     .logo { max-width: 260px; margin-top: 22px; }
     .number { align-self: end; padding: 18px 22px; }
-    .number .n { font-size: 52px; }
+    .number .n { width: 64px; height: 64px; }
+    .number .n svg { width: 38px; height: 38px; }
     .number p { font-size: 18px; }
     .photo { align-self: end; justify-self: center; max-width: 500px; }
 
@@ -328,8 +326,7 @@
     .vote .date { font-size: 17px; margin-bottom: 22px; }
     .ballot { max-width: 620px; margin: 0 auto; text-align: left; gap: 20px; padding: 14px 20px; }
     .ballot .sym { width: 130px; }
-    .ballot .no { font-size: 48px; padding-left: 20px; }
-    .ballot .who { font-size: 22px; }
+    .ballot .who { font-size: 24px; padding: 0 20px; }
     .ballot .who small { font-size: 14px; }
     footer { padding: 24px 24px 40px; }
   }
@@ -353,8 +350,8 @@
     <img class="photo" src="img/ivan-panea.jpg" alt="Иван Паня" width="720" height="777">
     <div class="hero-bar"></div>
     <div class="number">
-      <span class="n">7</span>
-      <p>Мой номер в бюллетене.<br><span>Выборы 15 ноября 2026</span></p>
+      <span class="n"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <p>Голосуй за Ивана Паню!<br><span>Выборы в Народное Собрание · 15 ноября 2026</span></p>
     </div>
   </div>
   <div class="wrap promo">
@@ -375,7 +372,7 @@
       <p class="a-place">Угол улиц Шевченко и Одесской, возле автомойки</p>
       <p class="a-text">Приходите, поговорим о проблемах района. Задайте вопросы и расскажите, что нужно исправить.</p>
       <a class="a-btn" data-track="maps-announce" href="https://www.google.com/maps/search/?api=1&amp;query=46.298951,28.637292" target="_blank" rel="noopener">Как добраться ›</a>
-      <p class="a-sign"><b>№&nbsp;7</b> в бюллетене</p>
+      <p class="a-sign"><b>Голосуй</b> за Ивана Паню · 15 ноября</p>
     </article>
   </div>
 </header>
@@ -553,7 +550,6 @@
     <p class="date">15 ноября 2026 · ваш кандидат в бюллетене:</p>
     <div class="ballot">
       <img class="sym" src="img/logo.png" alt="Электоральный символ Ивана Пани — «ИП»" width="900" height="398">
-      <span class="no"><sup>№</sup>7</span>
       <span class="who">Иван Паня<small>Независимый кандидат</small></span>
       <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#012147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     </div>
