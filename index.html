@@ -104,6 +104,22 @@
   .a-sign { margin-top: 14px !important; font: 700 15px/1.3 Montserrat, Arial, sans-serif; color: #dfe5ee; }
   .a-sign b { color: var(--gold); font-weight: 900; }
 
+  /* ---------- Фотоотчёт ---------- */
+  .report-text { max-width: 720px; }
+  .report-text p { margin: 0 0 12px; }
+  .report-text ul { list-style: none; margin: 0 0 12px; padding: 0; }
+  .report-text li { position: relative; padding: 4px 0 4px 22px; }
+  .report-text li::before { content: "◆"; color: var(--gold); position: absolute; left: 0; top: 7px; font-size: 13px; }
+  .report-text b { font-family: Montserrat, Arial, sans-serif; color: var(--navy); font-weight: 800; }
+  .report-thanks { background: var(--cream); border-left: 5px solid var(--gold); padding: 14px 16px; font-weight: 700; }
+  .gallery { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .gallery li.wide { grid-column: 1 / -1; }
+  .gallery a { display: block; border-radius: 10px; overflow: hidden; background: var(--cream); }
+  .gallery a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .2s ease; }
+  .gallery a:hover img { transform: scale(1.03); }
+  .report-video video { display: block; width: 100%; max-width: 720px; margin: 16px 0 0; border-radius: 14px; background: #000; }
+
   /* ---------- Секции ---------- */
   section { padding: 28px 0 8px; }
   h2 {
@@ -280,6 +296,11 @@
     .where { padding: 18px 18px 18px 0; }
     .where .addr { font-size: 19px; }
 
+    /* фотоотчёт: 3 в ряд, первое фото крупно */
+    .gallery { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .gallery li.wide { grid-column: span 2; grid-row: span 2; }
+    .gallery li.wide img { height: 100%; }
+
     /* шаги и тезисы рядом */
     .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
     .cols .lead { max-width: none; }
@@ -354,6 +375,36 @@
 </header>
 
 <main class="wrap">
+
+  <section aria-labelledby="report">
+    <h2 id="report">Встреча с избирателями · 22 октября</h2>
+    <p class="lead">Ни сцены, ни трибуны. Только дождь, зонты и круг из людей.</p>
+    <div class="report-text">
+      <p>22 октября я встретился с жителями округа № 2. Погода звала остаться дома, но люди пришли: кто с зонтом, кто под капюшоном, кто-то сидел на табуретке, а многие простояли весь разговор на ногах, до самого конца.</p>
+      <p>Разговор получился прямым. Спрашивали о том, с чем живут каждый день:</p>
+      <ul>
+        <li><b>Социальный транспорт</b> — для тех, кому он действительно нужен.</li>
+        <li><b>Помощь в холодный период</b> — зима уже близко, и ждать до неё нельзя.</li>
+        <li><b>Общественная приёмная</b> — после избрания здесь можно будет получить бесплатную юридическую консультацию и прийти с любым вопросом.</li>
+      </ul>
+      <p>Первые два пункта я как депутат буду выдвигать законодательными инициативами. Третий сделаю своими руками.</p>
+      <p class="report-thanks">Работа депутата начинается рядом с жителями — я ещё раз в этом убедился. Спасибо каждому, кто пришёл и поддержал меня, несмотря на погоду.</p>
+    </div>
+    <!-- Видео по итогам встречи: вставить сюда блок
+         <div class="report-video"><video controls playsinline preload="none" poster="img/…jpg" aria-label="…"><source src="video/…mp4" type="video/mp4"></video></div> -->
+    <ul class="gallery" aria-label="Фотографии со встречи 22 октября">
+        <li class="wide"><a href="img/photos/2026-10-22-01.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-01-sm.jpg" alt="Иван Паня говорит с жителями округа № 2" width="800" height="600" loading="eager"></a></li>
+        <li><a href="img/photos/2026-10-22-02.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-02-sm.jpg" alt="Жители под зонтами слушают кандидата" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="img/photos/2026-10-22-03.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-03-sm.jpg" alt="Встреча под дождём: жители стоят кругом" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="img/photos/2026-10-22-04.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-04-sm.jpg" alt="Иван Паня отвечает на вопросы жителей" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="img/photos/2026-10-22-05.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-05-sm.jpg" alt="Жители округа на встрече" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="img/photos/2026-10-22-06.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-06-sm.jpg" alt="Иван Паня обращается к собравшимся" width="800" height="450" loading="lazy"></a></li>
+        <li><a href="img/photos/2026-10-22-07.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-07-sm.jpg" alt="Жители слушают разговор" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="img/photos/2026-10-22-08.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-08-sm.jpg" alt="Общий вид встречи с избирателями" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="img/photos/2026-10-22-09.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-09-sm.jpg" alt="Разговор с жителями под дождём" width="800" height="450" loading="lazy"></a></li>
+        <li><a href="img/photos/2026-10-22-10.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-10-sm.jpg" alt="Листовка кандидата в руках у жительницы" width="800" height="600" loading="lazy"></a></li>
+    </ul>
+  </section>
 
   <section aria-labelledby="meet">
     <h2 id="meet">Встречи с жителями</h2>
