@@ -118,7 +118,10 @@
   .gallery a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
   .gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .2s ease; }
   .gallery a:hover img { transform: scale(1.03); }
-  .report-video video { display: block; width: 100%; max-width: 720px; margin: 16px 0 0; border-radius: 14px; background: #000; }
+  .report-video { margin: 18px 0 0; }
+  .report-video video { display: block; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 0 auto; border-radius: 14px; background: #000; object-fit: cover; }
+  .vnote { max-width: 340px; margin: 10px auto 0; text-align: center; font: 600 15px/1.45 Montserrat, Arial, sans-serif; color: var(--ink); }
+  .vnote b { display: block; margin-bottom: 4px; color: var(--gold-text); text-transform: uppercase; letter-spacing: .04em; font-size: 14px; font-weight: 800; }
 
   /* ---------- Секции ---------- */
   section { padding: 28px 0 8px; }
@@ -296,7 +299,9 @@
     .where { padding: 18px 18px 18px 0; }
     .where .addr { font-size: 19px; }
 
-    /* фотоотчёт: 3 в ряд, первое фото крупно */
+    /* фотоотчёт: текст и видео рядом, фото 3 в ряд, первое крупно */
+    .report-top { display: grid; grid-template-columns: 1fr 340px; column-gap: 56px; align-items: start; }
+    .report-video { margin: 0; }
     .gallery { grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .gallery li.wide { grid-column: span 2; grid-row: span 2; }
     .gallery li.wide img { height: 100%; }
@@ -379,6 +384,7 @@
   <section aria-labelledby="report">
     <h2 id="report">Встреча с избирателями · 22 октября</h2>
     <p class="lead">Ни сцены, ни трибуны. Только дождь, зонты и круг из людей.</p>
+    <div class="report-top">
     <div class="report-text">
       <p>22 октября я встретился с жителями округа № 2. Погода звала остаться дома, но люди пришли: кто с зонтом, кто под капюшоном, кто-то сидел на табуретке, а многие простояли весь разговор на ногах, до самого конца.</p>
       <p>Разговор получился прямым. Спрашивали о том, с чем живут каждый день:</p>
@@ -390,8 +396,14 @@
       <p>Первые два пункта я как депутат буду выдвигать законодательными инициативами. Третий сделаю своими руками.</p>
       <p class="report-thanks">Работа депутата начинается рядом с жителями — я ещё раз в этом убедился. Спасибо каждому, кто пришёл и поддержал меня, несмотря на погоду.</p>
     </div>
-    <!-- Видео по итогам встречи: вставить сюда блок
-         <div class="report-video"><video controls playsinline preload="none" poster="img/…jpg" aria-label="…"><source src="video/…mp4" type="video/mp4"></video></div> -->
+    <!-- Видео по итогам встречи. Заменить: src у <source>, poster (кадр 540×960) и подпись <p class="vnote">. -->
+    <figure class="report-video">
+      <video controls playsinline preload="none" poster="img/vstrecha-2026-10-22-poster.jpg" data-track="video-meeting-2026-10-22" aria-label="Видео: встреча с избирателями 22 октября">
+        <source src="video/vstrecha-2026-10-22-720.mp4" type="video/mp4">
+      </video>
+      <figcaption class="vnote"><b>Видео со встречи · 22 октября</b>Даже несмотря на дождь, люди вышли. Говорили открыто: о поддержке пенсионеров, людей с инвалидностью, молодёжи и семей, о сильных законах, о кабинете депутата в нашем округе и о том, чтобы наши дети жили здесь, а не уезжали. Спасибо каждому, кто пришёл! Встречи продолжаются.</figcaption>
+    </figure>
+    </div>
     <ul class="gallery" aria-label="Фотографии со встречи 22 октября">
         <li class="wide"><a href="img/photos/2026-10-22-01.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-01-sm.jpg" alt="Иван Паня говорит с жителями округа № 2" width="800" height="600" loading="eager"></a></li>
         <li><a href="img/photos/2026-10-22-02.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-02-sm.jpg" alt="Жители под зонтами слушают кандидата" width="800" height="600" loading="lazy"></a></li>
@@ -670,6 +682,13 @@
     new Image().src = URL + q;
   }
   hit(location.pathname, document.title, false);
+  Array.prototype.forEach.call(document.querySelectorAll('video[data-track]'), function (v) {
+    v.addEventListener('play', function () {
+      if (v.getAttribute('data-counted')) return;
+      v.setAttribute('data-counted', '1');
+      hit(v.getAttribute('data-track'), v.getAttribute('aria-label') || 'Видео', true);
+    });
+  });
   document.addEventListener('click', function (e) {
     var a = e.target && e.target.closest ? e.target.closest('[data-track]') : null;
     if (a) hit(a.getAttribute('data-track'), (a.getAttribute('aria-label') || a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60), true);
