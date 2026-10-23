@@ -122,8 +122,25 @@
   .gallery a:hover img { transform: scale(1.03); }
   .report-video { margin: 18px 0 0; }
   .report-video video { display: block; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 0 auto; border-radius: 14px; background: #000; object-fit: cover; }
-  .vnote { max-width: 340px; margin: 10px auto 0; text-align: center; font: 600 15px/1.45 Montserrat, Arial, sans-serif; color: var(--ink); }
-  .vnote b { display: block; margin-bottom: 4px; color: var(--gold-text); text-transform: uppercase; letter-spacing: .04em; font-size: 14px; font-weight: 800; }
+  .report-more { margin: 4px 0 0; }
+  .report-more a { display: inline-flex; align-items: center; min-height: 48px; padding: 10px 18px; border-radius: 12px; background: var(--navy); color: #fff; text-decoration: none; font: 800 16px/1.2 Montserrat, Arial, sans-serif; }
+  .report-more a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .vf-date { margin: 0 0 4px; font: 800 14px/1.2 Montserrat, Arial, sans-serif; color: var(--gold-text); text-transform: uppercase; letter-spacing: .06em; }
+  .vf-title { margin: 0 0 10px; font: 900 20px/1.2 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .vf-desc p { margin: 0 0 12px; }
+  .vlist-title { margin: 26px 0 10px; font: 900 17px/1.2 Montserrat, Arial, sans-serif; color: var(--navy); text-transform: uppercase; }
+  .vlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .vcard { display: flex; align-items: center; gap: 14px; padding: 8px; border: 2px solid var(--line); border-radius: 14px; text-decoration: none; color: var(--navy); background: #fff; }
+  .vcard:hover { border-color: var(--gold); }
+  .vcard:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .vcard img { display: block; width: 64px; height: 114px; object-fit: cover; border-radius: 8px; flex: none; background: #000; }
+  .vc-text { display: flex; flex-direction: column; gap: 4px; }
+  .vc-date { font: 800 13px/1.2 Montserrat, Arial, sans-serif; color: var(--gold-text); text-transform: uppercase; letter-spacing: .04em; }
+  .vc-title { font: 800 17px/1.25 Montserrat, Arial, sans-serif; }
+  .vc-now { display: none; font: 800 13px/1 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .vcard.on { border-color: var(--gold); background: var(--cream); }
+  .vcard.on .vc-now { display: inline-block; }
+  .vcard.on .vc-now::before { content: "▶ "; color: var(--gold); }
 
   /* ---------- Секции ---------- */
   section { padding: 28px 0 8px; }
@@ -301,6 +318,8 @@
     /* фотоотчёт: текст и видео рядом, фото 3 в ряд, первое крупно */
     .report-top { display: grid; grid-template-columns: 1fr 340px; column-gap: 56px; align-items: start; }
     .report-video { margin: 0; }
+    .vf-title { font-size: 26px; }
+    .vlist { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
     .gallery { grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .gallery li.wide { grid-column: span 2; grid-row: span 2; }
     .gallery li.wide img { height: 100%; }
@@ -379,27 +398,67 @@
 
 <main class="wrap">
 
-  <section aria-labelledby="transport">
-    <h2 id="transport">Социальный транспорт: мой ответ</h2>
-    <div class="report-top">
+  <section aria-labelledby="videos">
+    <h2 id="videos">Видео</h2>
+    <!-- Как добавить видео: положить mp4 (720p) в video/, обложку 540×960 в img/, затем скопировать
+         блок <li> в списке «Все видео» и поставить его ПЕРВЫМ; в главный плеер вверху перенести
+         те же src, poster, data-track, дату, заголовок и текст. Остальное работает само. -->
+    <div class="report-top vfeature">
     <div class="report-text">
-      <p class="lead">На дебатах ГРТ прозвучало, что социальный транспорт «признали незаконным». Ответить в эфире мне не дали, поэтому отвечаю сейчас.</p>
-      <p>Нет ни одного решения суда о запрете. Были остановки на дорогах, снятые номера и штрафы, которые суды потом отменяли. Без этого автобуса остались пенсионеры, люди с инвалидностью и многодетные семьи.</p>
-      <p class="report-thanks">Помощь людям должна быть защищена законом, и я его инициирую.</p>
+      <p class="vf-date">23 октября</p>
+      <h3 class="vf-title">Социальный транспорт: мой ответ</h3>
+      <div class="vf-desc">
+          <p class="lead">На дебатах ГРТ прозвучало, что социальный транспорт «признали незаконным». Ответить в эфире мне не дали, поэтому отвечаю сейчас.</p>
+          <p>Нет ни одного решения суда о запрете. Были остановки на дорогах, снятые номера и штрафы, которые суды потом отменяли. Без этого автобуса остались пенсионеры, люди с инвалидностью и многодетные семьи.</p>
+          <p class="report-thanks">Помощь людям должна быть защищена законом, и я его инициирую.</p>
+      </div>
     </div>
     <figure class="report-video">
-      <video controls playsinline preload="none" poster="img/socialnyi-transport-poster.jpg" data-track="video-social-transport" aria-label="Видео: Иван Паня о социальном транспорте">
+      <video controls playsinline preload="none" poster="img/socialnyi-transport-poster.jpg" data-track="video-social-transport" aria-label="Видео: Социальный транспорт: мой ответ">
         <source src="video/socialnyi-transport-720.mp4" type="video/mp4">
       </video>
-      <figcaption class="vnote"><b>Видео · социальный транспорт</b>Ответ на слова, прозвучавшие на дебатах ГРТ.</figcaption>
     </figure>
     </div>
+    <h3 class="vlist-title">Все видео</h3>
+    <ul class="vlist">
+        <li>
+          <a class="vcard on" href="video/socialnyi-transport-720.mp4" data-video="transport" data-src="video/socialnyi-transport-720.mp4" data-poster="img/socialnyi-transport-poster.jpg" data-track="video-social-transport" data-title="Социальный транспорт: мой ответ" data-date="23 октября" aria-current="true">
+            <img src="img/socialnyi-transport-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">23 октября</span><span class="vc-title">Социальный транспорт: мой ответ</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">На дебатах ГРТ прозвучало, что социальный транспорт «признали незаконным». Ответить в эфире мне не дали, поэтому отвечаю сейчас.</p>
+          <p>Нет ни одного решения суда о запрете. Были остановки на дорогах, снятые номера и штрафы, которые суды потом отменяли. Без этого автобуса остались пенсионеры, люди с инвалидностью и многодетные семьи.</p>
+          <p class="report-thanks">Помощь людям должна быть защищена законом, и я его инициирую.</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="video/vstrecha-2026-10-22-720.mp4" data-video="meeting" data-src="video/vstrecha-2026-10-22-720.mp4" data-poster="img/vstrecha-2026-10-22-poster.jpg" data-track="video-meeting-2026-10-22" data-title="Встреча с избирателями" data-date="22 октября">
+            <img src="img/vstrecha-2026-10-22-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">22 октября</span><span class="vc-title">Встреча с избирателями</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Даже несмотря на дождь, люди вышли.</p>
+          <p>Первая встреча с жителями округа № 2. Говорили открыто: о поддержке пенсионеров, людей с инвалидностью, молодёжи и семей, о сильных законах, о кабинете депутата в нашем округе и о том, чтобы наши дети жили здесь, а не уезжали.</p>
+          <p class="report-thanks">Спасибо каждому, кто пришёл! Встречи продолжаются.</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="video/ivan-panea-debaty-720.mp4" data-video="debates" data-src="video/ivan-panea-debaty-720.mp4" data-poster="img/video-poster.jpg" data-track="video-debates-announce" data-title="Анонс дебатов на ГРТ" data-date="21 октября">
+            <img src="img/video-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">21 октября</span><span class="vc-title">Анонс дебатов на ГРТ</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Приглашение на дебаты кандидатов в эфире ГРТ 21 октября.</p>
+          <p>19:00 — радио GRT FM, 20:00 — телеканал TV-Găgăuzia.</p>
+          </div>
+        </li>
+    </ul>
   </section>
 
   <section aria-labelledby="report">
     <h2 id="report">Встреча с избирателями · 22 октября</h2>
     <p class="lead">Ни сцены, ни трибуны. Только дождь, зонты и круг из людей.</p>
-    <div class="report-top">
     <div class="report-text">
       <p>22 октября я встретился с жителями округа № 2. Погода звала остаться дома, но люди пришли: кто с зонтом, кто под капюшоном, кто-то сидел на табуретке, а многие простояли весь разговор на ногах, до самого конца.</p>
       <p>Разговор получился прямым. Спрашивали о том, с чем живут каждый день:</p>
@@ -411,14 +470,7 @@
       <p>Первые два пункта я как депутат буду выдвигать законодательными инициативами. Третий сделаю своими руками.</p>
       <p class="report-thanks">Работа депутата начинается рядом с жителями — я ещё раз в этом убедился. Спасибо каждому, кто пришёл и поддержал меня, несмотря на погоду.</p>
     </div>
-    <!-- Видео по итогам встречи. Заменить: src у <source>, poster (кадр 540×960) и подпись <p class="vnote">. -->
-    <figure class="report-video">
-      <video controls playsinline preload="none" poster="img/vstrecha-2026-10-22-poster.jpg" data-track="video-meeting-2026-10-22" aria-label="Видео: встреча с избирателями 22 октября">
-        <source src="video/vstrecha-2026-10-22-720.mp4" type="video/mp4">
-      </video>
-      <figcaption class="vnote"><b>Видео со встречи · 22 октября</b>Даже несмотря на дождь, люди вышли. Говорили открыто: о поддержке пенсионеров, людей с инвалидностью, молодёжи и семей, о сильных законах, о кабинете депутата в нашем округе и о том, чтобы наши дети жили здесь, а не уезжали. Спасибо каждому, кто пришёл! Встречи продолжаются.</figcaption>
-    </figure>
-    </div>
+    <p class="report-more"><a href="#videos" data-video="meeting">▶ Смотреть видео со встречи</a></p>
     <ul class="gallery" aria-label="Фотографии со встречи 22 октября">
         <li class="wide"><a href="img/photos/2026-10-22-01.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-01-sm.jpg" alt="Иван Паня говорит с жителями округа № 2" width="800" height="600" loading="eager"></a></li>
         <li><a href="img/photos/2026-10-22-02.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-22-02-sm.jpg" alt="Жители под зонтами слушают кандидата" width="800" height="600" loading="lazy"></a></li>
@@ -585,6 +637,45 @@
   <a class="ic wa" data-track="whatsapp-dock" href="https://wa.me/37379168917" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" title="WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 6.6a9.3 9.3 0 0 0-8 14.1L6.8 25.3l4.7-1.2A9.3 9.3 0 1 0 16 6.6zm5.2 13c-.2.6-1.2 1.2-1.8 1.3-.5.1-1 .1-1.7-.1-3.5-1.1-5.6-4.5-5.8-4.7-.2-.2-1.2-1.7-1.2-3.1s.8-2.2 1.1-2.6c.2-.3.6-.3.8-.3h.6c.2 0 .4 0 .7.6l.9 2.1c.1.2.1.4 0 .6l-.3.5-.5.5c-.1.1-.3.3-.1.7.2.3.9 1.5 1.9 2.4 1.3 1.1 2.4 1.5 2.7 1.7.3.1.6.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.8-.2 1.6z"/></svg></a>
   <a class="ic tg" data-track="telegram-dock" href="https://t.me/+37379168917" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M6.2 15.4l17.2-6.7c.8-.3 1.5.2 1.2 1.5l-2.9 13.8c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.5.5-1 .5l.4-4.6 8.3-7.5c.4-.3-.1-.5-.6-.2l-10.3 6.5-4.4-1.4c-1-.3-1-1 .4-1.5z"/></svg></a>
 </nav>
+<script>
+/* Раздел «Видео»: нажатие на ролик в списке ставит его в главный плеер с его текстом. */
+(function () {
+  var sec = document.querySelector('[aria-labelledby="videos"]');
+  if (!sec) return;
+  var player = sec.querySelector('.report-video video');
+  function show(card, play) {
+    var item = card.parentNode;
+    player.pause();
+    player.setAttribute('poster', card.getAttribute('data-poster'));
+    player.querySelector('source').setAttribute('src', card.getAttribute('data-src'));
+    player.setAttribute('data-track', card.getAttribute('data-track'));
+    player.setAttribute('aria-label', 'Видео: ' + card.getAttribute('data-title'));
+    player.removeAttribute('data-counted');
+    player.load();
+    sec.querySelector('.vf-date').textContent = card.getAttribute('data-date');
+    sec.querySelector('.vf-title').textContent = card.getAttribute('data-title');
+    sec.querySelector('.vf-desc').innerHTML = item.querySelector('.vc-desc').innerHTML;
+    Array.prototype.forEach.call(sec.querySelectorAll('.vcard'), function (c) {
+      c.classList.toggle('on', c === card);
+      if (c === card) c.setAttribute('aria-current', 'true'); else c.removeAttribute('aria-current');
+    });
+    sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (play) { var p = player.play(); if (p && p.catch) p.catch(function () {}); }
+  }
+  sec.addEventListener('click', function (e) {
+    var card = e.target.closest && e.target.closest('.vcard');
+    if (!card) return;
+    e.preventDefault();
+    show(card, true);
+  });
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[data-video]:not(.vcard)');
+    if (!link) return;
+    var card = sec.querySelector('.vcard[data-video="' + link.getAttribute('data-video') + '"]');
+    if (card) { e.preventDefault(); show(card, false); }
+  });
+})();
+</script>
 <script>
 /* Встречи: скрыть прошедшие (по дате в Europe/Chisinau), отсортировать,
    подставить дату/время/ссылку из data-атрибутов, показать карту ближайшей
