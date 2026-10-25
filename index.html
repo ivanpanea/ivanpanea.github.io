@@ -402,27 +402,43 @@
     <h2 id="videos">Видео</h2>
     <!-- Как добавить видео: положить mp4 (720p) в video/, обложку 540×960 в img/, затем скопировать
          блок <li> в списке «Все видео» и поставить его ПЕРВЫМ; в главный плеер вверху перенести
-         те же src, poster, data-track, дату, заголовок и текст. Остальное работает само. -->
+         те же src, poster, data-track, дату, заголовок и текст. Не вертикальному ролику (не 9:16)
+         добавить карточке data-ratio="ширина / высота", а плееру — тот же style="aspect-ratio: …". Остальное работает само. -->
     <div class="report-top vfeature">
     <div class="report-text">
-      <p class="vf-date">23 октября</p>
-      <h3 class="vf-title">Социальный транспорт: мой ответ</h3>
+      <p class="vf-date">25 октября</p>
+      <h3 class="vf-title">Рядом с людьми, а не только во время выборов</h3>
       <div class="vf-desc">
-          <p class="lead">На дебатах ГРТ прозвучало, что социальный транспорт «признали незаконным». Ответить в эфире мне не дали, поэтому отвечаю сейчас.</p>
-          <p>Нет ни одного решения суда о запрете. Были остановки на дорогах, снятые номера и штрафы, которые суды потом отменяли. Без этого автобуса остались пенсионеры, люди с инвалидностью и многодетные семьи.</p>
-          <p class="report-thanks">Помощь людям должна быть защищена законом, и я его инициирую.</p>
+          <p class="lead">Депутат должен быть рядом с людьми, а не только во время выборов!</p>
+          <p>Одна из моих инициатив — открытие кабинета депутата в округе №&nbsp;2, где каждый сможет обратиться ко мне, получить бесплатную юридическую помощь и поддержку в решении своих вопросов.</p>
+          <p>Ещё одна важная для меня цель — создание Молодёжного парламента Гагаузии. Законопроект уже подготовлен, и я намерен добиваться его реализации.</p>
+          <p>Я помогаю людям уже сегодня и хочу продолжать эту работу.</p>
+          <p class="report-thanks">Для меня депутатство — это не должность, а ответственность перед людьми, среди которых я живу.</p>
       </div>
     </div>
     <figure class="report-video">
-      <video controls playsinline preload="none" poster="img/socialnyi-transport-poster.jpg" data-track="video-social-transport" aria-label="Видео: Социальный транспорт: мой ответ">
-        <source src="video/socialnyi-transport-720.mp4" type="video/mp4">
+      <video controls playsinline preload="none" poster="img/kabinet-molodezhnyi-parlament-poster.jpg" data-track="video-kabinet-molodezhnyi-parlament" aria-label="Видео: Рядом с людьми, а не только во время выборов" style="aspect-ratio: 720 / 634">
+        <source src="video/kabinet-molodezhnyi-parlament-720.mp4" type="video/mp4">
       </video>
     </figure>
     </div>
     <h3 class="vlist-title">Все видео</h3>
     <ul class="vlist">
         <li>
-          <a class="vcard on" href="video/socialnyi-transport-720.mp4" data-video="transport" data-src="video/socialnyi-transport-720.mp4" data-poster="img/socialnyi-transport-poster.jpg" data-track="video-social-transport" data-title="Социальный транспорт: мой ответ" data-date="23 октября" aria-current="true">
+          <a class="vcard on" href="video/kabinet-molodezhnyi-parlament-720.mp4" data-video="kabinet" data-src="video/kabinet-molodezhnyi-parlament-720.mp4" data-poster="img/kabinet-molodezhnyi-parlament-poster.jpg" data-ratio="720 / 634" data-track="video-kabinet-molodezhnyi-parlament" data-title="Рядом с людьми, а не только во время выборов" data-date="25 октября" aria-current="true">
+            <img src="img/kabinet-molodezhnyi-parlament-poster.jpg" alt="" width="720" height="634" loading="lazy">
+            <span class="vc-text"><span class="vc-date">25 октября</span><span class="vc-title">Рядом с людьми, а не только во время выборов</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Депутат должен быть рядом с людьми, а не только во время выборов!</p>
+          <p>Одна из моих инициатив — открытие кабинета депутата в округе №&nbsp;2, где каждый сможет обратиться ко мне, получить бесплатную юридическую помощь и поддержку в решении своих вопросов.</p>
+          <p>Ещё одна важная для меня цель — создание Молодёжного парламента Гагаузии. Законопроект уже подготовлен, и я намерен добиваться его реализации.</p>
+          <p>Я помогаю людям уже сегодня и хочу продолжать эту работу.</p>
+          <p class="report-thanks">Для меня депутатство — это не должность, а ответственность перед людьми, среди которых я живу.</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="video/socialnyi-transport-720.mp4" data-video="transport" data-src="video/socialnyi-transport-720.mp4" data-poster="img/socialnyi-transport-poster.jpg" data-track="video-social-transport" data-title="Социальный транспорт: мой ответ" data-date="23 октября">
             <img src="img/socialnyi-transport-poster.jpg" alt="" width="540" height="960" loading="lazy">
             <span class="vc-text"><span class="vc-date">23 октября</span><span class="vc-title">Социальный транспорт: мой ответ</span><span class="vc-now">Сейчас на экране</span></span>
           </a>
@@ -649,6 +665,7 @@
     player.setAttribute('poster', card.getAttribute('data-poster'));
     player.querySelector('source').setAttribute('src', card.getAttribute('data-src'));
     player.setAttribute('data-track', card.getAttribute('data-track'));
+    player.style.aspectRatio = card.getAttribute('data-ratio') || '';
     player.setAttribute('aria-label', 'Видео: ' + card.getAttribute('data-title'));
     player.removeAttribute('data-counted');
     player.load();
