@@ -412,27 +412,33 @@
          добавить карточке data-ratio="ширина / высота", а плееру — тот же style="aspect-ratio: …". Остальное работает само. -->
     <div class="report-top vfeature">
     <div class="report-text">
-      <p class="vf-date">25 октября</p>
-      <h3 class="vf-title">Встреча с жителями улиц Кутузова и Чкалова</h3>
+      <p class="vf-date">26 октября</p>
+      <h3 class="vf-title">Малый бизнес — хлеб каждой гагаузской семьи</h3>
       <div class="vf-desc">
-          <p class="lead">Встреча с жителями улиц Кутузова и Чкалова — ещё один открытый и искренний разговор о том, что действительно волнует людей.</p>
-          <p>Обсудили конкретные вопросы: социальный транспорт, помощь нуждающимся, защиту полномочий Гагаузии и ответственность депутатов перед избирателями.</p>
-          <p>Я живу в этом городе, знаю его проблемы и убеждён: важно не просто слушать людей, а слышать их и добиваться реальных решений.</p>
-          <p>Комрат — мой дом. И мне небезразлично, каким будет его будущее.</p>
-          <p>Для меня главное — оставаться рядом с людьми не только перед выборами, но и после них.</p>
-          <p class="report-thanks">Меньше обещаний — больше реальных дел!</p>
+          <p class="lead">Рынок, магазин, своё дело — так живут наши сёла. На дебатах ГРТ я сказал прямо: закон о патенте нужно продлевать каждый год, а молодых предпринимателей — не бросать один на один с налогами.</p>
+          <p class="report-thanks">Меньше налогов. Помощь с бухгалтерией. Поддержка, которая работает.</p>
       </div>
     </div>
     <figure class="report-video">
-      <video controls playsinline preload="none" poster="img/vstrecha-2026-10-25-poster.jpg" data-track="video-meeting-2026-10-25" aria-label="Видео: Встреча с жителями улиц Кутузова и Чкалова">
-        <source src="video/vstrecha-2026-10-25-720.mp4" type="video/mp4">
+      <video controls playsinline preload="none" poster="img/malyi-biznes-poster.jpg" data-track="video-small-business" aria-label="Видео: Малый бизнес — хлеб каждой гагаузской семьи">
+        <source src="video/malyi-biznes-720.mp4" type="video/mp4">
       </video>
     </figure>
     </div>
     <h3 class="vlist-title">Все видео</h3>
     <ul class="vlist">
         <li>
-          <a class="vcard on" href="video/vstrecha-2026-10-25-720.mp4" data-video="meeting-25" data-src="video/vstrecha-2026-10-25-720.mp4" data-poster="img/vstrecha-2026-10-25-poster.jpg" data-track="video-meeting-2026-10-25" data-title="Встреча с жителями улиц Кутузова и Чкалова" data-date="25 октября" aria-current="true">
+          <a class="vcard on" href="video/malyi-biznes-720.mp4" data-video="small-business" data-src="video/malyi-biznes-720.mp4" data-poster="img/malyi-biznes-poster.jpg" data-track="video-small-business" data-title="Малый бизнес — хлеб каждой гагаузской семьи" data-date="26 октября" aria-current="true">
+            <img src="img/malyi-biznes-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">26 октября</span><span class="vc-title">Малый бизнес — хлеб каждой гагаузской семьи</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Рынок, магазин, своё дело — так живут наши сёла. На дебатах ГРТ я сказал прямо: закон о патенте нужно продлевать каждый год, а молодых предпринимателей — не бросать один на один с налогами.</p>
+          <p class="report-thanks">Меньше налогов. Помощь с бухгалтерией. Поддержка, которая работает.</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="video/vstrecha-2026-10-25-720.mp4" data-video="meeting-25" data-src="video/vstrecha-2026-10-25-720.mp4" data-poster="img/vstrecha-2026-10-25-poster.jpg" data-track="video-meeting-2026-10-25" data-title="Встреча с жителями улиц Кутузова и Чкалова" data-date="25 октября">
             <img src="img/vstrecha-2026-10-25-poster.jpg" alt="" width="540" height="960" loading="lazy">
             <span class="vc-text"><span class="vc-date">25 октября</span><span class="vc-title">Встреча с жителями улиц Кутузова и Чкалова</span><span class="vc-now">Сейчас на экране</span></span>
           </a>
@@ -856,7 +862,7 @@
     });
   });
   document.addEventListener('click', function (e) {
-    var a = e.target && e.target.closest ? e.target.closest('[data-track]') : null;
+    var a = e.target && e.target.closest ? e.target.closest('a[data-track]:not(.vcard)') : null;
     if (a) hit(a.getAttribute('data-track'), (a.getAttribute('aria-label') || a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60), true);
   });
 })();
