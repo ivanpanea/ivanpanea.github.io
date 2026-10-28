@@ -104,6 +104,8 @@
   .a-date b { display: block; font-size: 30px; font-weight: 900; text-transform: uppercase; }
   .a-date span { display: block; margin-top: 4px; color: #dfe5ee; }
   .a-time { margin: 10px 0 0 !important; font: 900 64px/1 Montserrat, Arial, sans-serif; color: var(--gold); letter-spacing: -.01em; }
+  .a-gather { margin-top: 8px !important; font: 800 17px/1.2 Montserrat, Arial, sans-serif; color: #fff; }
+  .gather { margin: -4px 0 10px; font: 800 15px/1.3 Montserrat, Arial, sans-serif; color: var(--gold-text); }
   .a-place { margin-top: 16px !important; padding-top: 16px; border-top: 1.5px solid rgba(216,146,48,.55); font: 800 18px/1.35 Montserrat, Arial, sans-serif; }
   .a-text { margin-top: 10px !important; font-size: 16px; line-height: 1.45; color: #dfe5ee; }
   .a-btn { display: flex; align-items: center; justify-content: center; min-height: 52px; margin-top: 18px; border-radius: 12px;
@@ -392,11 +394,12 @@
       <p class="a-sub">кандидата в депутаты от округа №&nbsp;2</p>
       <p class="a-who"><small>Независимый кандидат</small>Паня Иван</p>
       <p class="a-badge" hidden>Сегодня</p>
-      <p class="a-date"><b>22 октября</b><span>четверг</span></p>
-      <p class="a-time">17:30</p>
-      <p class="a-place">Угол улиц Шевченко и Одесской, возле автомойки</p>
+      <p class="a-date"><b>28 октября</b><span>среда</span></p>
+      <p class="a-time">17:00</p>
+      <p class="a-gather">Сбор в 16:30</p>
+      <p class="a-place">Перекрёсток улиц Суворова и Галацана, район школы №&nbsp;2</p>
       <p class="a-text">Приходите, поговорим о проблемах района. Задайте вопросы и расскажите, что нужно исправить.</p>
-      <a class="a-btn" data-track="maps-announce" href="https://www.google.com/maps/search/?api=1&amp;query=46.298951,28.637292" target="_blank" rel="noopener">Как добраться ›</a>
+      <a class="a-btn" data-track="maps-announce" href="https://www.google.com/maps/search/?api=1&amp;query=46.300432,28.643111" target="_blank" rel="noopener">Как добраться ›</a>
       <p class="a-sign"><b>Голосуй</b> за Ивана Паню · 15 ноября</p>
     </article>
   </div>
@@ -554,24 +557,25 @@
   <section aria-labelledby="meet">
     <h2 id="meet">Встречи с жителями</h2>
     <p class="lead">Приходите, поговорим о проблемах района. Задайте вопросы и расскажите, что нужно исправить.</p>
-    <!-- Как добавить встречу: скопировать блок <li class="event">, поменять data-date / data-time / адрес / координаты
+    <!-- Как добавить встречу: скопировать блок <li class="event">, поменять data-date / data-time / data-gather (время сбора, можно убрать) / адрес / координаты
          (data-lat, data-lng). Число, месяц, день недели, время и ссылка «Как добраться» подставятся сами;
          прошедшие встречи скрываются со следующего дня, карта показывает ближайшую. -->
     <div class="meet-grid">
       <ul class="events">
-        <li class="event" data-date="2026-10-22" data-time="17:30" data-lat="46.298951" data-lng="28.637292">
+        <li class="event" data-date="2026-10-28" data-time="17:00" data-gather="16:30" data-lat="46.300432" data-lng="28.643111">
           <div class="meet">
-            <div class="when"><b>22</b><span>октября<br>четверг</span><em>17:30</em></div>
+            <div class="when"><b>28</b><span>октября<br>среда</span><em>17:00</em></div>
             <div class="where">
               <p class="lbl">Где</p>
-              <p class="addr">Угол улиц Шевченко и Одесской, возле автомойки</p>
-              <a class="maplink" data-track="maps-meeting" href="https://www.google.com/maps/search/?api=1&amp;query=46.298951,28.637292" target="_blank" rel="noopener">Как добраться ›</a>
+              <p class="addr">Перекрёсток улиц Суворова и Галацана, район школы №&nbsp;2</p>
+              <p class="gather">Сбор в 16:30 · начало в 17:00</p>
+              <a class="maplink" data-track="maps-meeting" href="https://www.google.com/maps/search/?api=1&amp;query=46.300432,28.643111" target="_blank" rel="noopener">Как добраться ›</a>
             </div>
           </div>
         </li>
       </ul>
       <p class="events-empty" hidden>Расписание ближайших встреч появится здесь. Следите за анонсами в соцсетях</p>
-      <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=28.633292%2C46.296451%2C28.641292%2C46.301451&amp;layer=mapnik&amp;marker=46.298951%2C28.637292" title="Место встречи на карте" loading="lazy"></iframe>
+      <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=28.639111%2C46.297932%2C28.647111%2C46.302932&amp;layer=mapnik&amp;marker=46.300432%2C28.643111" title="Место встречи на карте" loading="lazy"></iframe>
     </div>
   </section>
 
@@ -780,6 +784,8 @@
     ann.querySelector('.a-date b').textContent = (+p[2]) + ' ' + MONTHS[+p[1] - 1];
     ann.querySelector('.a-date span').textContent = DAYS[new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])).getUTCDay()];
     ann.querySelector('.a-time').textContent = li.getAttribute('data-time') || '';
+    var g = ann.querySelector('.a-gather'), gt = li.getAttribute('data-gather');
+    if (g) { g.textContent = gt ? 'Сбор в ' + gt : ''; g.hidden = !gt; }
     var addr = li.querySelector('.addr');
     if (addr) ann.querySelector('.a-place').textContent = addr.textContent;
     if (isFinite(ev.lat) && isFinite(ev.lng)) ann.querySelector('.a-btn').href = 'https://www.google.com/maps/search/?api=1&query=' + li.getAttribute('data-lat') + ',' + li.getAttribute('data-lng');
@@ -795,6 +801,8 @@
     if (b && d) b.textContent = d;
     if (span && m) span.innerHTML = MONTHS[m - 1] + '<br>' + DAYS[new Date(Date.UTC(y, m - 1, d)).getUTCDay()];
     if (em) em.textContent = time;
+    var gather = li.getAttribute('data-gather'), gEl = li.querySelector('.gather');
+    if (gEl) { gEl.textContent = gather ? 'Сбор в ' + gather + ' · начало в ' + time : ''; gEl.hidden = !gather; }
     if (a && lat && lng) a.href = 'https://www.google.com/maps/search/?api=1&query=' + lat + ',' + lng;
     upcoming.push({ li: li, key: date + ' ' + time, lat: +lat, lng: +lng });
   });
