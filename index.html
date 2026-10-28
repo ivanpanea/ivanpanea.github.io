@@ -124,6 +124,7 @@
   .report-thanks { background: var(--cream); border-left: 5px solid var(--gold); padding: 14px 16px; font-weight: 700; }
   .gallery { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .gallery li.wide { grid-column: 1 / -1; }
+  .gallery li.wide-m { grid-column: 1 / -1; } /* последнее фото без пары — на всю ширину телефона */
   .gallery a { display: block; border-radius: 10px; overflow: hidden; background: var(--cream); }
   .gallery a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
   .gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .2s ease; }
@@ -331,6 +332,7 @@
     .gallery { grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .gallery li.wide { grid-column: span 2; grid-row: span 2; }
     .gallery li.wide img { height: 100%; }
+    .gallery li.wide-m { grid-column: auto; }
 
     /* шаги и тезисы рядом */
     .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
@@ -415,23 +417,35 @@
          добавить карточке data-ratio="ширина / высота", а плееру — тот же style="aspect-ratio: …". Остальное работает само. -->
     <div class="report-top vfeature">
     <div class="report-text">
-      <p class="vf-date">26 октября</p>
-      <h3 class="vf-title">Малый бизнес — хлеб каждой гагаузской семьи</h3>
+      <p class="vf-date">28 октября</p>
+      <h3 class="vf-title">Поставьте кандидатов на весы</h3>
       <div class="vf-desc">
-          <p class="lead">Рынок, магазин, своё дело — так живут наши сёла. На дебатах ГРТ я сказал прямо: закон о патенте нужно продлевать каждый год, а молодых предпринимателей — не бросать один на один с налогами.</p>
-          <p class="report-thanks">Меньше налогов. Помощь с бухгалтерией. Поддержка, которая работает.</p>
+          <p class="lead">Перед 15 ноября поставьте кандидатов на весы: кто имеет опыт, кто умеет работать с людьми и писать законы.</p>
+          <p>Я уважаю каждого оппонента, но депутатом должен стать тот, кто знает, как работать, и вместе с сильными кандидатами защитит Гагаузскую автономию.</p>
+          <p class="report-thanks">Спасибо всем, кто пришёл на встречу на Суворова – Галацана!</p>
       </div>
     </div>
     <figure class="report-video">
-      <video controls playsinline preload="none" poster="img/malyi-biznes-poster.jpg" data-track="video-small-business" aria-label="Видео: Малый бизнес — хлеб каждой гагаузской семьи">
-        <source src="video/malyi-biznes-720.mp4" type="video/mp4">
+      <video controls playsinline preload="none" poster="img/vstrecha-2026-10-28-poster.jpg" data-track="video-meeting-2026-10-28" aria-label="Видео: Поставьте кандидатов на весы">
+        <source src="video/vstrecha-2026-10-28-720.mp4" type="video/mp4">
       </video>
     </figure>
     </div>
     <h3 class="vlist-title">Все видео</h3>
     <ul class="vlist">
         <li>
-          <a class="vcard on" href="video/malyi-biznes-720.mp4" data-video="small-business" data-src="video/malyi-biznes-720.mp4" data-poster="img/malyi-biznes-poster.jpg" data-track="video-small-business" data-title="Малый бизнес — хлеб каждой гагаузской семьи" data-date="26 октября" aria-current="true">
+          <a class="vcard on" href="video/vstrecha-2026-10-28-720.mp4" data-video="meeting-28" data-src="video/vstrecha-2026-10-28-720.mp4" data-poster="img/vstrecha-2026-10-28-poster.jpg" data-track="video-meeting-2026-10-28" data-title="Поставьте кандидатов на весы" data-date="28 октября" aria-current="true">
+            <img src="img/vstrecha-2026-10-28-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">28 октября</span><span class="vc-title">Поставьте кандидатов на весы</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Перед 15 ноября поставьте кандидатов на весы: кто имеет опыт, кто умеет работать с людьми и писать законы.</p>
+          <p>Я уважаю каждого оппонента, но депутатом должен стать тот, кто знает, как работать, и вместе с сильными кандидатами защитит Гагаузскую автономию.</p>
+          <p class="report-thanks">Спасибо всем, кто пришёл на встречу на Суворова – Галацана!</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="video/malyi-biznes-720.mp4" data-video="small-business" data-src="video/malyi-biznes-720.mp4" data-poster="img/malyi-biznes-poster.jpg" data-track="video-small-business" data-title="Малый бизнес — хлеб каждой гагаузской семьи" data-date="26 октября">
             <img src="img/malyi-biznes-poster.jpg" alt="" width="540" height="960" loading="lazy">
             <span class="vc-text"><span class="vc-date">26 октября</span><span class="vc-title">Малый бизнес — хлеб каждой гагаузской семьи</span><span class="vc-now">Сейчас на экране</span></span>
           </a>
@@ -499,6 +513,30 @@
           <p>19:00 — радио GRT FM, 20:00 — телеканал TV-Găgăuzia.</p>
           </div>
         </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="report-28">
+    <h2 id="report-28">Встреча с избирателями · 28 октября</h2>
+    <p class="lead">На улице холодно, а разговор получился тёплым.</p>
+    <div class="report-text">
+      <p>Сегодня вечером встретился с жителями округа №&nbsp;2 — Комрат, угол улиц Суворова и Галацана. Рассказал о своих основных шагах и ответил на вопросы:</p>
+      <ul>
+        <li><b>Социальный транспорт</b> — законодательная инициатива по созданию правовых условий для организации и поддержки бесплатного социального транспорта для уязвимых категорий населения.</li>
+        <li><b>Помощь в холодный период</b> — законодательная инициатива по увеличению ежемесячной финансовой помощи с 400 до 2&nbsp;000 леев для установленных законом категорий семей.</li>
+        <li><b>Общественная приёмная</b> — после избрания бесплатные юридические консультации жителям округа.</li>
+      </ul>
+      <p>Люди пришли, несмотря на холод, и это дорогого стоит. Работа депутата начинается рядом с жителями Гагаузии.</p>
+      <p class="report-thanks">Благодарю каждого, кто вышел на встречу и поделился мнением.</p>
+    </div>
+    <p class="report-more"><a href="#videos" data-video="meeting-28">▶ Смотреть видео со встречи</a></p>
+    <ul class="gallery" aria-label="Фотографии со встречи 28 октября">
+        <li class="wide"><a href="img/photos/2026-10-28-01.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-28-01-sm.jpg" alt="Иван Паня говорит с жителями на углу улиц Суворова и Галацана" width="800" height="600" loading="eager"></a></li>
+        <li><a href="img/photos/2026-10-28-02.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 37%" src="img/photos/2026-10-28-02-sm.jpg" alt="Иван Паня с листовкой обращается к жителям" width="600" height="800" loading="lazy"></a></li>
+        <li><a href="img/photos/2026-10-28-03.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-28-03-sm.jpg" alt="Жители слушают кандидата, несмотря на холод" width="600" height="800" loading="lazy"></a></li>
+        <li><a href="img/photos/2026-10-28-04.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-28-04-sm.jpg" alt="Вечерняя встреча: жители стоят кругом" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="img/photos/2026-10-28-05.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-28-05-sm.jpg" alt="Житель задаёт вопрос на встрече" width="800" height="600" loading="lazy"></a></li>
+        <li class="wide-m"><a href="img/photos/2026-10-28-06.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-28-06-sm.jpg" alt="Иван Паня отвечает на вопросы жителей округа № 2" width="800" height="600" loading="lazy"></a></li>
     </ul>
   </section>
 
