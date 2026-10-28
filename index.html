@@ -557,7 +557,9 @@
   <section aria-labelledby="meet">
     <h2 id="meet">Встречи с жителями</h2>
     <p class="lead">Приходите, поговорим о проблемах района. Задайте вопросы и расскажите, что нужно исправить.</p>
-    <!-- Как добавить встречу: скопировать блок <li class="event">, поменять data-date / data-time / data-gather (время сбора, можно убрать) / адрес / координаты
+    <!-- Как добавить встречу: скопировать блок <li class="event">, поменять data-date / data-time / data-gather (время сбора, можно убрать) / адрес / координаты;
+         data-show-from="ГГГГ-ММ-ДД ЧЧ:ММ" — показать встречу на сайте не раньше этого времени (можно убрать);
+         встреча скрывается через 3 часа после начала
          (data-lat, data-lng). Число, месяц, день недели, время и ссылка «Как добраться» подставятся сами;
          прошедшие встречи скрываются со следующего дня, карта показывает ближайшую. -->
     <div class="meet-grid">
@@ -570,6 +572,17 @@
               <p class="addr">Перекрёсток улиц Суворова и Галацана, район школы №&nbsp;2</p>
               <p class="gather">Сбор в 16:30 · начало в 17:00</p>
               <a class="maplink" data-track="maps-meeting" href="https://www.google.com/maps/search/?api=1&amp;query=46.300432,28.643111" target="_blank" rel="noopener">Как добраться ›</a>
+            </div>
+          </div>
+        </li>
+        <li class="event" data-date="2026-10-29" data-time="17:00" data-gather="16:30" data-lat="46.296366" data-lng="28.632773" data-show-from="2026-10-28 20:00">
+          <div class="meet">
+            <div class="when"><b>29</b><span>октября<br>четверг</span><em>17:00</em></div>
+            <div class="where">
+              <p class="lbl">Где</p>
+              <p class="addr">Перекрёсток улиц Жукова и Зои Космодемьянской</p>
+              <p class="gather">Сбор в 16:30 · начало в 17:00</p>
+              <a class="maplink" data-track="maps-meeting" href="https://www.google.com/maps/search/?api=1&amp;query=46.296366,28.632773" target="_blank" rel="noopener">Как добраться ›</a>
             </div>
           </div>
         </li>
@@ -757,18 +770,24 @@
   var MONTHS = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
   var DAYS = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
   function pad(n) { return (n < 10 ? '0' : '') + n; }
-  function today() {
+  /* Текущие дата и время в Кишинёве: «ГГГГ-ММ-ДД» и «ЧЧ:ММ». */
+  function nowChisinau() {
     try {
-      var parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Chisinau', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());
+      var parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Chisinau', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
       var v = {};
       parts.forEach(function (p) { v[p.type] = p.value; });
-      return v.year + '-' + v.month + '-' + v.day;
+      return [v.year + '-' + v.month + '-' + v.day, v.hour + ':' + v.minute];
     } catch (e) {
       var d = new Date();
-      return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+      return [d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()), pad(d.getHours()) + ':' + pad(d.getMinutes())];
     }
   }
-  var now = today();
+  var nowDT = nowChisinau(), now = nowDT[0], nowTime = nowDT[1];
+  /* Встреча считается прошедшей через 3 часа после начала (17:00 → скрывается в 20:00). */
+  function endTime(t) {
+    var h = +t.split(':')[0] + 3;
+    return h >= 24 ? '24:00' : pad(h) + ':' + t.split(':')[1];
+  }
   function addDays(iso, n) {
     var p = iso.split('-'), d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + n));
     return d.getUTCFullYear() + '-' + pad(d.getUTCMonth() + 1) + '-' + pad(d.getUTCDate());
@@ -793,7 +812,9 @@
   var upcoming = [];
   Array.prototype.forEach.call(list.querySelectorAll('.event'), function (li) {
     var date = li.getAttribute('data-date') || '';
-    if (date < now) { li.hidden = true; return; }
+    var showFrom = li.getAttribute('data-show-from') || '';
+    var start = li.getAttribute('data-time') || '';
+    if (date < now || (date === now && start && nowTime >= endTime(start)) || (showFrom && now + ' ' + nowTime < showFrom)) { li.hidden = true; return; }
     var p = date.split('-'), y = +p[0], m = +p[1], d = +p[2];
     var time = li.getAttribute('data-time') || '';
     var lat = li.getAttribute('data-lat'), lng = li.getAttribute('data-lng');
