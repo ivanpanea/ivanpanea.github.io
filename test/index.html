@@ -1,0 +1,1322 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Иван Паня — независимый кандидат, округ № 2, Комрат</title>
+<meta name="description" content="Иван Паня, независимый кандидат в Народное Собрание Гагаузии, округ № 2, мун. Комрат. Выборы 15 ноября 2026.">
+<meta property="og:title" content="Иван Паня — независимый кандидат, округ № 2">
+<meta property="og:description" content="Независимый кандидат в Народное Собрание Гагаузии. Округ № 2 · мун. Комрат. Выборы 15 ноября 2026.">
+<meta property="og:site_name" content="Иван Паня · округ № 2">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:image" content="https://ivanpanea.github.io/img/og-4.jpg">
+<meta property="og:image:secure_url" content="https://ivanpanea.github.io/img/og-4.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Иван Паня — независимый кандидат, округ № 2, Комрат. Электоральный символ «ИП». Голосуй 15 ноября 2026">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://ivanpanea.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Иван Паня — независимый кандидат, округ № 2">
+<meta name="twitter:image" content="https://ivanpanea.github.io/img/og-4.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#012147">
+<link rel="icon" type="image/png" sizes="512x512" href="../img/icon-512.png">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #012147;
+    --navy-2: #0b2d5a;
+    --gold: #d89230;
+    --gold-text: #8a5a0f;
+    --cream: #faf3e8;
+    --ink: #1b2433;
+    --muted: #4a5568;
+    --line: #e6dccb;
+    --bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 400 18px/1.5 "PT Serif", Georgia, serif;
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  }
+  .wrap { max-width: 560px; margin: 0 auto; padding: 0 16px; }
+  h1, h2, h3, .btn, .kicker, .label { font-family: Montserrat, Arial, sans-serif; }
+
+  /* ---------- Шапка ---------- */
+  .hero {
+    display: grid; grid-template-columns: 1fr 50%; column-gap: 6px; row-gap: 0; align-items: end;
+    grid-template-areas: "kick kick" "text photo" "bar bar" "num num";
+  }
+  .kicker {
+    grid-area: kick;
+    display: flex; align-items: center; gap: 10px; justify-content: center;
+    font-size: 14px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase;
+    color: var(--navy); padding: 18px 0 10px;
+  }
+  .kicker::before, .kicker::after { content: ""; flex: 1; height: 1.5px; background: var(--gold); max-width: 60px; }
+  .hero-text { grid-area: text; padding-bottom: 18px; }
+  .hero h1 {
+    margin: 0; font-weight: 900; color: var(--navy);
+    font-size: clamp(36px, 11vw, 58px); line-height: .95; letter-spacing: -.01em;
+  }
+  .label { margin: 10px 0 2px; font-size: 14px; font-weight: 800; letter-spacing: .1em; color: var(--gold-text); text-transform: uppercase; }
+  .district { font-family: Montserrat, Arial, sans-serif; font-weight: 700; font-size: 15px; color: var(--navy); margin: 0; }
+  .logo { display: block; width: 100%; max-width: 210px; height: auto; margin-top: 14px; }
+  .photo { grid-area: photo; width: 100%; height: auto; display: block; }
+  .hero-bar { grid-area: bar; height: 4px; background: var(--gold); }
+
+  .number {
+    grid-area: num;
+    display: flex; align-items: center; gap: 14px;
+    background: var(--navy); color: #fff; padding: 14px 18px; margin-top: 0;
+  }
+  .number .n {
+    display: grid; place-items: center; flex: none; width: 54px; height: 54px; color: var(--gold);
+    border: 1.5px solid var(--gold);
+  }
+  .number .n svg { width: 32px; height: 32px; }
+  .number p { margin: 0; font: 700 15px/1.35 Montserrat, Arial, sans-serif; }
+  .number p span { color: var(--gold); }
+
+  /* ---------- Слоган и видео ---------- */
+  .tagline { margin: 22px 0 0; font: 800 clamp(22px, 6.4vw, 30px)/1.2 Montserrat, Arial, sans-serif; color: var(--navy); text-align: center; }
+  .announce {
+    max-width: 340px; margin: 24px auto 0; padding: 26px 22px 22px; border-radius: 16px; text-align: center;
+    background: var(--navy); color: #fff; border: 3px solid var(--gold);
+    box-shadow: 0 10px 28px rgba(1,33,71,.18);
+  }
+  .announce p { margin: 0; }
+  .a-sym { display: block; width: 100%; max-width: 220px; height: auto; margin: 0 auto 18px; padding: 10px 14px; background: #fff; border-radius: 10px; }
+  .a-kicker { font: 800 15px/1.2 Montserrat, Arial, sans-serif; color: var(--gold); text-transform: uppercase; letter-spacing: .08em; }
+  .a-sub { margin-top: 6px !important; font: 700 15px/1.35 Montserrat, Arial, sans-serif; color: #dfe5ee; }
+  .a-who { margin-top: 12px !important; font: 900 24px/1.1 Montserrat, Arial, sans-serif; text-transform: uppercase; }
+  .a-who small { display: block; margin-bottom: 4px; font-size: 13px; font-weight: 800; letter-spacing: .08em; color: var(--gold); }
+  .a-badge { display: inline-block; margin-top: 14px !important; padding: 7px 16px; border-radius: 999px; background: var(--gold); color: var(--navy);
+    font: 900 18px/1 Montserrat, Arial, sans-serif; text-transform: uppercase; letter-spacing: .06em; }
+  .a-date { margin-top: 14px !important; font: 700 17px/1.2 Montserrat, Arial, sans-serif; }
+  .a-date b { display: block; font-size: 30px; font-weight: 900; text-transform: uppercase; }
+  .a-date span { display: block; margin-top: 4px; color: #dfe5ee; }
+  .a-time { margin: 10px 0 0 !important; font: 900 64px/1 Montserrat, Arial, sans-serif; color: var(--gold); letter-spacing: -.01em; }
+  .a-gather { margin-top: 8px !important; font: 800 17px/1.2 Montserrat, Arial, sans-serif; color: #fff; }
+  .gather { margin: -4px 0 10px; font: 800 15px/1.3 Montserrat, Arial, sans-serif; color: var(--gold-text); }
+  .a-place { margin-top: 16px !important; padding-top: 16px; border-top: 1.5px solid rgba(216,146,48,.55); font: 800 18px/1.35 Montserrat, Arial, sans-serif; }
+  .a-text { margin-top: 10px !important; font-size: 16px; line-height: 1.45; color: #dfe5ee; }
+  .a-btn { display: flex; align-items: center; justify-content: center; min-height: 52px; margin-top: 18px; border-radius: 12px;
+    background: var(--gold); color: var(--navy); text-decoration: none; font: 800 17px/1 Montserrat, Arial, sans-serif; }
+  .a-btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  .a-sign { margin-top: 14px !important; font: 700 15px/1.3 Montserrat, Arial, sans-serif; color: #dfe5ee; }
+  .a-sign b { color: var(--gold); font-weight: 900; }
+
+  /* ---------- Фотоотчёт ---------- */
+  .report-text { max-width: 720px; }
+  .report-text p { margin: 0 0 12px; }
+  .report-text ul { list-style: none; margin: 0 0 12px; padding: 0; }
+  .report-text li { position: relative; padding: 4px 0 4px 22px; }
+  .report-text li::before { content: "◆"; color: var(--gold); position: absolute; left: 0; top: 7px; font-size: 13px; }
+  .report-text b { font-family: Montserrat, Arial, sans-serif; color: var(--navy); font-weight: 800; }
+  .report-thanks { background: var(--cream); border-left: 5px solid var(--gold); padding: 14px 16px; font-weight: 700; }
+  .gallery { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .gallery li.wide { grid-column: 1 / -1; }
+  .gallery li.wide-m { grid-column: 1 / -1; } /* последнее фото без пары — на всю ширину телефона */
+  .gallery a { display: block; border-radius: 10px; overflow: hidden; background: var(--cream); }
+  .gallery a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .gallery img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .2s ease; }
+  .gallery a:hover img { transform: scale(1.03); }
+  .report-video { margin: 18px 0 0; }
+  .report-video video { display: block; width: 100%; max-width: 340px; aspect-ratio: 9 / 16; margin: 0 auto; border-radius: 14px; background: #000; object-fit: cover; }
+  .report-more { margin: 4px 0 0; }
+  .report-more a { display: inline-flex; align-items: center; min-height: 48px; padding: 10px 18px; border-radius: 12px; background: var(--navy); color: #fff; text-decoration: none; font: 800 16px/1.2 Montserrat, Arial, sans-serif; }
+  .report-more a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .vf-date { margin: 0 0 4px; font: 800 14px/1.2 Montserrat, Arial, sans-serif; color: var(--gold-text); text-transform: uppercase; letter-spacing: .06em; }
+  .vf-title { margin: 0 0 10px; font: 900 20px/1.2 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .vf-desc p { margin: 0 0 12px; }
+  .vlist-title { margin: 26px 0 10px; font: 900 17px/1.2 Montserrat, Arial, sans-serif; color: var(--navy); text-transform: uppercase; }
+  .vlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .vcard { display: flex; align-items: center; gap: 14px; padding: 8px; border: 2px solid var(--line); border-radius: 14px; text-decoration: none; color: var(--navy); background: #fff; }
+  .vcard:hover { border-color: var(--gold); }
+  .vcard:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .vcard img { display: block; width: 64px; height: 114px; object-fit: cover; border-radius: 8px; flex: none; background: #000; }
+  .vc-text { display: flex; flex-direction: column; gap: 4px; }
+  .vc-date { font: 800 13px/1.2 Montserrat, Arial, sans-serif; color: var(--gold-text); text-transform: uppercase; letter-spacing: .04em; }
+  .vc-title { font: 800 17px/1.25 Montserrat, Arial, sans-serif; }
+  .vc-now { display: none; font: 800 13px/1 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .vcard.on { border-color: var(--gold); background: var(--cream); }
+  .vcard.on .vc-now { display: inline-block; }
+  .vcard.on .vc-now::before { content: "▶ "; color: var(--gold); }
+
+  /* ---------- Секции ---------- */
+  section { padding: 28px 0 8px; }
+  h2 {
+    margin: 0 0 6px; font-size: 21px; font-weight: 900; color: var(--navy);
+    text-transform: uppercase; letter-spacing: .01em; line-height: 1.15;
+  }
+  .lead { margin: 0 0 18px; color: var(--muted); font-size: 17px; }
+
+  /* ---------- Встречи ---------- */
+  .events { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .events-empty { margin: 0; padding: 16px 18px; background: var(--cream); border-left: 5px solid var(--gold); font: 700 16px/1.45 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .meet { display: grid; grid-template-columns: 96px 1fr; gap: 14px; border: 2px solid var(--navy); border-radius: 12px; overflow: hidden; }
+  .when { background: var(--navy); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 14px 6px; text-align: center; }
+  .when b { font: 900 40px/1 Montserrat, Arial, sans-serif; }
+  .when span { font: 700 14px/1.3 Montserrat, Arial, sans-serif; margin: 4px 0; }
+  .when em { font: 900 18px/1 Montserrat, Arial, sans-serif; color: var(--gold); font-style: normal; }
+  .where { padding: 12px 12px 14px 0; }
+  .where .lbl { margin: 0; font: 800 14px Montserrat, Arial, sans-serif; letter-spacing: .1em; color: var(--gold-text); text-transform: uppercase; }
+  .where .addr { margin: 4px 0 10px; font: 700 16px/1.35 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .maplink { display: inline-flex; align-items: center; min-height: 48px; background: var(--gold); color: var(--navy); text-decoration: none; font: 800 14px Montserrat, Arial, sans-serif; padding: 10px 14px; border-radius: 8px; }
+  .map { display: block; width: 100%; height: 240px; border: 2px solid var(--navy); border-radius: 12px; margin-top: 10px; }
+
+  /* ---------- Кнопки ---------- */
+  .links { display: grid; gap: 12px; }
+  .btn {
+    display: flex; align-items: center; gap: 14px;
+    min-height: 64px; padding: 12px 18px; border-radius: 14px;
+    text-decoration: none; color: #fff; font-weight: 800; font-size: 18px;
+    background: var(--navy); border: 2px solid var(--navy);
+    transition: transform .08s ease, background .15s ease;
+  }
+  .btn:active { transform: scale(.985); }
+  .btn:hover { background: var(--navy-2); }
+  .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .btn svg { width: 30px; height: 30px; flex: none; }
+  .btn .txt { flex: 1; display: flex; flex-direction: column; line-height: 1.15; }
+  .btn small { font-weight: 600; font-size: 14px; opacity: .85; margin-top: 3px; }
+  .btn .arrow { color: var(--gold); font-size: 22px; }
+  .btn-call { background: var(--cream); color: var(--navy); border-color: var(--gold); }
+  .btn-call:hover { background: #f5e9d6; }
+  .btn-viber { background: #fff; color: var(--navy); border-color: #7360F2; }
+  .btn-wa { background: #fff; color: var(--navy); border-color: #25D366; }
+  .btn-tg { background: #fff; color: var(--navy); border-color: #29A9EB; }
+  .btn-viber:hover, .btn-wa:hover, .btn-tg:hover { background: #f6f6fb; }
+
+  /* ---------- Шаги и тезисы ---------- */
+  .steps { background: var(--cream); border-left: 5px solid var(--gold); padding: 18px 18px 6px; margin-top: 8px; }
+  .steps h3 { margin: 0 0 4px; font: 800 17px/1.25 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .steps p { margin: 0 0 14px; color: var(--muted); font-size: 16px; }
+  .steps h3::before { content: "◆ "; color: var(--gold); font-size: 13px; vertical-align: 2px; }
+
+  .theses { list-style: none; margin: 0; padding: 0; counter-reset: t; }
+  .theses > li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid var(--line); }
+  .theses > li:first-child { border-top: 0; }
+  .theses > li::before {
+    counter-increment: t; content: counter(t);
+    width: 40px; height: 40px; display: grid; place-items: center;
+    background: var(--navy); color: var(--gold); font: 900 20px Montserrat, Arial, sans-serif;
+  }
+  .theses h3 { margin: 2px 0 4px; font-size: 15px; font-weight: 800; color: var(--navy); text-transform: uppercase; line-height: 1.25; }
+  .theses p { margin: 0; font-size: 17px; }
+
+  /* ---------- Обо мне ---------- */
+  .about p { margin: 0 0 12px; }
+  .about .goal { background: var(--cream); border-left: 5px solid var(--gold); padding: 14px 16px; }
+
+  /* ---------- Контакты ---------- */
+  .contact ul { list-style: none; margin: 0 0 12px; padding: 0; }
+  .contact li { font: 700 16px/1.4 Montserrat, Arial, sans-serif; color: var(--navy); padding: 4px 0 4px 22px; position: relative; }
+  .contact li::before { content: "◆"; color: var(--gold); position: absolute; left: 0; font-size: 13px; top: 6px; }
+  .contact .phone { display: flex; align-items: center; min-height: 48px; font: 900 clamp(26px, 8vw, 34px)/1.1 Montserrat, Arial, sans-serif; color: var(--navy); text-decoration: none; margin: 0 0 4px; white-space: nowrap; }
+  .contact .ask { margin: 0 0 6px; font: 800 16px/1.35 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .contact-links { margin-top: 12px; }
+
+  /* ---------- Голосование ---------- */
+  .vote { background: var(--navy); color: #fff; margin-top: 30px; padding: 26px 0 28px; }
+  .vote h2 { color: #fff; font-size: 25px; }
+  .vote .date { margin: 4px 0 16px; color: var(--gold); font: 700 15px Montserrat, Arial, sans-serif; }
+  .ballot {
+    display: flex; align-items: center; gap: 10px; background: #fff; color: var(--navy);
+    border: 2px solid var(--gold); padding: 12px 12px;
+  }
+  .ballot .sym { display: block; width: 72px; height: auto; flex: none; }
+  .ballot .who { flex: 1; min-width: 0; font: 900 18px/1.1 Montserrat, Arial, sans-serif; text-transform: uppercase; border-left: 2px solid var(--gold); border-right: 2px solid var(--gold); padding: 0 10px; white-space: nowrap; }
+  .ballot .who small { display: block; font-size: 11px; font-weight: 800; letter-spacing: 0; margin-top: 4px; white-space: normal; }
+  .ballot .check {
+    width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--navy); flex: none;
+    display: grid; place-items: center;
+  }
+  .ballot .check svg { width: 24px; height: 24px; }
+
+  footer { padding: 18px 0 28px; font: 600 14px/1.55 Montserrat, Arial, sans-serif; color: var(--muted); text-align: center; }
+  footer strong { color: var(--ink); }
+
+  /* ---------- Нижняя панель связи ---------- */
+  .dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: grid; grid-template-columns: 1fr repeat(3, 56px); gap: 8px;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); border-top: 1px solid var(--line);
+    box-shadow: 0 -6px 18px rgba(1,33,71,.10); }
+  .dock a { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 56px; border-radius: 14px; text-decoration: none;
+    font: 800 17px/1 Montserrat, Arial, sans-serif; }
+  .dock .call { background: var(--navy); color: #fff; }
+  .dock .call svg { width: 22px; height: 22px; }
+  .dock .ic svg { width: 34px; height: 34px; }
+  .dock .viber { background: #665CAC; }
+  .dock .wa { background: #1DA851; }
+  .dock .tg { background: #229ED9; }
+  .dock a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  @media (max-width: 340px) { .dock { grid-template-columns: 1fr repeat(3, 48px); gap: 6px; } .dock a { font-size: 15px; } }
+  @media (min-width: 600px) {
+    .ballot { gap: 14px; padding: 12px 16px; }
+    .ballot .sym { width: 100px; }
+    .ballot .who { font-size: 20px; padding: 0 14px; }
+    .ballot .who small { font-size: 13px; }
+    .ballot .check { width: 46px; height: 46px; }
+  }
+  @media (min-width: 600px) { .dock { max-width: 560px; margin: 0 auto; border-radius: 16px 16px 0 0; } }
+
+  @media (max-width: 360px) {
+    .hero { grid-template-columns: 1fr 40%; }
+    .ballot { gap: 8px; padding: 10px 8px; }
+    .ballot .sym { width: 58px; }
+    .ballot .who { font-size: 15px; padding: 0 8px; }
+    .ballot .who small { font-size: 10px; }
+    .ballot .check { width: 34px; height: 34px; }
+    .ballot .check svg { width: 18px; height: 18px; }
+  }
+
+
+  /* ---------- Программа ---------- */
+  .program h3 { font-family: Montserrat, Arial, sans-serif; color: var(--navy); }
+  .prog-intro h3 { margin: 0 0 6px; font-size: 19px; font-weight: 900; }
+  .prog-sub { margin: 0 0 10px; padding-left: 12px; border-left: 4px solid var(--gold); font: 800 16px/1.35 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .prog-intro p { margin: 0 0 12px; }
+  .prog-intro b { color: var(--navy); }
+  .pledge { margin: 18px 0 0; padding: 18px 16px 6px; background: var(--cream); border-left: 5px solid var(--gold); }
+  .pledge h3 { margin: 0 0 12px; font-size: 17px; font-weight: 900; text-transform: uppercase; line-height: 1.25; }
+  .pledge-list { list-style: none; margin: 0; padding: 0; counter-reset: pl; }
+  .pledge-list li { position: relative; padding: 10px 0 10px 46px; border-top: 1.5px solid #e9d3ad; }
+  .pledge-list li:first-child { border-top: 0; padding-top: 2px; }
+  .pledge-list li::before {
+    counter-increment: pl; content: counter(pl); position: absolute; left: 0; top: 10px;
+    width: 34px; height: 34px; display: grid; place-items: center;
+    background: var(--navy); color: var(--gold); font: 900 17px Montserrat, Arial, sans-serif;
+  }
+  .pledge-list li:first-child::before { top: 2px; }
+  .pl-when { display: block; font: 900 14px/1.25 Montserrat, Arial, sans-serif; color: var(--navy); text-transform: uppercase; letter-spacing: .02em; }
+  .pl-what { display: block; margin-top: 2px; font-size: 17px; line-height: 1.45; }
+  .pledge-note { margin: 4px 0 12px; padding-top: 12px; border-top: 1.5px solid var(--gold); font-size: 16px; }
+  .pledge-note b { color: var(--navy); }
+
+  .prio-head { margin: 24px 0 10px; font-size: 19px; font-weight: 900; text-transform: uppercase; }
+  .prio { margin: 0 0 10px; border: 2px solid var(--line); border-left: 5px solid var(--navy); border-radius: 0 12px 12px 0; background: #f4f6fb; }
+  .prio[open] { border-color: var(--navy); }
+  .prio summary {
+    display: grid; grid-template-columns: 40px 1fr 22px; gap: 12px; align-items: center;
+    min-height: 64px; padding: 10px 12px; cursor: pointer; list-style: none;
+  }
+  .prio summary::-webkit-details-marker { display: none; }
+  .prio summary::after { content: "+"; font: 900 26px/1 Montserrat, Arial, sans-serif; color: var(--gold); text-align: center; }
+  .prio[open] summary::after { content: "−"; }
+  .prio summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .pn { width: 40px; height: 40px; display: grid; place-items: center; background: var(--navy); color: var(--gold); font: 900 20px Montserrat, Arial, sans-serif; }
+  .pt { font: 900 17px/1.2 Montserrat, Arial, sans-serif; color: var(--navy); text-transform: uppercase; }
+  .pt small { display: block; margin-top: 4px; font: 700 14px/1.3 Montserrat, Arial, sans-serif; color: var(--gold-text); text-transform: none; }
+  .prio ul { list-style: none; margin: 0; padding: 4px 16px 0 16px; border-top: 1.5px solid var(--navy); }
+  .prio li { position: relative; padding: 8px 0 8px 22px; font-size: 17px; line-height: 1.45; }
+  .prio li::before { content: "◆"; color: var(--gold); position: absolute; left: 0; top: 11px; font-size: 13px; }
+  .prio li b { color: var(--navy); }
+  .motto { margin: 4px 16px 14px; font: italic 700 18px/1.35 "PT Serif", Georgia, serif; color: var(--gold-text); }
+  .prio.done { background: var(--cream); border-left-color: var(--gold); }
+  .prio.done .pn { background: var(--gold); color: var(--navy); }
+  .prio dl { margin: 0; padding: 6px 16px 10px; border-top: 1.5px solid var(--gold); }
+  .prio dt { margin-top: 10px; padding-left: 12px; border-left: 4px solid var(--gold); font: 800 16px/1.3 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .prio dd { margin: 4px 0 0; font-size: 17px; line-height: 1.45; }
+
+  .weigh { margin: 18px 0 0; padding: 18px 16px; background: var(--cream); border-left: 5px solid var(--gold); }
+  .weigh h3 { margin: 0 0 8px; font-size: 20px; font-weight: 900; }
+  .weigh p { margin: 0; }
+
+  /* ================= Десктоп ================= */
+  @media (min-width: 900px) {
+    body { padding-bottom: 0; }
+    .dock { display: none; }
+    .wrap { max-width: 1040px; padding: 0 24px; }
+    section { padding: 48px 0 8px; }
+    h2 { font-size: 26px; margin-bottom: 10px; }
+    .lead { max-width: 720px; }
+
+    /* шапка: слева текст и номер, справа фото на золотой полосе */
+    .hero {
+      grid-template-columns: 1fr 1fr; column-gap: 48px;
+      grid-template-areas: "kick photo" "text photo" "num photo" "bar bar";
+      grid-template-rows: auto auto 1fr auto;
+    }
+    .kicker { justify-content: flex-start; align-self: start; padding: 40px 0 18px; font-size: 15px; }
+    .kicker::before { display: none; }
+    .kicker::after { max-width: 80px; }
+    .hero-text { align-self: start; padding-bottom: 28px; }
+    .hero h1 { font-size: 78px; }
+    .label { margin-top: 18px; font-size: 16px; }
+    .district { font-size: 18px; }
+    .logo { max-width: 260px; margin-top: 22px; }
+    .number { align-self: end; padding: 18px 22px; }
+    .number .n { width: 64px; height: 64px; }
+    .number .n svg { width: 38px; height: 38px; }
+    .number p { font-size: 18px; }
+    .photo { align-self: end; justify-self: center; max-width: 500px; }
+
+    /* слоган + анонс встречи */
+    .promo {
+      display: grid; grid-template-columns: 1fr 380px; column-gap: 64px; align-items: center;
+      grid-template-areas: "tag ann"; padding-top: 48px;
+    }
+    .tagline { grid-area: tag; margin: 0; text-align: left; font-size: 44px; line-height: 1.15; }
+    .announce { grid-area: ann; max-width: none; margin: 0; }
+
+    /* встречи: карточка и карта рядом */
+    .meet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+    .events, .events-empty { grid-column: 1; align-self: start; }
+    .map { grid-column: 2; grid-row: 1 / span 2; margin-top: 0; height: 100%; min-height: 280px; }
+    .meet { grid-template-columns: 120px 1fr; gap: 20px; min-height: 180px; }
+    .when b { font-size: 48px; }
+    .where { padding: 18px 18px 18px 0; }
+    .where .addr { font-size: 19px; }
+
+    /* фотоотчёт: текст и видео рядом, фото 3 в ряд, первое крупно */
+    .report-top { display: grid; grid-template-columns: 1fr 340px; column-gap: 56px; align-items: start; }
+    .report-video { margin: 0; }
+    .vf-title { font-size: 26px; }
+    .vlist { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+    .gallery { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .gallery li.wide { grid-column: span 2; grid-row: span 2; }
+    .gallery li.wide img { height: 100%; }
+    .gallery li.wide-m { grid-column: auto; }
+
+    /* шаги и тезисы рядом */
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .cols .lead { max-width: none; }
+
+    /* программа: слева «родной округ» и «моё слово», справа приоритеты */
+    .prog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .prio-head { margin-top: 0; }
+    .pledge { padding: 22px 22px 8px; }
+    .weigh { margin-top: 28px; padding: 22px 26px; }
+
+    /* соцсети сеткой 2×2 */
+    .social { grid-template-columns: 1fr 1fr; max-width: 820px; }
+
+    /* обо мне */
+    .about { max-width: 720px; }
+
+    /* контакты: слева телефон, справа кнопки 2×2 */
+    .contact-grid { display: grid; grid-template-columns: 4fr 7fr; gap: 28px; align-items: start; }
+    .contact-links { margin-top: 8px; }
+    .contact-links .btn { padding: 12px 14px; gap: 10px; font-size: 17px; }
+
+    /* голосование: полоса на всю ширину, бюллетень по центру */
+    .vote { margin-top: 64px; padding: 48px 0 52px; text-align: center; }
+    .vote h2 { font-size: 34px; }
+    .vote .date { font-size: 17px; margin-bottom: 22px; }
+    .ballot { max-width: 620px; margin: 0 auto; text-align: left; gap: 20px; padding: 14px 20px; }
+    .ballot .sym { width: 130px; }
+    .ballot .who { font-size: 24px; padding: 0 20px; }
+    .ballot .who small { font-size: 14px; }
+    footer { padding: 24px 24px 40px; }
+  }
+  /* кнопки контактов сеткой 2×2 — когда хватает ширины, чтобы подписи не переносились */
+  @media (min-width: 1100px) {
+    .contact-links { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div style="background:#d89230;color:#012147;text-align:center;font:800 14px/1.3 Montserrat,Arial,sans-serif;padding:8px 12px">ТЕСТОВАЯ ВЕРСИЯ · не для публикации</div>
+<header>
+  <div class="wrap hero">
+    <div class="kicker">Выборы в Народное Собрание Гагаузии</div>
+    <div class="hero-text">
+      <h1>Иван<br>Паня</h1>
+      <p class="label">Независимый кандидат</p>
+      <p class="district">Округ № 2 · мун. Комрат</p>
+      <img class="logo" src="../img/logo.png" alt="Логотип ИП" width="900" height="398">
+    </div>
+    <img class="photo" src="../img/ivan-panea.jpg" alt="Иван Паня" width="720" height="777">
+    <div class="hero-bar"></div>
+    <div class="number">
+      <span class="n"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <p>Голосуй за Ивана Паню!<br><span>Выборы в Народное Собрание · 15 ноября 2026</span></p>
+    </div>
+  </div>
+  <div class="wrap promo">
+    <p class="tagline">Работа депутата начинается рядом с жителями Гагаузии</p>
+    <!-- Анонс ближайшей встречи. Данные берутся сами из списка «Встречи с жителями» ниже
+         (ближайшая актуальная встреча); метка «Сегодня» / «Завтра» ставится по дате, после встречи
+         карточка скрывается. Здесь править ничего не нужно — только добавлять встречи в список.
+         Видео о дебатах сохранено в video/ivan-panea-debaty-720.mp4 (обложка img/video-poster.jpg),
+         его можно вернуть сюда блоком <div class="video"><video …></div>. -->
+    <article class="announce" aria-labelledby="announce-title">
+      <img class="a-sym" src="../img/logo.png" alt="Электоральный символ «ИП»" width="900" height="398">
+      <p class="a-kicker" id="announce-title">Встреча с избирателями</p>
+      <p class="a-sub">кандидата в депутаты от округа №&nbsp;2</p>
+      <p class="a-who"><small>Независимый кандидат</small>Паня Иван</p>
+      <p class="a-badge" hidden>Сегодня</p>
+      <p class="a-date"><b>31 октября</b><span>суббота</span></p>
+      <p class="a-time">16:00</p>
+      <p class="a-gather" hidden></p>
+      <p class="a-place">Угол улиц Гоголя и Чкалова, у трансформатора</p>
+      <p class="a-text">Приходите, поговорим о проблемах района. Задайте вопросы и расскажите, что нужно исправить.</p>
+      <a class="a-btn" data-track="maps-announce" href="https://www.google.com/maps/search/?api=1&amp;query=46.293212,28.645370" target="_blank" rel="noopener">Как добраться ›</a>
+      <p class="a-sign"><b>Голосуй</b> за Ивана Паню · 15 ноября</p>
+    </article>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="program" aria-labelledby="program">
+    <h2 id="program">Моя предвыборная программа</h2>
+    <p class="lead">Пять приоритетов и конкретные сроки. Нажмите на пункт, чтобы прочитать подробнее.</p>
+    <div class="prog-grid">
+    <div class="prog-col">
+      <div class="prog-intro">
+        <h3>Это мой родной округ</h3>
+        <p class="prog-sub">Вы меня знаете. Я здесь вырос, здесь живу и буду жить.</p>
+        <p>Мы уже встречались на ваших улицах. Мне 29 лет, я юрист, три года работаю в совете Комрата и иду независимым кандидатом. Я женат: с супругой Мариной мы строим семью здесь.</p>
+        <p><b>Скажу честно:</b> депутат — не примар, приказать сделать дорогу не может. Но может использовать законы и механизмы, чтобы добиваться решений. Он пишет законы и контролирует власть. Сказок не рассказываю, говорю о том, что реально можно сделать.</p>
+      </div>
+      <div class="pledge">
+        <h3>Моё слово жителям округа №&nbsp;2</h3>
+        <ol class="pledge-list">
+          <li><span class="pl-when">В первый месяц после избрания</span><span class="pl-what">открою кабинет депутата Народного Собрания в нашем округе для бесплатной юридической помощи жителям.</span></li>
+          <li><span class="pl-when">В первые 3&nbsp;месяца</span><span class="pl-what">внесу закон о социальном транспорте.</span></li>
+          <li><span class="pl-when">К первому бюджету</span><span class="pl-what">внесу поправки о помощи в холодный период: с 400 до 2&nbsp;000 леев.</span></li>
+          <li><span class="pl-when">В первый год</span><span class="pl-what">внесу законы: о фонде помощи онко- и тяжелобольным, о Молодёжном Народном Собрании.</span></li>
+          <li><span class="pl-when">После каждого заседания</span><span class="pl-what">буду отчитываться: как проголосовал и почему.</span></li>
+          <li><span class="pl-when">Регулярно</span><span class="pl-what">буду встречаться с жителями и отчитываться перед вами: что уже сделал, что ещё не сделал и почему.</span></li>
+        </ol>
+        <p class="pledge-note"><b>Я умею добиваться.</b> В совете Комрата 27 человек, и большинство прислушивалось ко мне: мои инициативы поддерживали, и мы их реализовывали. Этот опыт я использую и в Народном Собрании.</p>
+      </div>
+    </div>
+    <div class="prog-col">
+      <h3 class="prio-head">Пять моих приоритетов</h3>
+      <details class="prio" data-track="program-1">
+        <summary><span class="pn">1</span><span class="pt">Наш округ<small>кабинет депутата, дороги, экология</small></span></summary>
+        <ul>
+          <li><b>Открою кабинет депутата Народного Собрания в нашем округе:</b> бесплатная юридическая помощь, приём заявлений, запросов и жалоб.</li>
+          <li><b>Вместе с советниками округа:</b> объединю советников, закреплённых за округом, приду на заседания совета и вместе решим проблемы округа.</li>
+          <li><b>Дороги и тротуары:</b> добиваться денег для округа и контроля качества ремонтов.</li>
+          <li><b>Бродячие собаки:</b> безопасность людей и забота о животных. Больше питомников по всей Гагаузии, помощь примэриям.</li>
+          <li><b>Экология:</b> чистые улицы, колодцы и родники. Привлекать экологические фонды и помогать примэриям.</li>
+        </ul>
+        <p class="motto">Если ты не рядом, грош тебе цена.</p>
+      </details>
+      <details class="prio" data-track="program-2">
+        <summary><span class="pn">2</span><span class="pt">Защита автономии<small>полномочия и гагаузский язык</small></span></summary>
+        <ul>
+          <li><b>Когда наши полномочия забирали, я брал флаг и шёл впереди.</b> Депутат должен так же защищать полномочия.</li>
+          <li><b>Не допустить потери полномочий:</b> следить за каждым законопроектом Парламента, восстанавливать прежние полномочия и добиваться новых.</li>
+          <li><b>Наши языки:</b> по Уложению Гагаузии гагаузский, русский и молдавский равны. Особая забота — о гагаузском языке.</li>
+        </ul>
+        <p class="motto">Не будет жителей — не будет автономии.</p>
+      </details>
+      <details class="prio" data-track="program-3">
+        <summary><span class="pn">3</span><span class="pt">Забота о людях<small>социальный транспорт, помощь с 400 до 2&nbsp;000 леев в холодный период, фонд помощи онко- и тяжелобольным</small></span></summary>
+        <ul>
+          <li><b>Социальный транспорт:</b> законодательная инициатива — правовые условия для организации и поддержки бесплатного социального транспорта уязвимым категориям населения.</li>
+          <li><b>Помощь в холодный период:</b> законодательная инициатива об увеличении ежемесячной помощи с 400 до 2&nbsp;000 леев для установленных законом категорий семей.</li>
+          <li><b>Фонд помощи онко- и тяжелобольным:</b> дополнительная реальная помощь на лечение, операции и лекарства. Я видел, как тяжело было моей бабушке.</li>
+        </ul>
+        <p class="motto">Вы работали всю жизнь на благо всех нас. Теперь наша очередь.</p>
+      </details>
+      <details class="prio" data-track="program-4">
+        <summary><span class="pn">4</span><span class="pt">Молодые семьи и работа<small>земля, жильё, молодой бизнес</small></span></summary>
+        <ul>
+          <li><b>Земля и жильё:</b> цены на участки такие, что кровь стынет в жилах. Добиваться участков молодым семьям и социального жилья молодым специалистам.</li>
+          <li><b>Патенты:</b> обеспечить их работу на территории Гагаузии.</li>
+          <li><b>Молодой бизнес:</b> законы есть, но нужны дополнительные условия и реальная помощь молодым предпринимателям.</li>
+          <li><b>Молодёжное Народное Собрание Гагаузии:</b> голос молодёжи на уровне автономии. Помощь талантливым школьникам и студентам.</li>
+        </ul>
+        <p class="motto">Чтобы наши дети жили здесь и не уезжали.</p>
+      </details>
+      <details class="prio" data-track="program-5">
+        <summary><span class="pn">5</span><span class="pt">Власть должна отвечать<small>контроль и проверки</small></span></summary>
+        <ul>
+          <li><b>Ответы чиновников по существу и в срок.</b> Бюджет простыми словами: откуда деньги и куда ушли.</li>
+          <li><b>Контроль власти:</b> проводить аудиты и повышать эффективность работы.</li>
+        </ul>
+        <p class="motto">Закон должен работать на людей, а не против них.</p>
+      </details>
+      <details class="prio done" data-track="program-done">
+        <summary><span class="pn" aria-hidden="true">✓</span><span class="pt">Что уже сделано за 3 года в совете<small>проезд детям, питание в садиках, пастбища, премии олимпиадникам и другое</small></span></summary>
+        <dl>
+          <dt>Проезд детям: с 5 до 3 леев</dt>
+          <dd>Когда подняли цену на маршрутки, я спорил с советом. Добился снижения цены проезда для детей от 7 до 12 лет: с 5 до 3 леев.</dd>
+          <dt>Сохранили питание и поваров в детских садах</dt>
+          <dd>Я сам ходил в девятый садик и бегал за добавкой. Когда пришла фирма и решила всё поменять, мы с коллегами и родителями сохранили и питание, и наших поваров.</dd>
+          <dt>Мораторий на продажу пастбищных земель</dt>
+          <dd>Защищаю фермеров и животноводов: инициировал мораторий на продажу пастбищных земель.</dd>
+          <dt>Муниципальные премии школьникам-олимпиадникам</dt>
+          <dd>Разработал Положение о муниципальных премиях детям — победителям олимпиад. Положение принято.</dd>
+          <dt>Бесплатные юридические консультации</dt>
+          <dd>Как юрист бесплатно консультирую: заявления и запросы в примэрию, совет и другие органы власти, какие документы и куда подавать, обжалование решений, вплоть до международных инстанций.</dd>
+          <dt>Отчёты, запросы, ответы</dt>
+          <dd>Требовал отчёты, направлял запросы и добивался ответов.</dd>
+          <dt>Ни одного пропущенного заседания</dt>
+          <dd>За три года не пропустил ни одного заседания. Когда люди голосуют на выборах, они берут нас на работу.</dd>
+          <dt>Работа по всему городу и в нашем округе</dt>
+          <dd>Вместе с муниципальным советом мы проделали огромную работу по всему городу и в нашем округе тоже, и вы это видите.</dd>
+        </dl>
+      </details>
+    </div>
+    </div>
+    <div class="weigh">
+      <h3>Взвесьте и выберите лучшего!</h3>
+      <p>Перед тем как 15 ноября пойти проголосовать, поставьте кандидатов на весы. На одну чашу — обещания, на другую — дела. Вы знаете меня. Вы знаете мои заслуги. Я по-настоящему независимый: я иду от жителей нашего округа.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="videos">
+    <h2 id="videos">Видео</h2>
+    <!-- Как добавить видео: положить mp4 (720p) в video/, обложку 540×960 в img/, затем скопировать
+         блок <li> в списке «Все видео» и поставить его ПЕРВЫМ; в главный плеер вверху перенести
+         те же src, poster, data-track, дату, заголовок и текст. Не вертикальному ролику (не 9:16)
+         добавить карточке data-ratio="ширина / высота", а плееру — тот же style="aspect-ratio: …". Остальное работает само. -->
+    <div class="report-top vfeature">
+    <div class="report-text">
+      <p class="vf-date">9 ноября</p>
+      <h3 class="vf-title">Не с обещаниями — с инструментами</h3>
+      <div class="vf-desc">
+          <p class="lead">Встреча с жителями на углу Федько — Невского, на закате.</p>
+          <p>Человек идёт на работу с сумкой инструментов. Мои инструменты — уже написанные законы. Я не обещаю золотые замки, я говорю о реальных вещах, которые может сделать депутат.</p>
+          <p>Дом строят с фундамента, и каждую инициативу тоже. А программу я писал сам, на улицах, от дома к дому. Каждая буковка в ней — моя работа.</p>
+          <p class="report-thanks">Спасибо всем, кто пришёл и выслушал.</p>
+      </div>
+    </div>
+    <figure class="report-video">
+      <video controls playsinline preload="none" poster="../img/vstrecha-fedko-nevskogo-poster.jpg" data-track="video-meeting-fedko-nevskogo" aria-label="Видео: Не с обещаниями — с инструментами">
+        <source src="../video/vstrecha-fedko-nevskogo-720.mp4" type="video/mp4">
+      </video>
+    </figure>
+    </div>
+    <h3 class="vlist-title">Все видео</h3>
+    <ul class="vlist">
+        <li>
+          <a class="vcard on" href="../video/vstrecha-fedko-nevskogo-720.mp4" data-video="meeting-fedko" data-src="../video/vstrecha-fedko-nevskogo-720.mp4" data-poster="../img/vstrecha-fedko-nevskogo-poster.jpg" data-track="video-meeting-fedko-nevskogo" data-title="Не с обещаниями — с инструментами" data-date="9 ноября" aria-current="true">
+            <img src="../img/vstrecha-fedko-nevskogo-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">9 ноября</span><span class="vc-title">Не с обещаниями — с инструментами</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Встреча с жителями на углу Федько — Невского, на закате.</p>
+          <p>Человек идёт на работу с сумкой инструментов. Мои инструменты — уже написанные законы. Я не обещаю золотые замки, я говорю о реальных вещах, которые может сделать депутат.</p>
+          <p>Дом строят с фундамента, и каждую инициативу тоже. А программу я писал сам, на улицах, от дома к дому. Каждая буковка в ней — моя работа.</p>
+          <p class="report-thanks">Спасибо всем, кто пришёл и выслушал.</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="../video/programma-sroki-720.mp4" data-video="programma" data-src="../video/programma-sroki-720.mp4" data-poster="../img/programma-sroki-poster.jpg" data-track="video-programma-sroki" data-title="Программа с конкретными сроками" data-date="5 ноября">
+            <img src="../img/programma-sroki-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">5 ноября</span><span class="vc-title">Программа с конкретными сроками</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Моя программа — с конкретными сроками, а не с обещаниями с потолка.</p>
+          <p>Писал её не в кабинете, а на встречах с вами.</p>
+          <p>Ищите её в своих почтовых ящиках и прочитайте!</p>
+          <p class="report-thanks">15 ноября — Иван Паня, округ №&nbsp;2, последняя строчка в бюллетене, символ «ИП».</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="../video/vstrecha-2026-11-04-720.mp4" data-video="meeting-04-11" data-src="../video/vstrecha-2026-11-04-720.mp4" data-poster="../img/vstrecha-2026-11-04-poster.jpg" data-track="video-meeting-2026-11-04" data-title="Кабинет депутата — в нашем округе" data-date="4 ноября">
+            <img src="../img/vstrecha-2026-11-04-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">4 ноября</span><span class="vc-title">Кабинет депутата — в нашем округе</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">В самом начале своей предвыборной кампании я сказал: первым делом открою кабинет депутата прямо в нашем округе. Чтобы вы знали, где найти своего депутата, могли прийти с проблемой, за юридической помощью и потребовать отчёт.</p>
+          <p>И вот что интересно: эту идею уже подхватывают кандидаты по всей Гагаузии. Мне это нравится. Если копируют, значит, идея хорошая.</p>
+          <p>Спасибо жителям колхозных домов по Шевченко за тёплую встречу, несмотря на холод, и за честный вопрос: «Куда исчезают депутаты после выборов?» Я исчезать не собираюсь. В первый месяц после избрания кабинет будет в самом центре нашего округа.</p>
+          <p class="report-thanks">Выборы — 15 ноября. Иван Паня, независимый кандидат, округ №&nbsp;2, последняя строчка в бюллетене.</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="../video/vstrecha-2026-11-01-720.mp4" data-video="meeting-01-11" data-src="../video/vstrecha-2026-11-01-720.mp4" data-poster="../img/vstrecha-2026-11-01-poster.jpg" data-track="video-meeting-2026-11-01" data-title="Встреча во дворе «Кабельного»" data-date="1 ноября">
+            <img src="../img/vstrecha-2026-11-01-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">1 ноября</span><span class="vc-title">Встреча во дворе «Кабельного»</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Кому-то мандат — это кресло на годы. Мне — работа, которую нужно делать каждый день.</p>
+          <p>За три года в совете я не пропустил ни одного заседания. Если не тянешь эту ношу — сдай мандат, пусть придёт другой человек.</p>
+          <p>Особенно тронули слова моей школьной учительницы. Спасибо вам за всё, чему вы меня научили.</p>
+          <p>Спасибо жителям «Кабельного» за тёплую встречу!</p>
+          <p class="report-thanks">Выборы — 15 ноября. Иван Паня, независимый кандидат, округ №&nbsp;2, нижняя строчка в бюллетене.</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="../video/vstrecha-2026-10-31-720.mp4" data-video="meeting-31" data-src="../video/vstrecha-2026-10-31-720.mp4" data-poster="../img/vstrecha-2026-10-31-poster.jpg" data-track="video-meeting-2026-10-31" data-title="Встреча на углу Гоголя и Чкалова" data-date="31 октября">
+            <img src="../img/vstrecha-2026-10-31-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">31 октября</span><span class="vc-title">Встреча на углу Гоголя и Чкалова</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Какая отличная встреча у нас прошла на углу Гоголя и Чкалова! Живой, позитивный разговор, вопросы и ответы.</p>
+          <p>Мы так увлеклись общением, что даже не заметили, как стемнело.</p>
+          <p>Людям было интересно слушать, как я без сложных терминов, доступным языком рассказываю, как работает система, что может сделать депутат и каким он должен быть. Вопросы задавали прямо, без прикрас. Спасибо вам, дорогие жители, за такой тёплый приём!</p>
+          <p>Народному собранию нужны специалисты, которые умеют и хотят работать рядом с людьми и вместе с советниками своего округа. Именно так я и намерен работать.</p>
+          <p>А один житель предупредил, что зайдёт ко мне, когда выиграю. Без проблем! Договорились и пожали руки.</p>
+          <p class="report-thanks">Выборы: 15 ноября. Иван Паня, независимый кандидат, округ №&nbsp;2, нижняя строчка в бюллетене.</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="../video/kazhdyi-den-sredi-lyudei-720.mp4" data-video="walk-30" data-src="../video/kazhdyi-den-sredi-lyudei-720.mp4" data-poster="../img/kazhdyi-den-sredi-lyudei-poster.jpg" data-track="video-walk-2026-10-30" data-title="Каждый день — среди людей" data-date="30 октября">
+            <img src="../img/kazhdyi-den-sredi-lyudei-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">30 октября</span><span class="vc-title">Каждый день — среди людей</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Каждый день я хожу по улицам нашего округа и общаюсь с людьми.</p>
+          <p>Кто-то делится наболевшим, кто-то просто скажет доброе слово, и я чувствую невероятную поддержку. Хочу поделиться с вами частью этих добрых встреч.</p>
+          <p class="report-thanks">Спасибо вам за тепло! Выборы — 15 ноября. Иван Паня, независимый кандидат, округ №&nbsp;2, нижняя строчка в бюллетене.</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="../video/vstrecha-2026-10-29-720.mp4" data-video="meeting-29" data-src="../video/vstrecha-2026-10-29-720.mp4" data-poster="../img/vstrecha-2026-10-29-poster.jpg" data-track="video-meeting-2026-10-29" data-title="Днём, вечером, а если надо — и ночью" data-date="29 октября">
+            <img src="../img/vstrecha-2026-10-29-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">29 октября</span><span class="vc-title">Днём, вечером, а если надо — и ночью</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Кому-то депутатское кресло кажется удобным. Мне — тяжёлой работой, которую надо делать.</p>
+          <p>Пока одни идут защищать свой бизнес, я иду к вам. Днём, вечером, а если надо — и ночью.</p>
+          <p class="report-thanks">15 ноября голосуйте за Ивана Паню. Ищите в конце списка — символ «ИП».</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="../video/vstrecha-2026-10-28-720.mp4" data-video="meeting-28" data-src="../video/vstrecha-2026-10-28-720.mp4" data-poster="../img/vstrecha-2026-10-28-poster.jpg" data-track="video-meeting-2026-10-28" data-title="Поставьте кандидатов на весы" data-date="28 октября">
+            <img src="../img/vstrecha-2026-10-28-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">28 октября</span><span class="vc-title">Поставьте кандидатов на весы</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Перед 15 ноября поставьте кандидатов на весы: кто имеет опыт, кто умеет работать с людьми и писать законы.</p>
+          <p>Я уважаю каждого оппонента, но депутатом должен стать тот, кто знает, как работать, и вместе с сильными кандидатами защитит Гагаузскую автономию.</p>
+          <p class="report-thanks">Спасибо всем, кто пришёл на встречу на Суворова – Галацана!</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="../video/malyi-biznes-720.mp4" data-video="small-business" data-src="../video/malyi-biznes-720.mp4" data-poster="../img/malyi-biznes-poster.jpg" data-track="video-small-business" data-title="Малый бизнес — хлеб каждой гагаузской семьи" data-date="26 октября">
+            <img src="../img/malyi-biznes-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">26 октября</span><span class="vc-title">Малый бизнес — хлеб каждой гагаузской семьи</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Рынок, магазин, своё дело — так живут наши сёла. На дебатах ГРТ я сказал прямо: закон о патенте нужно продлевать каждый год, а молодых предпринимателей — не бросать один на один с налогами.</p>
+          <p class="report-thanks">Меньше налогов. Помощь с бухгалтерией. Поддержка, которая работает.</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="../video/vstrecha-2026-10-25-720.mp4" data-video="meeting-25" data-src="../video/vstrecha-2026-10-25-720.mp4" data-poster="../img/vstrecha-2026-10-25-poster.jpg" data-track="video-meeting-2026-10-25" data-title="Встреча с жителями улиц Кутузова и Чкалова" data-date="25 октября">
+            <img src="../img/vstrecha-2026-10-25-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">25 октября</span><span class="vc-title">Встреча с жителями улиц Кутузова и Чкалова</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Встреча с жителями улиц Кутузова и Чкалова — ещё один открытый и искренний разговор о том, что действительно волнует людей.</p>
+          <p>Обсудили конкретные вопросы: социальный транспорт, помощь нуждающимся, защиту полномочий Гагаузии и ответственность депутатов перед избирателями.</p>
+          <p>Я живу в этом городе, знаю его проблемы и убеждён: важно не просто слушать людей, а слышать их и добиваться реальных решений.</p>
+          <p>Комрат — мой дом. И мне небезразлично, каким будет его будущее.</p>
+          <p>Для меня главное — оставаться рядом с людьми не только перед выборами, но и после них.</p>
+          <p class="report-thanks">Меньше обещаний — больше реальных дел!</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="../video/kabinet-molodezhnyi-parlament-720.mp4" data-video="kabinet" data-src="../video/kabinet-molodezhnyi-parlament-720.mp4" data-poster="../img/kabinet-molodezhnyi-parlament-poster.jpg" data-ratio="720 / 634" data-track="video-kabinet-molodezhnyi-parlament" data-title="Рядом с людьми, а не только во время выборов" data-date="25 октября">
+            <img src="../img/kabinet-molodezhnyi-parlament-poster.jpg" alt="" width="720" height="634" loading="lazy">
+            <span class="vc-text"><span class="vc-date">25 октября</span><span class="vc-title">Рядом с людьми, а не только во время выборов</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Депутат должен быть рядом с людьми, а не только во время выборов!</p>
+          <p>Одна из моих инициатив — открытие кабинета депутата в округе №&nbsp;2, где каждый сможет обратиться ко мне, получить бесплатную юридическую помощь и поддержку в решении своих вопросов.</p>
+          <p>Ещё одна важная для меня цель — создание Молодёжного парламента Гагаузии. Законопроект уже подготовлен, и я намерен добиваться его реализации.</p>
+          <p>Я помогаю людям уже сегодня и хочу продолжать эту работу.</p>
+          <p class="report-thanks">Для меня депутатство — это не должность, а ответственность перед людьми, среди которых я живу.</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="../video/socialnyi-transport-720.mp4" data-video="transport" data-src="../video/socialnyi-transport-720.mp4" data-poster="../img/socialnyi-transport-poster.jpg" data-track="video-social-transport" data-title="Социальный транспорт: мой ответ" data-date="23 октября">
+            <img src="../img/socialnyi-transport-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">23 октября</span><span class="vc-title">Социальный транспорт: мой ответ</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">На дебатах ГРТ прозвучало, что социальный транспорт «признали незаконным». Ответить в эфире мне не дали, поэтому отвечаю сейчас.</p>
+          <p>Нет ни одного решения суда о запрете. Были остановки на дорогах, снятые номера и штрафы, которые суды потом отменяли. Без этого автобуса остались пенсионеры, люди с инвалидностью и многодетные семьи.</p>
+          <p class="report-thanks">Помощь людям должна быть защищена законом, и я его инициирую.</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="../video/vstrecha-2026-10-22-720.mp4" data-video="meeting" data-src="../video/vstrecha-2026-10-22-720.mp4" data-poster="../img/vstrecha-2026-10-22-poster.jpg" data-track="video-meeting-2026-10-22" data-title="Встреча с избирателями" data-date="22 октября">
+            <img src="../img/vstrecha-2026-10-22-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">22 октября</span><span class="vc-title">Встреча с избирателями</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Даже несмотря на дождь, люди вышли.</p>
+          <p>Первая встреча с жителями округа № 2. Говорили открыто: о поддержке пенсионеров, людей с инвалидностью, молодёжи и семей, о сильных законах, о кабинете депутата в нашем округе и о том, чтобы наши дети жили здесь, а не уезжали.</p>
+          <p class="report-thanks">Спасибо каждому, кто пришёл! Встречи продолжаются.</p>
+          </div>
+        </li>
+        <li>
+          <a class="vcard" href="../video/ivan-panea-debaty-720.mp4" data-video="debates" data-src="../video/ivan-panea-debaty-720.mp4" data-poster="../img/video-poster.jpg" data-track="video-debates-announce" data-title="Анонс дебатов на ГРТ" data-date="21 октября">
+            <img src="../img/video-poster.jpg" alt="" width="540" height="960" loading="lazy">
+            <span class="vc-text"><span class="vc-date">21 октября</span><span class="vc-title">Анонс дебатов на ГРТ</span><span class="vc-now">Сейчас на экране</span></span>
+          </a>
+          <div class="vc-desc" hidden>
+          <p class="lead">Приглашение на дебаты кандидатов в эфире ГРТ 21 октября.</p>
+          <p>19:00 — радио GRT FM, 20:00 — телеканал TV-Găgăuzia.</p>
+          </div>
+        </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="report-09-11s">
+    <h2 id="report-09-11s">Встреча в гимназии имени С.&nbsp;Курогло · 9 ноября</h2>
+    <p class="lead">Побывал в своей школе, гимназии имени С.&nbsp;Курогло. Здесь я учился.</p>
+    <div class="report-text">
+      <p>Встретился с педагогическим коллективом и представил свою программу. Для меня образование и молодёжь остаются одним из главных приоритетов.</p>
+      <p>Спасибо за тёплый приём.</p>
+      <p class="report-thanks">15 ноября. Округ №&nbsp;2. Иван Паня</p>
+    </div>
+    <ul class="gallery" aria-label="Фотографии из гимназии имени С. Курогло, 9 ноября">
+        <li class="wide"><a href="../img/photos/2026-11-09s-01.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 60%" src="../img/photos/2026-11-09s-01-sm.jpg" alt="Педагоги гимназии за столом с листовками, Иван Паня выступает в глубине зала" width="600" height="800" loading="eager"></a></li>
+        <li><a href="../img/photos/2026-11-09s-02.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 50%" src="../img/photos/2026-11-09s-02-sm.jpg" alt="Две учительницы вместе читают программу Ивана Пани" width="600" height="800" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-09s-03.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 35%" src="../img/photos/2026-11-09s-03-sm.jpg" alt="Иван Паня рассказывает о программе педагогическому коллективу" width="600" height="800" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-09s-04.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 45%" src="../img/photos/2026-11-09s-04-sm.jpg" alt="Учительницы изучают листовку с программой" width="600" height="800" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-09s-05.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 50%" src="../img/photos/2026-11-09s-05-sm.jpg" alt="Педагогический коллектив за длинным столом слушает кандидата" width="600" height="800" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-09s-06.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 50%" src="../img/photos/2026-11-09s-06-sm.jpg" alt="Учителя читают программу и делают пометки" width="600" height="800" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-09s-07.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 60%" src="../img/photos/2026-11-09s-07-sm.jpg" alt="Педагоги в зале гимназии" width="600" height="800" loading="lazy"></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="report-09-11">
+    <h2 id="report-09-11">Встреча в детском саду «Сказка» · 9 ноября</h2>
+    <p class="lead">Сегодня был в детском саду №&nbsp;9 «Сказка». Это мой родной сад, здесь я вырос.</p>
+    <div class="report-text">
+      <p>Встретился с коллективом, представил свою программу. Рассказал, что буду делать как депутат: защищать автономию, добиваться, чтобы закон работал одинаково для всех, заниматься дорогами, поддержкой молодёжи и семей.</p>
+      <p>Почувствовал поддержку. Спасибо за разговор.</p>
+      <p>Работа депутата начинается рядом с жителями.</p>
+      <p class="report-thanks">15 ноября. Округ №&nbsp;2. Иван Паня</p>
+    </div>
+    <ul class="gallery" aria-label="Фотографии из детского сада «Сказка», 9 ноября">
+        <li class="wide"><a href="../img/photos/2026-11-09-01.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-09-01-sm.jpg" alt="Иван Паня говорит с коллективом детского сада «Сказка»" width="800" height="600" loading="eager"></a></li>
+        <li><a href="../img/photos/2026-11-09-02.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-09-02-sm.jpg" alt="Иван Паня выступает у флагов Молдовы и Гагаузии в зале детского сада" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-09-03.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-09-03-sm.jpg" alt="Воспитатели слушают, одна держит листовку с программой" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-09-04.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-09-04-sm.jpg" alt="Зал детского сада: коллектив слушает кандидата" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-09-05.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-09-05-sm.jpg" alt="Сотрудницы сада внимательно слушают" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-09-06.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-09-06-sm.jpg" alt="Воспитатели читают программу кандидата" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-09-07.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-09-07-sm.jpg" alt="Сотрудницы детского сада у стены с рисунками" width="800" height="600" loading="lazy"></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="report-04-11">
+    <h2 id="report-04-11">Встреча с избирателями · 4 ноября</h2>
+    <p class="lead">Вечер, холод, а люди вышли и стояли с нами до конца. Спасибо вам, дорогие жители колхозных домов на Шевченко!</p>
+    <div class="report-text">
+      <p>Говорили о самом важном:</p>
+      <ul>
+        <li>Кабинет депутата в нашем округе.</li>
+        <li>Колодцы и родники.</li>
+        <li>Жильё для молодых.</li>
+        <li>Патенты.</li>
+        <li>Бизнес для молодых.</li>
+        <li>Помощь в холодный период. С 400 до 2&nbsp;000 леев.</li>
+        <li>Фонд помощи онко- и тяжелобольным.</li>
+        <li>Закон о социальном транспорте.</li>
+      </ul>
+      <p>И самый честный вопрос вечера: «Куда исчезают депутаты после выборов?» Мой ответ простой: никуда. После каждого заседания буду отчитываться, как проголосовал и почему.</p>
+      <p class="report-thanks">Выборы — 15 ноября. Иван Паня, независимый кандидат, округ №&nbsp;2, последняя строчка в бюллетене, символ «ИП».</p>
+    </div>
+    <p class="report-more"><a href="#videos" data-video="meeting-04-11">▶ Смотреть видео со встречи</a></p>
+    <ul class="gallery" aria-label="Фотографии со встречи 4 ноября">
+        <li class="wide"><a href="../img/photos/2026-11-04-01.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-04-01-sm.jpg" alt="Иван Паня разговаривает с жителями во дворе колхозных домов на Шевченко" width="800" height="600" loading="eager"></a></li>
+        <li><a href="../img/photos/2026-11-04-02.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-04-02-sm.jpg" alt="Кандидат беседует с жительницами вечером во дворе" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-04-03.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-04-03-sm.jpg" alt="Жители собрались на встречу у дома, несмотря на холод" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-04-04.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-04-04-sm.jpg" alt="Вечерний двор: жители стоят до конца встречи" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-04-05.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 30%" src="../img/photos/2026-11-04-05-sm.jpg" alt="Житель с листовкой Ивана Пани" width="600" height="800" loading="lazy"></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="report-01-11">
+    <h2 id="report-01-11">Встреча с избирателями · 1 ноября</h2>
+    <p class="lead">Сегодня вечером встретился с жителями многоквартирных домов в районе, который в Комрате по-свойски называют «Кабельным».</p>
+    <div class="report-text">
+      <p>Собрались прямо во дворе, как у нас и принято: без трибун и микрофонов, просто разговор соседей. Я рассказал о своей программе и о законодательных инициативах, которые буду продвигать в Народном Собрании. Люди слушали внимательно, задавали вопросы, говорили о том, что волнует их каждый день.</p>
+      <p>Особенно приятно было увидеть среди жителей своего школьного учителя. Спасибо вам за всё, чему вы меня научили.</p>
+      <p>Главное, что я услышал: эти идеи людям близки. Для меня это самая важная оценка.</p>
+      <p>Спасибо всем, кто вышел и нашёл время. Работа депутата начинается рядом с жителями, и я буду работать именно так.</p>
+      <p class="report-thanks">Выборы в Народное Собрание Гагаузии: 15 ноября. Округ №&nbsp;2. Крайняя строчка в бюллетене: Иван Паня, независимый кандидат</p>
+    </div>
+    <p class="report-more"><a href="#videos" data-video="meeting-01-11">▶ Смотреть видео со встречи</a></p>
+    <ul class="gallery" aria-label="Фотографии со встречи 1 ноября">
+        <li class="wide"><a href="../img/photos/2026-11-01-01.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-01-01-sm.jpg" alt="Двор многоквартирных домов: жители собрались на встречу с Иваном Паней на закате" width="800" height="600" loading="eager"></a></li>
+        <li><a href="../img/photos/2026-11-01-02.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-01-02-sm.jpg" alt="Иван Паня разговаривает с жительницами во дворе" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-01-03.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-01-03-sm.jpg" alt="Жители слушают кандидата у многоэтажного дома" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-01-04.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-01-04-sm.jpg" alt="Иван Паня обращается к жителям, сидящим на скамейках" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-01-05.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-01-05-sm.jpg" alt="Жительница с листовкой кандидата на скамейке" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-01-06.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-01-06-sm.jpg" alt="Жители «Кабельного» на скамейках во дворе" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-01-07.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-01-07-sm.jpg" alt="Иван Паня говорит с жителями, собравшимися во дворе" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-01-08.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-01-08-sm.jpg" alt="Пожилые жители внимательно слушают на скамейке" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-11-01-09.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-01-09-sm.jpg" alt="Жители слушают, опершись на ограду" width="800" height="600" loading="lazy"></a></li>
+        <li class="wide-m"><a href="../img/photos/2026-11-01-10.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-11-01-10-sm.jpg" alt="Встреча во дворе: вид через цветник" width="800" height="600" loading="lazy"></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="report-31">
+    <h2 id="report-31">Встреча с избирателями · 31 октября</h2>
+    <p class="lead">Сегодня вечером встретился с жителями на перекрёстке Гоголя и Чкалова.</p>
+    <div class="report-text">
+      <p>Собрались прямо на улице, как у нас и принято: без трибун и микрофонов, просто разговор соседей. Я рассказал о своей программе и о законодательных инициативах, которые буду продвигать в Народном Собрании. Люди слушали внимательно, задавали вопросы, говорили о том, что волнует их каждый день.</p>
+      <p>Главное, что я услышал: эти идеи людям близки. Для меня это самая важная оценка.</p>
+      <p>Спасибо всем, кто вышел и нашёл время. Работа депутата начинается рядом с жителями, и я буду работать именно так.</p>
+      <p class="report-thanks">Выборы в Народное Собрание Гагаузии: 15 ноября. Округ №&nbsp;2. Крайняя строчка в бюллетене: Иван Паня, независимый кандидат</p>
+    </div>
+    <p class="report-more"><a href="#videos" data-video="meeting-31">▶ Смотреть видео со встречи</a></p>
+    <ul class="gallery" aria-label="Фотографии со встречи 31 октября">
+        <li class="wide"><a href="../img/photos/2026-10-31-01.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 30%" src="../img/photos/2026-10-31-01-sm.jpg" alt="Иван Паня обращается к жителям на перекрёстке улиц Гоголя и Чкалова" width="600" height="800" loading="eager"></a></li>
+        <li><a href="../img/photos/2026-10-31-02.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-02-sm.jpg" alt="Кандидат говорит с собравшимися жителями" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-03.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-03-sm.jpg" alt="Жители полукругом стоят у дома" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-04.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-04-sm.jpg" alt="Много людей на встрече: вид со спины" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-05.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-05-sm.jpg" alt="Иван Паня обращается к людям, разведя руки" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-06.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-06-sm.jpg" alt="Жительница подняла руку, чтобы задать вопрос" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-07.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-07-sm.jpg" alt="Разговор в кругу жителей" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-08.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-08-sm.jpg" alt="Иван Паня выступает перед жителями" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-09.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-09-sm.jpg" alt="Кандидат слушает жителей" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-10.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-10-sm.jpg" alt="Встреча на закате" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-11.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-11-sm.jpg" alt="Жители стоят кольцом вокруг кандидата" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-12.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-12-sm.jpg" alt="Встреча на фоне закатного неба" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-13.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-13-sm.jpg" alt="Вид на встречу со стороны мужчин" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-14.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-14-sm.jpg" alt="Самый многолюдный момент встречи" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-15.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-15-sm.jpg" alt="Панорама встречи" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-16.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-16-sm.jpg" alt="На встречу вышла вся улица" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-31-17.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-31-17-sm.jpg" alt="Иван Паня и кольцо жителей вокруг него" width="800" height="600" loading="lazy"></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="report-29v">
+    <h2 id="report-29v">Вечерняя встреча с жителями · 29 октября</h2>
+    <p class="lead">Комрат, округ №&nbsp;2 · перекрёсток улиц Жукова и Зои Космодемьянской</p>
+    <div class="report-text">
+      <p>Никаких трибун и сцен: стулья прямо на улице, фонарь над головой и живой разговор о том, что действительно волнует людей. Спасибо всем, кто пришёл, задавал вопросы и не стеснялся говорить прямо.</p>
+      <p>Для меня работа депутата начинается именно так: рядом с жителями, лицом к лицу. Слышать людей, а не пересказывать их слова из кабинета.</p>
+      <p>Буду и дальше приходить в каждый уголок округа №&nbsp;2. Если у вас во дворе или на улице есть вопрос, зовите, приду.</p>
+      <p class="report-thanks">Выборы в Народное Собрание Гагаузии — 15 ноября. Иван Паня, независимый кандидат, округ №&nbsp;2, нижняя строчка в бюллетене.</p>
+    </div>
+    <p class="report-more"><a href="#videos" data-video="meeting-29">▶ Смотреть видео со встречи</a></p>
+    <ul class="gallery" aria-label="Фотографии с вечерней встречи 29 октября">
+        <li class="wide"><a href="../img/photos/2026-10-29v-01.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-29v-01-sm.jpg" alt="Иван Паня говорит с жителями, собравшимися кругом на улице" width="800" height="600" loading="eager"></a></li>
+        <li><a href="../img/photos/2026-10-29v-02.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-29v-02-sm.jpg" alt="Жители стоят кругом и слушают кандидата" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-29v-03.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-29v-03-sm.jpg" alt="Жительницы на стульях прямо на улице, в руках листовки" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-29v-04.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-29v-04-sm.jpg" alt="Встреча в сумерках под уличным фонарём" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-29v-05.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 30%" src="../img/photos/2026-10-29v-05-sm.jpg" alt="Иван Паня отвечает на вопрос" width="600" height="800" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-29v-06.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-29v-06-sm.jpg" alt="Разговор с жителями у столба на перекрёстке" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-29v-07.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-29v-07-sm.jpg" alt="Встреча продолжается после наступления темноты" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-29v-08.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-29v-08-sm.jpg" alt="Иван Паня отвечает жителям вечером" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-29v-09.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 45%" src="../img/photos/2026-10-29v-09-sm.jpg" alt="Личный разговор с пожилым жителем после встречи" width="600" height="800" loading="lazy"></a></li>
+        <li class="wide-m"><a href="../img/photos/2026-10-29v-10.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 30%" src="../img/photos/2026-10-29v-10-sm.jpg" alt="Житель обнимает Ивана Паню на прощание" width="450" height="800" loading="lazy"></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="report-29">
+    <h2 id="report-29">Каждый день на встречах с жителями округа · 29 октября</h2>
+    <p class="lead">Между крупными встречами мы ежедневно ходим по домам, заходим в магазины и мастерские.</p>
+    <div class="report-text">
+      <p>Разговариваем лично и слушаем: что не так с дорогами, как людям живётся зимой, куда обращаться и что решается годами.</p>
+      <p>Спасибо всем, кто открыл калитку, поделился проблемой и просто поговорил. Все обращения записываем, ничего не теряем.</p>
+      <p>Работа депутата начинается рядом с жителями Гагаузии.</p>
+      <p class="report-thanks">15 ноября — нижняя строчка бюллетеня.</p>
+    </div>
+    <ul class="gallery" aria-label="Фотографии с обхода домов 29 октября">
+        <li class="wide"><a href="../img/photos/2026-10-29-01.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 42%" src="../img/photos/2026-10-29-01-sm.jpg" alt="Жительница у зелёной калитки улыбается, в руках листовка Ивана Пани" width="450" height="800" loading="eager"></a></li>
+        <li><a href="../img/photos/2026-10-29-02.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 45%" src="../img/photos/2026-10-29-02-sm.jpg" alt="Рукопожатие Ивана Пани с рабочим в спецовке" width="600" height="800" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-29-03.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 35%" src="../img/photos/2026-10-29-03-sm.jpg" alt="Разговор с пожилым жителем у его дома" width="600" height="800" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-29-04.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 35%" src="../img/photos/2026-10-29-04-sm.jpg" alt="Иван Паня беседует с жителем в кепке у ворот" width="600" height="800" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-29-05.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 40%" src="../img/photos/2026-10-29-05-sm.jpg" alt="Разговор с покупателем в магазине" width="600" height="800" loading="lazy"></a></li>
+        <li class="wide-m"><a href="../img/photos/2026-10-29-07.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 45%" src="../img/photos/2026-10-29-07-sm.jpg" alt="Житель с листовкой у зелёных ворот" width="600" height="800" loading="lazy"></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="report-28">
+    <h2 id="report-28">Встреча с избирателями · 28 октября</h2>
+    <p class="lead">На улице холодно, а разговор получился тёплым.</p>
+    <div class="report-text">
+      <p>Сегодня вечером встретился с жителями округа №&nbsp;2 — Комрат, угол улиц Суворова и Галацана. Рассказал о своих основных шагах и ответил на вопросы:</p>
+      <ul>
+        <li><b>Социальный транспорт</b> — законодательная инициатива по созданию правовых условий для организации и поддержки бесплатного социального транспорта для уязвимых категорий населения.</li>
+        <li><b>Помощь в холодный период</b> — законодательная инициатива по увеличению ежемесячной финансовой помощи с 400 до 2&nbsp;000 леев для установленных законом категорий семей.</li>
+        <li><b>Общественная приёмная</b> — после избрания бесплатные юридические консультации жителям округа.</li>
+      </ul>
+      <p>Люди пришли, несмотря на холод, и это дорогого стоит. Работа депутата начинается рядом с жителями Гагаузии.</p>
+      <p class="report-thanks">Благодарю каждого, кто вышел на встречу и поделился мнением.</p>
+    </div>
+    <p class="report-more"><a href="#videos" data-video="meeting-28">▶ Смотреть видео со встречи</a></p>
+    <ul class="gallery" aria-label="Фотографии со встречи 28 октября">
+        <li class="wide"><a href="../img/photos/2026-10-28-01.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-28-01-sm.jpg" alt="Иван Паня говорит с жителями на углу улиц Суворова и Галацана" width="800" height="600" loading="eager"></a></li>
+        <li><a href="../img/photos/2026-10-28-02.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 37%" src="../img/photos/2026-10-28-02-sm.jpg" alt="Иван Паня с листовкой обращается к жителям" width="600" height="800" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-28-03.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-28-03-sm.jpg" alt="Жители слушают кандидата, несмотря на холод" width="600" height="800" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-28-04.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-28-04-sm.jpg" alt="Вечерняя встреча: жители стоят кругом" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-28-05.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-28-05-sm.jpg" alt="Житель задаёт вопрос на встрече" width="800" height="600" loading="lazy"></a></li>
+        <li class="wide-m"><a href="../img/photos/2026-10-28-06.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-28-06-sm.jpg" alt="Иван Паня отвечает на вопросы жителей округа № 2" width="800" height="600" loading="lazy"></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="report-25">
+    <h2 id="report-25">Встреча с избирателями · 25 октября</h2>
+    <p class="lead">Комрат, округ №&nbsp;2 · угол улиц Кутузова и Чкалова</p>
+    <div class="report-text">
+      <p>Сегодня провели встречу с жителями одного из районов нашего округа.</p>
+      <p>Поговорили по душам, обсудили важные вопросы, поделились мыслями и предложениями.</p>
+      <p>Для меня такие встречи особенно ценны. Ведь самое главное — слышать друг друга, общаться открыто и вместе искать решения.</p>
+      <p class="report-thanks">От души благодарю каждого, кто нашёл время прийти, за искренность, доверие и неравнодушие! Всегда рад нашему общению. Продолжаем встречаться и оставаться на связи!</p>
+    </div>
+    <p class="report-more"><a href="#videos" data-video="meeting-25">▶ Смотреть видео со встречи</a></p>
+    <ul class="gallery" aria-label="Фотографии со встречи 25 октября">
+        <li class="wide"><a href="../img/photos/2026-10-25-01.jpg" target="_blank" rel="noopener"><img style="object-position: 12% 50%" src="../img/photos/2026-10-25-01-sm.jpg" alt="Иван Паня говорит с жителями на углу улиц Кутузова и Чкалова" width="800" height="450" loading="eager"></a></li>
+        <li><a href="../img/photos/2026-10-25-02.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-25-02-sm.jpg" alt="Жители района собрались на встречу с кандидатом" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-25-03.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-25-03-sm.jpg" alt="Иван Паня отвечает на вопросы жителей" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-25-04.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-25-04-sm.jpg" alt="Жители слушают Ивана Паню" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-25-05.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-25-05-sm.jpg" alt="Жительницы округа на скамейке во время встречи" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-25-06.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-25-06-sm.jpg" alt="Иван Паня во время разговора с жителями" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-25-07.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-25-07-sm.jpg" alt="Жители округа на встрече" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-25-08.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-25-08-sm.jpg" alt="Иван Паня беседует с жительницами района" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-25-09.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-25-09-sm.jpg" alt="Общий вид встречи на улице" width="800" height="600" loading="lazy"></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="report">
+    <h2 id="report">Встреча с избирателями · 22 октября</h2>
+    <p class="lead">Ни сцены, ни трибуны. Только дождь, зонты и круг из людей.</p>
+    <div class="report-text">
+      <p>22 октября я встретился с жителями округа № 2. Погода звала остаться дома, но люди пришли: кто с зонтом, кто под капюшоном, кто-то сидел на табуретке, а многие простояли весь разговор на ногах, до самого конца.</p>
+      <p>Разговор получился прямым. Спрашивали о том, с чем живут каждый день:</p>
+      <ul>
+        <li><b>Социальный транспорт</b> — для тех, кому он действительно нужен.</li>
+        <li><b>Помощь в холодный период</b> — зима уже близко, и ждать до неё нельзя.</li>
+        <li><b>Общественная приёмная</b> — после избрания здесь можно будет получить бесплатную юридическую консультацию и прийти с любым вопросом.</li>
+      </ul>
+      <p>Первые два пункта я как депутат буду выдвигать законодательными инициативами. Третий сделаю своими руками.</p>
+      <p class="report-thanks">Работа депутата начинается рядом с жителями — я ещё раз в этом убедился. Спасибо каждому, кто пришёл и поддержал меня, несмотря на погоду.</p>
+    </div>
+    <p class="report-more"><a href="#videos" data-video="meeting">▶ Смотреть видео со встречи</a></p>
+    <ul class="gallery" aria-label="Фотографии со встречи 22 октября">
+        <li class="wide"><a href="../img/photos/2026-10-22-01.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-22-01-sm.jpg" alt="Иван Паня говорит с жителями округа № 2" width="800" height="600" loading="eager"></a></li>
+        <li><a href="../img/photos/2026-10-22-02.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-22-02-sm.jpg" alt="Жители под зонтами слушают кандидата" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-22-03.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-22-03-sm.jpg" alt="Встреча под дождём: жители стоят кругом" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-22-04.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-22-04-sm.jpg" alt="Иван Паня отвечает на вопросы жителей" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-22-05.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-22-05-sm.jpg" alt="Жители округа на встрече" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-22-06.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-22-06-sm.jpg" alt="Иван Паня обращается к собравшимся" width="800" height="450" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-22-07.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-22-07-sm.jpg" alt="Жители слушают разговор" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-22-08.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-22-08-sm.jpg" alt="Общий вид встречи с избирателями" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-22-09.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-22-09-sm.jpg" alt="Разговор с жителями под дождём" width="800" height="450" loading="lazy"></a></li>
+        <li><a href="../img/photos/2026-10-22-10.jpg" target="_blank" rel="noopener"><img src="../img/photos/2026-10-22-10-sm.jpg" alt="Листовка кандидата в руках у жительницы" width="800" height="600" loading="lazy"></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="meet">
+    <h2 id="meet">Встречи с жителями</h2>
+    <p class="lead">Приходите, поговорим о проблемах района. Задайте вопросы и расскажите, что нужно исправить.</p>
+    <!-- Как добавить встречу: скопировать блок <li class="event">, поменять data-date / data-time / data-gather (время сбора, можно убрать) / адрес / координаты;
+         data-show-from="ГГГГ-ММ-ДД ЧЧ:ММ" — показать встречу на сайте не раньше этого времени (можно убрать);
+         встреча скрывается через 3 часа после начала
+         (data-lat, data-lng). Число, месяц, день недели, время и ссылка «Как добраться» подставятся сами;
+         прошедшие встречи скрываются со следующего дня, карта показывает ближайшую. -->
+    <div class="meet-grid">
+      <ul class="events">
+        <li class="event" data-date="2026-10-31" data-time="16:00" data-lat="46.293212" data-lng="28.645370">
+          <div class="meet">
+            <div class="when"><b>31</b><span>октября<br>суббота</span><em>16:00</em></div>
+            <div class="where">
+              <p class="lbl">Где</p>
+              <p class="addr">Угол улиц Гоголя и Чкалова, у трансформатора</p>
+              <p class="gather" hidden></p>
+              <a class="maplink" data-track="maps-meeting" href="https://www.google.com/maps/search/?api=1&amp;query=46.293212,28.645370" target="_blank" rel="noopener">Как добраться ›</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <p class="events-empty" hidden>Расписание ближайших встреч появится здесь. Следите за анонсами в соцсетях</p>
+      <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=28.639111%2C46.297932%2C28.647111%2C46.302932&amp;layer=mapnik&amp;marker=46.300432%2C28.643111" title="Место встречи на карте" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section aria-labelledby="video">
+    <h2 id="video">Следите за моей работой</h2>
+    <p class="lead">Открыто рассказываю, что делаю для округа, разбираю проблемы жителей и отвечаю на ваши вопросы. Подпишитесь там, где вам удобно:</p>
+
+    <div class="links social">
+      <a class="btn" data-track="social-facebook" href="https://www.facebook.com/ivan.pana.2025/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#1877F2"/><path fill="#fff" d="M17.6 26v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.6 1.6-1.6h1.7V8.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4h-2.8v3.2h2.8V26h3.4z"/></svg>
+        <span class="txt">Facebook<small>ivan.pana.2025</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="btn" data-track="social-tiktok" href="https://www.tiktok.com/@ivanpanea" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#000"/><path fill="#25F4EE" d="M13.4 14.2v-1.1a7 7 0 0 0-6.2 7 7 7 0 0 0 3 5.7 7 7 0 0 1 3.2-11.6z"/><path fill="#FE2C55" d="M19.6 7.5h-2.4v13.3a2.7 2.7 0 1 1-1.9-2.6v-2.7a5.3 5.3 0 1 0 4.6 5.3v-6.7a8 8 0 0 0 4.4 1.3v-2.7a4.6 4.6 0 0 1-4.7-5.2z"/><path fill="#fff" d="M18.6 6.5h-2.4v13.3a2.7 2.7 0 1 1-1.9-2.6v-2.7a5.3 5.3 0 1 0 4.6 5.3v-6.7a8 8 0 0 0 4.4 1.3V11.7a4.6 4.6 0 0 1-4.7-5.2z"/></svg>
+        <span class="txt">TikTok<small>@ivanpanea</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="btn" data-track="social-instagram" href="https://www.instagram.com/panea_vanea/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".35" stop-color="#FA7E1E"/><stop offset=".6" stop-color="#D62976"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#ig)"/><rect x="7.5" y="7.5" width="17" height="17" rx="5" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="16" cy="16" r="4" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="21.2" cy="10.8" r="1.3" fill="#fff"/></svg>
+        <span class="txt">Instagram<small>panea_vanea</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="btn" data-track="social-telegram" href="https://t.me/IvanPanea" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#29A9EB"/><path fill="#fff" d="M7.2 15.6l15.4-6c.7-.3 1.4.2 1.1 1.4l-2.6 12.4c-.2.9-.7 1.1-1.5.7l-4-3-1.9 1.9c-.2.2-.4.4-.9.4l.3-4.1 7.5-6.8c.3-.3-.1-.5-.5-.2l-9.3 5.9-4-1.3c-.9-.3-.9-.9.2-1.3z"/></svg>
+        <span class="txt">Telegram<small>t.me/IvanPanea</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+    </div>
+  </section>
+
+  <section aria-labelledby="about">
+    <h2 id="about">Гагаузия — наш родной дом!</h2>
+    <div class="about">
+      <p>Я родился и вырос в Комрате. Здесь моя семья, мои близкие, здесь моё прошлое и будущее.</p>
+      <p>Для меня Гагаузия — это не просто территория на карте. Это наша история, наши традиции, наши права и будущее наших детей.</p>
+      <p>Я убеждён: автономии нужны сильные, принципиальные депутаты, которые знают закон, имеют собственную позицию и готовы открыто отстаивать интересы жителей.</p>
+      <p>Моя цель — защищать особый правовой статус Гагаузии, добиваться справедливых решений и быть рядом с людьми не только во время выборов, но и каждый день.</p>
+      <p class="goal"><b>Я не обещаю невозможного. Я обещаю работать, отстаивать свою позицию и отвечать перед людьми за каждое своё решение. Гагаузия была, есть и будет.</b></p>
+    </div>
+  </section>
+
+  <section aria-labelledby="contact">
+    <h2 id="contact">Звоните и обращайтесь</h2>
+    <div class="contact-grid">
+    <div class="steps contact">
+      <a class="phone" data-track="call-number" href="tel:+37379168917">+373 79 16 89 17</a>
+      <p>На этом номере есть Viber, WhatsApp и Telegram.</p>
+      <p class="ask">Позвоните или напишите на этот номер:</p>
+      <ul>
+        <li>узнать о программе;</li>
+        <li>рассказать о проблеме в вашем районе;</li>
+        <li>задать вопрос кандидату.</li>
+      </ul>
+    </div>
+    <div class="links contact-links">
+      <a class="btn btn-call" data-track="call-button" href="tel:+37379168917">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#d89230"/><path fill="#fff" d="M12.2 8.5l1.7 3.6c.2.5.1 1-.3 1.4l-1.3 1.2a10 10 0 0 0 5 5l1.2-1.3c.4-.4.9-.5 1.4-.3l3.6 1.7c.5.2.7.7.6 1.2l-.5 2.4c-.1.5-.6.9-1.1.9A15 15 0 0 1 7.6 9.4c0-.5.4-1 .9-1.1l2.4-.5c.5-.1 1 .1 1.3.7z"/></svg>
+        <span class="txt">Позвонить<small>+373 79 16 89 17</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="btn btn-viber" data-track="viber-button" href="viber://chat?number=%2B37379168917">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#7360F2"/><path fill="#fff" d="M16 7.5c-4.9 0-8.3 2.6-8.3 7.4 0 2.8 1.1 4.6 2.9 5.7v3.4l3-2.4c.8.2 1.6.2 2.4.2 4.9 0 8.3-2.6 8.3-7 0-4.7-3.4-7.3-8.3-7.3zm3.6 9.9c-.3.6-1.1 1.1-1.7 1-2.7-.6-5.1-3-5.7-5.6-.1-.6.4-1.4 1-1.7.3-.2.7-.1.9.2l.8 1.2c.2.3.1.7-.2.9l-.4.3c.4 1.1 1.3 2 2.4 2.4l.3-.4c.2-.3.6-.4.9-.2l1.2.8c.4.3.5.7.5 1.1z"/></svg>
+        <span class="txt">Написать в Viber<small>+373 79 16 89 17</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="btn btn-wa" data-track="whatsapp-button" href="https://wa.me/37379168917" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#25D366"/><path fill="#fff" d="M16 7.6a8.3 8.3 0 0 0-7.1 12.6L7.8 24.3l4.2-1.1A8.3 8.3 0 1 0 16 7.6zm4.6 11.6c-.2.6-1.1 1.1-1.6 1.2-.4.1-.9.1-1.5-.1-3.1-1-5-4-5.2-4.2-.2-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.8.9c.3.1.4.2.5.3.1.2.1.7-.1 1.4z"/></svg>
+        <span class="txt">Написать в WhatsApp<small>+373 79 16 89 17</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="btn btn-tg" data-track="telegram-button" href="https://t.me/+37379168917" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#29A9EB"/><path fill="#fff" d="M7.2 15.6l15.4-6c.7-.3 1.4.2 1.1 1.4l-2.6 12.4c-.2.9-.7 1.1-1.5.7l-4-3-1.9 1.9c-.2.2-.4.4-.9.4l.3-4.1 7.5-6.8c.3-.3-.1-.5-.5-.2l-9.3 5.9-4-1.3c-.9-.3-.9-.9.2-1.3z"/></svg>
+        <span class="txt">Написать в Telegram<small>+373 79 16 89 17</small></span>
+        <span class="arrow" aria-hidden="true">›</span>
+      </a>
+    </div>
+    </div>
+  </section>
+</main>
+
+<section class="vote" aria-labelledby="vote">
+  <div class="wrap">
+    <h2 id="vote">Голосуй за Ивана Паню!</h2>
+    <p class="date">15 ноября 2026 · ваш кандидат в бюллетене:</p>
+    <div class="ballot">
+      <img class="sym" src="../img/logo.png" alt="Электоральный символ Ивана Пани — «ИП»" width="900" height="398">
+      <span class="who">Иван Паня<small>Независимый кандидат</small></span>
+      <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#012147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <strong>Publicitate electorală / Избирательная реклама</strong><br>
+  Panea Ivan (Паня Иван), candidat independent / независимый кандидат.<br>
+  Realizat cu forțele candidatului / Сделано силами кандидата.
+</footer>
+
+<nav class="dock" aria-label="Быстрая связь">
+  <a class="call" data-track="call-dock" href="tel:+37379168917"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.2 3.5l1.7 3.6c.2.5.1 1-.3 1.4L7.3 9.7a10 10 0 0 0 5 5l1.2-1.3c.4-.4.9-.5 1.4-.3l3.6 1.7c.5.2.7.7.6 1.2l-.5 2.4c-.1.5-.6.9-1.1.9A15 15 0 0 1 2.6 4.4c0-.5.4-1 .9-1.1l2.4-.5c.5-.1 1 .1 1.3.7z"/></svg>Позвонить</a>
+  <a class="ic viber" data-track="viber-dock" href="viber://chat?number=%2B37379168917" aria-label="Написать в Viber" title="Viber"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 7.5c-4.9 0-8.3 2.6-8.3 7.4 0 2.8 1.1 4.6 2.9 5.7v3.4l3-2.4c.8.2 1.6.2 2.4.2 4.9 0 8.3-2.6 8.3-7 0-4.7-3.4-7.3-8.3-7.3zm3.6 9.9c-.3.6-1.1 1.1-1.7 1-2.7-.6-5.1-3-5.7-5.6-.1-.6.4-1.4 1-1.7.3-.2.7-.1.9.2l.8 1.2c.2.3.1.7-.2.9l-.4.3c.4 1.1 1.3 2 2.4 2.4l.3-.4c.2-.3.6-.4.9-.2l1.2.8c.4.3.5.7.5 1.1z"/></svg></a>
+  <a class="ic wa" data-track="whatsapp-dock" href="https://wa.me/37379168917" target="_blank" rel="noopener" aria-label="Написать в WhatsApp" title="WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 6.6a9.3 9.3 0 0 0-8 14.1L6.8 25.3l4.7-1.2A9.3 9.3 0 1 0 16 6.6zm5.2 13c-.2.6-1.2 1.2-1.8 1.3-.5.1-1 .1-1.7-.1-3.5-1.1-5.6-4.5-5.8-4.7-.2-.2-1.2-1.7-1.2-3.1s.8-2.2 1.1-2.6c.2-.3.6-.3.8-.3h.6c.2 0 .4 0 .7.6l.9 2.1c.1.2.1.4 0 .6l-.3.5-.5.5c-.1.1-.3.3-.1.7.2.3.9 1.5 1.9 2.4 1.3 1.1 2.4 1.5 2.7 1.7.3.1.6.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.8-.2 1.6z"/></svg></a>
+  <a class="ic tg" data-track="telegram-dock" href="https://t.me/+37379168917" target="_blank" rel="noopener" aria-label="Написать в Telegram" title="Telegram"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M6.2 15.4l17.2-6.7c.8-.3 1.5.2 1.2 1.5l-2.9 13.8c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.5.5-1 .5l.4-4.6 8.3-7.5c.4-.3-.1-.5-.6-.2l-10.3 6.5-4.4-1.4c-1-.3-1-1 .4-1.5z"/></svg></a>
+</nav>
+<script>
+/* Раздел «Видео»: нажатие на ролик в списке ставит его в главный плеер с его текстом. */
+(function () {
+  var sec = document.querySelector('[aria-labelledby="videos"]');
+  if (!sec) return;
+  var player = sec.querySelector('.report-video video');
+  function show(card, play) {
+    var item = card.parentNode;
+    player.pause();
+    player.setAttribute('poster', card.getAttribute('data-poster'));
+    player.querySelector('source').setAttribute('src', card.getAttribute('data-src'));
+    player.setAttribute('data-track', card.getAttribute('data-track'));
+    player.style.aspectRatio = card.getAttribute('data-ratio') || '';
+    player.setAttribute('aria-label', 'Видео: ' + card.getAttribute('data-title'));
+    player.removeAttribute('data-counted');
+    player.load();
+    sec.querySelector('.vf-date').textContent = card.getAttribute('data-date');
+    sec.querySelector('.vf-title').textContent = card.getAttribute('data-title');
+    sec.querySelector('.vf-desc').innerHTML = item.querySelector('.vc-desc').innerHTML;
+    Array.prototype.forEach.call(sec.querySelectorAll('.vcard'), function (c) {
+      c.classList.toggle('on', c === card);
+      if (c === card) c.setAttribute('aria-current', 'true'); else c.removeAttribute('aria-current');
+    });
+    sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (play) { var p = player.play(); if (p && p.catch) p.catch(function () {}); }
+  }
+  sec.addEventListener('click', function (e) {
+    var card = e.target.closest && e.target.closest('.vcard');
+    if (!card) return;
+    e.preventDefault();
+    show(card, true);
+  });
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[data-video]:not(.vcard)');
+    if (!link) return;
+    var card = sec.querySelector('.vcard[data-video="' + link.getAttribute('data-video') + '"]');
+    if (card) { e.preventDefault(); show(card, false); }
+  });
+})();
+</script>
+<script>
+/* Встречи: скрыть прошедшие (по дате в Europe/Chisinau), отсортировать,
+   подставить дату/время/ссылку из data-атрибутов, показать карту ближайшей
+   и заполнить анонс в шапке (метка «Сегодня» / «Завтра»). */
+(function () {
+  var list = document.querySelector('.events');
+  if (!list) return;
+  var MONTHS = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+  var DAYS = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  /* Текущие дата и время в Кишинёве: «ГГГГ-ММ-ДД» и «ЧЧ:ММ». */
+  function nowChisinau() {
+    try {
+      var parts = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/Chisinau', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+      var v = {};
+      parts.forEach(function (p) { v[p.type] = p.value; });
+      return [v.year + '-' + v.month + '-' + v.day, v.hour + ':' + v.minute];
+    } catch (e) {
+      var d = new Date();
+      return [d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()), pad(d.getHours()) + ':' + pad(d.getMinutes())];
+    }
+  }
+  var nowDT = nowChisinau(), now = nowDT[0], nowTime = nowDT[1];
+  /* Встреча считается прошедшей через 3 часа после начала (17:00 → скрывается в 20:00). */
+  function endTime(t) {
+    var h = +t.split(':')[0] + 3;
+    return h >= 24 ? '24:00' : pad(h) + ':' + t.split(':')[1];
+  }
+  function addDays(iso, n) {
+    var p = iso.split('-'), d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + n));
+    return d.getUTCFullYear() + '-' + pad(d.getUTCMonth() + 1) + '-' + pad(d.getUTCDate());
+  }
+  function fillAnnounce(ev) {
+    var ann = document.querySelector('.announce');
+    if (!ann) return;
+    var li = ev.li, date = li.getAttribute('data-date'), p = date.split('-');
+    var badge = ann.querySelector('.a-badge');
+    var label = date === now ? 'Сегодня' : date === addDays(now, 1) ? 'Завтра' : '';
+    badge.textContent = label;
+    badge.hidden = !label;
+    ann.querySelector('.a-date b').textContent = (+p[2]) + ' ' + MONTHS[+p[1] - 1];
+    ann.querySelector('.a-date span').textContent = DAYS[new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])).getUTCDay()];
+    ann.querySelector('.a-time').textContent = li.getAttribute('data-time') || '';
+    var g = ann.querySelector('.a-gather'), gt = li.getAttribute('data-gather');
+    if (g) { g.textContent = gt ? 'Сбор в ' + gt : ''; g.hidden = !gt; }
+    var addr = li.querySelector('.addr');
+    if (addr) ann.querySelector('.a-place').textContent = addr.textContent;
+    if (isFinite(ev.lat) && isFinite(ev.lng)) ann.querySelector('.a-btn').href = 'https://www.google.com/maps/search/?api=1&query=' + li.getAttribute('data-lat') + ',' + li.getAttribute('data-lng');
+  }
+  var upcoming = [];
+  Array.prototype.forEach.call(list.querySelectorAll('.event'), function (li) {
+    var date = li.getAttribute('data-date') || '';
+    var showFrom = li.getAttribute('data-show-from') || '';
+    var start = li.getAttribute('data-time') || '';
+    if (date < now || (date === now && start && nowTime >= endTime(start)) || (showFrom && now + ' ' + nowTime < showFrom)) { li.hidden = true; return; }
+    var p = date.split('-'), y = +p[0], m = +p[1], d = +p[2];
+    var time = li.getAttribute('data-time') || '';
+    var lat = li.getAttribute('data-lat'), lng = li.getAttribute('data-lng');
+    var b = li.querySelector('.when b'), span = li.querySelector('.when span'), em = li.querySelector('.when em'), a = li.querySelector('.maplink');
+    if (b && d) b.textContent = d;
+    if (span && m) span.innerHTML = MONTHS[m - 1] + '<br>' + DAYS[new Date(Date.UTC(y, m - 1, d)).getUTCDay()];
+    if (em) em.textContent = time;
+    var gather = li.getAttribute('data-gather'), gEl = li.querySelector('.gather');
+    if (gEl) { gEl.textContent = gather ? 'Сбор в ' + gather + ' · начало в ' + time : ''; gEl.hidden = !gather; }
+    if (a && lat && lng) a.href = 'https://www.google.com/maps/search/?api=1&query=' + lat + ',' + lng;
+    upcoming.push({ li: li, key: date + ' ' + time, lat: +lat, lng: +lng });
+  });
+  upcoming.sort(function (x, y) { return x.key < y.key ? -1 : x.key > y.key ? 1 : 0; });
+  upcoming.forEach(function (e) { list.appendChild(e.li); });
+  var map = document.querySelector('.map'), empty = document.querySelector('.events-empty');
+  if (!upcoming.length) {
+    var ann0 = document.querySelector('.announce');
+    if (ann0) ann0.hidden = true;
+    list.hidden = true;
+    if (empty) empty.hidden = false;
+    if (map) map.hidden = true;
+    return;
+  }
+  var e = upcoming[0];
+  fillAnnounce(e);
+  if (map && isFinite(e.lat) && isFinite(e.lng)) {
+    var src = 'https://www.openstreetmap.org/export/embed.html?bbox=' +
+      (e.lng - 0.004).toFixed(6) + '%2C' + (e.lat - 0.0025).toFixed(6) + '%2C' +
+      (e.lng + 0.004).toFixed(6) + '%2C' + (e.lat + 0.0025).toFixed(6) +
+      '&layer=mapnik&marker=' + e.lat.toFixed(6) + '%2C' + e.lng.toFixed(6);
+    if (map.getAttribute('src') !== src) map.setAttribute('src', src);
+  }
+})();
+</script>
+<script>
+/* Счётчик посещений (GoatCounter, ivanpanea.goatcounter.com) без внешних скриптов:
+   просмотр страницы при загрузке и нажатия на ссылки с атрибутом data-track.
+   Считает только на настоящем сайте — локальные просмотры не учитываются.
+   Свои заходы можно отключить в своём браузере: открыть сайт с адресом
+   https://ivanpanea.github.io/#toggle-goatcounter (повторный заход включает обратно). */
+(function () {
+  if (location.hostname !== 'ivanpanea.github.io' || location.pathname.indexOf('/test/') === 0) return;
+  try {
+    if (location.hash === '#toggle-goatcounter') {
+      var off = localStorage.getItem('skipgc') === 't';
+      if (off) localStorage.removeItem('skipgc'); else localStorage.setItem('skipgc', 't');
+      var note = document.createElement('div');
+      note.setAttribute('role', 'status');
+      note.textContent = off ? 'Счётчик снова учитывает этот браузер.' : 'Готово: заходы с этого браузера больше не считаются.';
+      note.style.cssText = 'position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:99;background:#012147;color:#fff;font:700 15px/1.3 Montserrat,Arial,sans-serif;padding:12px 18px;border-radius:10px;border:2px solid #d89230;max-width:90vw;text-align:center';
+      document.body.appendChild(note);
+      setTimeout(function () { note.remove(); }, 6000);
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+    if (localStorage.getItem('skipgc') === 't') return;
+  } catch (e) {}
+  var URL = 'https://ivanpanea.goatcounter.com/count';
+  function hit(path, title, isEvent) {
+    var q = '?p=' + encodeURIComponent(path) +
+      '&t=' + encodeURIComponent(title || document.title) +
+      '&r=' + encodeURIComponent(isEvent ? '' : document.referrer) +
+      '&s=' + encodeURIComponent([screen.width, screen.height, window.devicePixelRatio || 1].join(',')) +
+      '&q=' + encodeURIComponent(location.search) +
+      (isEvent ? '&e=true' : '') +
+      '&rnd=' + Math.random().toString(36).slice(2);
+    new Image().src = URL + q;
+  }
+  hit(location.pathname, document.title, false);
+  Array.prototype.forEach.call(document.querySelectorAll('video[data-track]'), function (v) {
+    v.addEventListener('play', function () {
+      if (v.getAttribute('data-counted')) return;
+      v.setAttribute('data-counted', '1');
+      hit(v.getAttribute('data-track'), v.getAttribute('aria-label') || 'Видео', true);
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('details[data-track]'), function (d) {
+    d.addEventListener('toggle', function () {
+      if (!d.open || d.getAttribute('data-counted')) return;
+      d.setAttribute('data-counted', '1');
+      hit(d.getAttribute('data-track'), 'Программа: ' + d.querySelector('.pt').firstChild.textContent.trim(), true);
+    });
+  });
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[data-track]:not(.vcard)') : null;
+    if (a) hit(a.getAttribute('data-track'), (a.getAttribute('aria-label') || a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60), true);
+  });
+})();
+</script>
+</body>
+</html>
