@@ -359,10 +359,6 @@
   .hb-title span { display: block; margin-top: 3px; font-size: 14px; font-weight: 700; color: var(--gold); text-transform: none; }
   .hero-ballot .pb-me { margin: 12px 0 0; background: #fff; text-align: left; }
   .hb-foot { margin: 10px 0 0; font: 900 15px/1.3 Montserrat, Arial, sans-serif; color: var(--gold); text-transform: uppercase; }
-
-  /* шапка: имя на всю ширину */
-  .hero { grid-template-areas: "kick kick" "name name" "text photo" "bar bar" "num num"; }
-  .hero h1.hero-name { grid-area: name; margin: 0 0 14px; text-align: center; white-space: nowrap; font-size: clamp(40px, 15.5vw, 66px); line-height: 1; }
   .vote { text-align: center; }
   .ballot { max-width: 620px; margin: 0 auto; justify-content: center; }
   .ballot .who { text-align: center; }
@@ -389,9 +385,6 @@
     .kicker::after { max-width: 80px; }
     .hero-text { align-self: start; padding-bottom: 28px; }
     .hero h1 { font-size: 78px; }
-    .hero { grid-template-areas: "kick photo" "name photo" "text photo" "num photo" "bar bar"; grid-template-rows: auto auto auto 1fr auto; }
-    .hero h1.hero-name { margin: 0; text-align: left; font-size: 78px; line-height: .95; }
-    .hero-name span { display: block; }
     .label { margin-top: 18px; font-size: 16px; }
     .district { font-size: 18px; }
     .logo { max-width: 260px; margin-top: 22px; }
@@ -488,8 +481,8 @@
 <header>
   <div class="wrap hero">
     <div class="kicker">Выборы в Народное Собрание Гагаузии</div>
-    <h1 class="hero-name"><span>Иван</span> <span>Паня</span></h1>
     <div class="hero-text">
+      <h1>Иван<br>Паня</h1>
       <p class="label">Независимый кандидат</p>
       <p class="district">Округ № 2 · мун. Комрат</p>
       <img class="logo" src="../img/logo.png" alt="Логотип ИП" width="900" height="398">

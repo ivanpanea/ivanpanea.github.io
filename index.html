@@ -278,6 +278,92 @@
     .ballot .check svg { width: 18px; height: 18px; }
   }
 
+
+  /* ---------- Программа ---------- */
+  .program h3 { font-family: Montserrat, Arial, sans-serif; color: var(--navy); }
+  .prog-intro h3 { margin: 0 0 6px; font-size: 19px; font-weight: 900; }
+  .prog-sub { margin: 0 0 10px; padding-left: 12px; border-left: 4px solid var(--gold); font: 800 16px/1.35 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .prog-intro p { margin: 0 0 12px; }
+  .prog-intro b { color: var(--navy); }
+  .pledge { margin: 18px 0 0; padding: 18px 16px 6px; background: var(--cream); border-left: 5px solid var(--gold); }
+  .pledge h3 { margin: 0 0 12px; font-size: 17px; font-weight: 900; text-transform: uppercase; line-height: 1.25; }
+  .pledge-list { list-style: none; margin: 0; padding: 0; counter-reset: pl; }
+  .pledge-list li { position: relative; padding: 10px 0 10px 46px; border-top: 1.5px solid #e9d3ad; }
+  .pledge-list li:first-child { border-top: 0; padding-top: 2px; }
+  .pledge-list li::before {
+    counter-increment: pl; content: counter(pl); position: absolute; left: 0; top: 10px;
+    width: 34px; height: 34px; display: grid; place-items: center;
+    background: var(--navy); color: var(--gold); font: 900 17px Montserrat, Arial, sans-serif;
+  }
+  .pledge-list li:first-child::before { top: 2px; }
+  .pl-when { display: block; font: 900 14px/1.25 Montserrat, Arial, sans-serif; color: var(--navy); text-transform: uppercase; letter-spacing: .02em; }
+  .pl-what { display: block; margin-top: 2px; font-size: 17px; line-height: 1.45; }
+  .pledge-note { margin: 4px 0 12px; padding-top: 12px; border-top: 1.5px solid var(--gold); font-size: 16px; }
+  .pledge-note b { color: var(--navy); }
+
+  .prio-head { margin: 24px 0 10px; font-size: 19px; font-weight: 900; text-transform: uppercase; }
+  .prio { margin: 0 0 10px; border: 2px solid var(--line); border-left: 5px solid var(--navy); border-radius: 0 12px 12px 0; background: #f4f6fb; }
+  .prio[open] { border-color: var(--navy); }
+  .prio summary {
+    display: grid; grid-template-columns: 40px 1fr 22px; gap: 12px; align-items: center;
+    min-height: 64px; padding: 10px 12px; cursor: pointer; list-style: none;
+  }
+  .prio summary::-webkit-details-marker { display: none; }
+  .prio summary::after { content: "+"; font: 900 26px/1 Montserrat, Arial, sans-serif; color: var(--gold); text-align: center; }
+  .prio[open] summary::after { content: "−"; }
+  .prio summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .pn { width: 40px; height: 40px; display: grid; place-items: center; background: var(--navy); color: var(--gold); font: 900 20px Montserrat, Arial, sans-serif; }
+  .pt { font: 900 17px/1.2 Montserrat, Arial, sans-serif; color: var(--navy); text-transform: uppercase; }
+  .pt small { display: block; margin-top: 4px; font: 700 14px/1.3 Montserrat, Arial, sans-serif; color: var(--gold-text); text-transform: none; }
+  .prio ul { list-style: none; margin: 0; padding: 4px 16px 0 16px; border-top: 1.5px solid var(--navy); }
+  .prio li { position: relative; padding: 8px 0 8px 22px; font-size: 17px; line-height: 1.45; }
+  .prio li::before { content: "◆"; color: var(--gold); position: absolute; left: 0; top: 11px; font-size: 13px; }
+  .prio li b { color: var(--navy); }
+  .motto { margin: 4px 16px 14px; font: italic 700 18px/1.35 "PT Serif", Georgia, serif; color: var(--gold-text); }
+  .prio.done { background: var(--cream); border-left-color: var(--gold); }
+  .prio.done .pn { background: var(--gold); color: var(--navy); }
+  .prio dl { margin: 0; padding: 6px 16px 10px; border-top: 1.5px solid var(--gold); }
+  .prio dt { margin-top: 10px; padding-left: 12px; border-left: 4px solid var(--gold); font: 800 16px/1.3 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .prio dd { margin: 4px 0 0; font-size: 17px; line-height: 1.45; }
+
+  .weigh { margin: 18px 0 0; padding: 18px 16px; background: var(--cream); border-left: 5px solid var(--gold); }
+  .weigh h3 { margin: 0 0 8px; font-size: 20px; font-weight: 900; }
+  .weigh p { margin: 0; }
+
+  .prog-facts { list-style: none; margin: -6px 0 18px; padding: 0; }
+  .prog-facts li { position: relative; padding: 3px 0 3px 22px; font: 700 16px/1.4 Montserrat, Arial, sans-serif; color: var(--navy); }
+  .prog-facts li::before { content: "◆"; color: var(--gold); position: absolute; left: 0; top: 5px; font-size: 13px; }
+  .prog-facts b { font-weight: 900; }
+
+  .pballot { margin: 18px 0 0; padding: 22px 14px 0; background: var(--navy); color: #fff; text-align: center; }
+  .program .pballot h3 { margin: 0; color: #fff; font-size: 24px; font-weight: 900; text-transform: uppercase; line-height: 1.15; }
+  .pb-date { margin: 6px 0 16px; font: 800 15px/1.35 Montserrat, Arial, sans-serif; color: var(--gold); }
+  .pb-sheet { padding: 14px 12px 12px; background: #fff; text-align: left; }
+  .pb-label { margin: 0 0 10px; font: 900 13px/1.3 Montserrat, Arial, sans-serif; color: var(--navy); text-transform: uppercase; letter-spacing: .03em; }
+  .pb-row { display: block; height: 18px; margin: 0 0 7px; background: #e3e8f2; border: 1px solid #c9d2e3; border-radius: 2px; }
+  .pb-me { display: flex; align-items: center; gap: 10px; margin-top: 10px; padding: 10px; border: 2px solid var(--gold); }
+  .pb-sym { display: block; width: 74px; height: auto; flex: none; }
+  .pb-who { flex: 1; min-width: 0; padding: 0 10px; border-left: 2px solid var(--gold); border-right: 2px solid var(--gold);
+    font: 900 18px/1.1 Montserrat, Arial, sans-serif; color: var(--navy); text-transform: uppercase; text-align: center; }
+  .pb-who small { display: block; margin-top: 4px; font-size: 11px; font-weight: 800; }
+  .pb-stamp { flex: none; width: 52px; height: 52px; display: grid; place-items: center; border-radius: 50%;
+    border: 2px solid var(--navy); box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 4.5px var(--gold);
+    font: 900 11px/1 Montserrat, Arial, sans-serif; color: var(--navy); text-transform: uppercase; transform: rotate(-14deg); }
+  .pb-foot { margin: 0 -14px; padding: 14px 12px 16px; font: 900 17px/1.3 Montserrat, Arial, sans-serif; color: var(--gold); text-transform: uppercase; }
+
+
+  /* шапка: строка из бюллетеня */
+  .hero-ballot { display: block; padding: 14px 12px 12px; text-align: center; }
+  .hb-title { margin: 0; font: 900 18px/1.25 Montserrat, Arial, sans-serif; color: #fff; text-transform: uppercase; }
+  .hb-title span { display: block; margin-top: 3px; font-size: 14px; font-weight: 700; color: var(--gold); text-transform: none; }
+  .hero-ballot .pb-me { margin: 12px 0 0; background: #fff; text-align: left; }
+  .hb-foot { margin: 10px 0 0; font: 900 15px/1.3 Montserrat, Arial, sans-serif; color: var(--gold); text-transform: uppercase; }
+  .vote { text-align: center; }
+  .ballot { max-width: 620px; margin: 0 auto; justify-content: center; }
+  .ballot .who { text-align: center; }
+  .vote-foot { margin: 14px 0 0; font: 900 17px/1.3 Montserrat, Arial, sans-serif; color: var(--gold); text-transform: uppercase; }
+  .ballot .pb-stamp { background: #fff; }
+
   /* ================= Десктоп ================= */
   @media (min-width: 900px) {
     body { padding-bottom: 0; }
@@ -338,6 +424,29 @@
     .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
     .cols .lead { max-width: none; }
 
+    /* программа: слева «родной округ» и «моё слово», справа приоритеты */
+    .prog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .prio-head { margin-top: 0; }
+    .pledge { padding: 22px 22px 8px; }
+    .weigh { margin-top: 28px; padding: 22px 26px; }
+    .pballot { max-width: 720px; margin: 28px auto 0; padding: 30px 28px 0; }
+    .program .pballot h3 { font-size: 32px; }
+    .pb-date { font-size: 17px; }
+    .pb-sheet { padding: 18px 20px 16px; }
+    .pb-row { height: 22px; }
+    .pb-sym { width: 120px; }
+    .pb-who { font-size: 26px; padding: 0 18px; }
+    .pb-who small { font-size: 14px; }
+    .pb-stamp { width: 66px; height: 66px; font-size: 13px; }
+    .pb-foot { margin: 0 -28px; font-size: 22px; padding: 18px 12px 22px; }
+
+    .hero-ballot { padding: 18px 20px 16px; }
+    .hb-title { font-size: 22px; }
+    .hb-title span { font-size: 16px; }
+    .hero-ballot .pb-sym { width: 110px; }
+    .hero-ballot .pb-who { font-size: 22px; }
+    .hero-ballot .pb-who small { font-size: 13px; }
+    .hb-foot { font-size: 17px; }
     /* соцсети сеткой 2×2 */
     .social { grid-template-columns: 1fr 1fr; max-width: 820px; }
 
@@ -378,9 +487,14 @@
     </div>
     <img class="photo" src="img/ivan-panea.jpg" alt="Иван Паня" width="720" height="777">
     <div class="hero-bar"></div>
-    <div class="number">
-      <span class="n"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <p>Голосуй за Ивана Паню!<br><span>Выборы в Народное Собрание · 15 ноября 2026</span></p>
+    <div class="number hero-ballot">
+      <p class="hb-title">Голосуй за Ивана Паня!<span>Выборы в Народное Собрание · 15&nbsp;ноября 2026</span></p>
+      <div class="pb-me">
+        <img class="pb-sym" src="img/logo.png" alt="Электоральный символ «ИП»" width="900" height="398">
+        <span class="pb-who">Иван Паня<small>Независимый кандидат</small></span>
+        <span class="pb-stamp" aria-label="Отметка «Votat»">Votat</span>
+      </div>
+      <p class="hb-foot">Ищите символ «ИП» — последняя строка</p>
     </div>
   </div>
   <div class="wrap promo">
@@ -402,12 +516,133 @@
       <p class="a-place">Угол улиц Гоголя и Чкалова, у трансформатора</p>
       <p class="a-text">Приходите, поговорим о проблемах района. Задайте вопросы и расскажите, что нужно исправить.</p>
       <a class="a-btn" data-track="maps-announce" href="https://www.google.com/maps/search/?api=1&amp;query=46.293212,28.645370" target="_blank" rel="noopener">Как добраться ›</a>
-      <p class="a-sign"><b>Голосуй</b> за Ивана Паню · 15 ноября</p>
+      <p class="a-sign"><b>Голосуй</b> за Ивана Паня · 15 ноября</p>
     </article>
   </div>
 </header>
 
 <main class="wrap">
+
+  <section class="program" aria-labelledby="program">
+    <h2 id="program">Моя предвыборная программа</h2>
+    <p class="lead">Пять приоритетов и то, что уже сделано за 3 года в совете Комрата.</p>
+    <ul class="prog-facts">
+      <li><b>15 ноября</b> — выборы в Народное Собрание Гагаузии</li>
+      <li><b>Независимый кандидат</b>, округ №&nbsp;2, мун. Комрат</li>
+      <li>В бюллетене ищите <b>символ «ИП»</b>, последняя строка</li>
+    </ul>
+    <div class="prog-grid">
+    <div class="prog-col">
+      <div class="prog-intro">
+        <h3>Это мой родной округ</h3>
+        <p class="prog-sub">Вы меня знаете. Я здесь вырос, здесь живу и буду жить.</p>
+        <p>Мы уже встречались на ваших улицах. Мне 29 лет, я юрист, три года работаю в совете Комрата и иду независимым кандидатом. Я женат: с супругой Мариной мы строим семью здесь.</p>
+        <p><b>Скажу честно:</b> депутат — не примар, приказать сделать дорогу не может. Но может использовать законы и механизмы, чтобы добиваться решений. Он пишет законы и контролирует власть. Сказок не рассказываю, говорю о том, что реально можно сделать.</p>
+      </div>
+      <div class="pledge">
+        <h3>Моё слово жителям округа №&nbsp;2</h3>
+        <ol class="pledge-list">
+          <li><span class="pl-when">В первый месяц после избрания</span><span class="pl-what">открою кабинет депутата Народного Собрания в нашем округе для бесплатной юридической помощи жителям.</span></li>
+          <li><span class="pl-when">В первые 3&nbsp;месяца</span><span class="pl-what">внесу закон о социальном транспорте.</span></li>
+          <li><span class="pl-when">К первому бюджету</span><span class="pl-what">внесу поправки о помощи в холодный период: с 400 до 2&nbsp;000 леев.</span></li>
+          <li><span class="pl-when">В первый год</span><span class="pl-what">внесу законы: о фонде помощи онко- и тяжелобольным, о Молодёжном Народном Собрании.</span></li>
+          <li><span class="pl-when">После каждого заседания</span><span class="pl-what">буду отчитываться: как проголосовал и почему.</span></li>
+          <li><span class="pl-when">Регулярно</span><span class="pl-what">буду встречаться с жителями и отчитываться перед вами: что уже сделал, что ещё не сделал и почему.</span></li>
+        </ol>
+        <p class="pledge-note"><b>Я умею добиваться.</b> В совете Комрата 27 человек, и большинство прислушивалось ко мне: мои инициативы поддерживали, и мы их реализовывали. Этот опыт я использую и в Народном Собрании.</p>
+      </div>
+    </div>
+    <div class="prog-col">
+      <h3 class="prio-head">Пять моих приоритетов</h3>
+      <details class="prio" data-track="program-1">
+        <summary><span class="pn">1</span><span class="pt">Наш округ<small>кабинет депутата, дороги, экология</small></span></summary>
+        <ul>
+          <li><b>Открою кабинет депутата Народного Собрания в нашем округе:</b> бесплатная юридическая помощь, приём заявлений, запросов и жалоб.</li>
+          <li><b>Вместе с советниками округа:</b> объединю советников, закреплённых за округом, приду на заседания совета и вместе решим проблемы округа.</li>
+          <li><b>Дороги и тротуары:</b> добиваться денег для округа и контроля качества ремонтов.</li>
+          <li><b>Бродячие собаки:</b> безопасность людей и забота о животных. Больше питомников по всей Гагаузии, помощь примэриям.</li>
+          <li><b>Экология:</b> чистые улицы, колодцы и родники. Привлекать экологические фонды и помогать примэриям.</li>
+        </ul>
+        <p class="motto">Если ты не рядом, грош тебе цена.</p>
+      </details>
+      <details class="prio" data-track="program-2">
+        <summary><span class="pn">2</span><span class="pt">Защита автономии<small>полномочия и гагаузский язык</small></span></summary>
+        <ul>
+          <li><b>Когда наши полномочия забирали, я брал флаг и шёл впереди.</b> Депутат должен так же защищать полномочия.</li>
+          <li><b>Не допустить потери полномочий:</b> следить за каждым законопроектом Парламента, восстанавливать прежние полномочия и добиваться новых.</li>
+          <li><b>Наши языки:</b> по Уложению Гагаузии гагаузский, русский и молдавский равны. Особая забота — о гагаузском языке.</li>
+        </ul>
+        <p class="motto">Не будет жителей — не будет автономии.</p>
+      </details>
+      <details class="prio" data-track="program-3">
+        <summary><span class="pn">3</span><span class="pt">Забота о людях<small>социальный транспорт, помощь с 400 до 2&nbsp;000 леев в холодный период, фонд помощи онко- и тяжелобольным</small></span></summary>
+        <ul>
+          <li><b>Социальный транспорт:</b> законодательная инициатива — правовые условия для организации и поддержки бесплатного социального транспорта уязвимым категориям населения.</li>
+          <li><b>Помощь в холодный период:</b> законодательная инициатива об увеличении ежемесячной помощи с 400 до 2&nbsp;000 леев для установленных законом категорий семей.</li>
+          <li><b>Фонд помощи онко- и тяжелобольным:</b> дополнительная реальная помощь на лечение, операции и лекарства. Я видел, как тяжело было моей бабушке.</li>
+        </ul>
+        <p class="motto">Вы работали всю жизнь на благо всех нас. Теперь наша очередь.</p>
+      </details>
+      <details class="prio" data-track="program-4">
+        <summary><span class="pn">4</span><span class="pt">Молодые семьи и работа<small>земля, жильё, молодой бизнес</small></span></summary>
+        <ul>
+          <li><b>Земля и жильё:</b> цены на участки такие, что кровь стынет в жилах. Добиваться участков молодым семьям и социального жилья молодым специалистам.</li>
+          <li><b>Патенты:</b> обеспечить их работу на территории Гагаузии.</li>
+          <li><b>Молодой бизнес:</b> законы есть, но нужны дополнительные условия и реальная помощь молодым предпринимателям.</li>
+          <li><b>Молодёжное Народное Собрание Гагаузии:</b> голос молодёжи на уровне автономии. Помощь талантливым школьникам и студентам.</li>
+        </ul>
+        <p class="motto">Чтобы наши дети жили здесь и не уезжали.</p>
+      </details>
+      <details class="prio" data-track="program-5">
+        <summary><span class="pn">5</span><span class="pt">Власть должна отвечать<small>контроль и проверки</small></span></summary>
+        <ul>
+          <li><b>Ответы чиновников по существу и в срок.</b> Бюджет простыми словами: откуда деньги и куда ушли.</li>
+          <li><b>Контроль власти:</b> проводить аудиты и повышать эффективность работы.</li>
+        </ul>
+        <p class="motto">Закон должен работать на людей, а не против них.</p>
+      </details>
+      <details class="prio done" data-track="program-done">
+        <summary><span class="pn" aria-hidden="true">✓</span><span class="pt">Что уже сделано за 3 года в совете<small>проезд детям, питание в садиках, пастбища, премии олимпиадникам и другое</small></span></summary>
+        <dl>
+          <dt>Проезд детям: с 5 до 3 леев</dt>
+          <dd>Когда подняли цену на маршрутки, я спорил с советом. Добился снижения цены проезда для детей от 7 до 12 лет: с 5 до 3 леев.</dd>
+          <dt>Сохранили питание и поваров в детских садах</dt>
+          <dd>Я сам ходил в девятый садик и бегал за добавкой. Когда пришла фирма и решила всё поменять, мы с коллегами и родителями сохранили и питание, и наших поваров.</dd>
+          <dt>Мораторий на продажу пастбищных земель</dt>
+          <dd>Защищаю фермеров и животноводов: инициировал мораторий на продажу пастбищных земель.</dd>
+          <dt>Муниципальные премии школьникам-олимпиадникам</dt>
+          <dd>Разработал Положение о муниципальных премиях детям — победителям олимпиад. Положение принято.</dd>
+          <dt>Бесплатные юридические консультации</dt>
+          <dd>Как юрист бесплатно консультирую: заявления и запросы в примэрию, совет и другие органы власти, какие документы и куда подавать, обжалование решений, вплоть до международных инстанций.</dd>
+          <dt>Отчёты, запросы, ответы</dt>
+          <dd>Требовал отчёты, направлял запросы и добивался ответов.</dd>
+          <dt>Ни одного пропущенного заседания</dt>
+          <dd>За три года не пропустил ни одного заседания. Когда люди голосуют на выборах, они берут нас на работу.</dd>
+          <dt>Работа по всему городу и в нашем округе</dt>
+          <dd>Вместе с муниципальным советом мы проделали огромную работу по всему городу и в нашем округе тоже, и вы это видите.</dd>
+        </dl>
+      </details>
+    </div>
+    </div>
+    <div class="weigh">
+      <h3>Взвесьте и выберите лучшего!</h3>
+      <p>Перед тем как 15 ноября пойти проголосовать, поставьте кандидатов на весы. На одну чашу — обещания, на другую — дела. Вы знаете меня. Вы знаете мои заслуги. Я по-настоящему независимый: я иду от жителей нашего округа.</p>
+    </div>
+    <div class="pballot">
+      <h3>Голосуй за Ивана Паня!</h3>
+      <p class="pb-date">15 ноября 2026 · независимый кандидат, округ №&nbsp;2</p>
+      <div class="pb-sheet">
+        <p class="pb-label">Пример: как найти меня в бюллетене</p>
+        <span class="pb-row" aria-hidden="true"></span><span class="pb-row" aria-hidden="true"></span><span class="pb-row" aria-hidden="true"></span><span class="pb-row" aria-hidden="true"></span><span class="pb-row" aria-hidden="true"></span>
+        <div class="pb-me">
+          <img class="pb-sym" src="img/logo.png" alt="Электоральный символ «ИП»" width="900" height="398" loading="lazy">
+          <span class="pb-who">Иван Паня<small>Независимый кандидат</small></span>
+          <span class="pb-stamp" aria-label="Отметка «Votat»">Votat</span>
+        </div>
+      </div>
+      <p class="pb-foot">Ищите символ «ИП» — последняя строка.</p>
+    </div>
+  </section>
 
   <section aria-labelledby="videos">
     <h2 id="videos">Видео</h2>
@@ -516,7 +751,7 @@
           <div class="vc-desc" hidden>
           <p class="lead">Кому-то депутатское кресло кажется удобным. Мне — тяжёлой работой, которую надо делать.</p>
           <p>Пока одни идут защищать свой бизнес, я иду к вам. Днём, вечером, а если надо — и ночью.</p>
-          <p class="report-thanks">15 ноября голосуйте за Ивана Паню. Ищите в конце списка — символ «ИП».</p>
+          <p class="report-thanks">15 ноября голосуйте за Ивана Паня. Ищите в конце списка — символ «ИП».</p>
           </div>
         </li>
         <li>
@@ -745,7 +980,7 @@
         <li><a href="img/photos/2026-10-29v-07.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-29v-07-sm.jpg" alt="Встреча продолжается после наступления темноты" width="800" height="600" loading="lazy"></a></li>
         <li><a href="img/photos/2026-10-29v-08.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-29v-08-sm.jpg" alt="Иван Паня отвечает жителям вечером" width="800" height="600" loading="lazy"></a></li>
         <li><a href="img/photos/2026-10-29v-09.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 45%" src="img/photos/2026-10-29v-09-sm.jpg" alt="Личный разговор с пожилым жителем после встречи" width="600" height="800" loading="lazy"></a></li>
-        <li class="wide-m"><a href="img/photos/2026-10-29v-10.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 30%" src="img/photos/2026-10-29v-10-sm.jpg" alt="Житель обнимает Ивана Паню на прощание" width="450" height="800" loading="lazy"></a></li>
+        <li class="wide-m"><a href="img/photos/2026-10-29v-10.jpg" target="_blank" rel="noopener"><img style="object-position: 50% 30%" src="img/photos/2026-10-29v-10-sm.jpg" alt="Житель обнимает Ивана Паня на прощание" width="450" height="800" loading="lazy"></a></li>
     </ul>
   </section>
 
@@ -806,7 +1041,7 @@
         <li class="wide"><a href="img/photos/2026-10-25-01.jpg" target="_blank" rel="noopener"><img style="object-position: 12% 50%" src="img/photos/2026-10-25-01-sm.jpg" alt="Иван Паня говорит с жителями на углу улиц Кутузова и Чкалова" width="800" height="450" loading="eager"></a></li>
         <li><a href="img/photos/2026-10-25-02.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-25-02-sm.jpg" alt="Жители района собрались на встречу с кандидатом" width="800" height="600" loading="lazy"></a></li>
         <li><a href="img/photos/2026-10-25-03.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-25-03-sm.jpg" alt="Иван Паня отвечает на вопросы жителей" width="800" height="600" loading="lazy"></a></li>
-        <li><a href="img/photos/2026-10-25-04.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-25-04-sm.jpg" alt="Жители слушают Ивана Паню" width="800" height="600" loading="lazy"></a></li>
+        <li><a href="img/photos/2026-10-25-04.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-25-04-sm.jpg" alt="Жители слушают Ивана Паня" width="800" height="600" loading="lazy"></a></li>
         <li><a href="img/photos/2026-10-25-05.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-25-05-sm.jpg" alt="Жительницы округа на скамейке во время встречи" width="800" height="600" loading="lazy"></a></li>
         <li><a href="img/photos/2026-10-25-06.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-25-06-sm.jpg" alt="Иван Паня во время разговора с жителями" width="800" height="600" loading="lazy"></a></li>
         <li><a href="img/photos/2026-10-25-07.jpg" target="_blank" rel="noopener"><img src="img/photos/2026-10-25-07-sm.jpg" alt="Жители округа на встрече" width="800" height="600" loading="lazy"></a></li>
@@ -870,32 +1105,6 @@
       <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=28.639111%2C46.297932%2C28.647111%2C46.302932&amp;layer=mapnik&amp;marker=46.300432%2C28.643111" title="Место встречи на карте" loading="lazy"></iframe>
     </div>
   </section>
-
-  <div class="cols">
-  <section aria-labelledby="steps">
-    <h2 id="steps">Мои основные шаги</h2>
-    <div class="steps">
-      <h3>Социальный транспорт</h3>
-      <p>Законодательная инициатива по созданию правовых условий для организации и поддержки бесплатного социального транспорта для уязвимых категорий населения.</p>
-      <h3>Помощь в холодный период</h3>
-      <p>Законодательная инициатива по увеличению ежемесячной финансовой помощи с 400 до 2 000 леев для установленных законом категорий семей.</p>
-      <h3>Общественная приёмная</h3>
-      <p>После избрания — бесплатные юридические консультации жителям округа.</p>
-    </div>
-  </section>
-
-  <section aria-labelledby="theses">
-    <h2 id="theses">Мои основные тезисы</h2>
-    <p class="lead">В округе есть проблемы. Я знаю, как решать их законными методами.</p>
-    <ol class="theses">
-      <li><div><h3>Поддержка семей, пенсионеров и людей с инвалидностью</h3><p>Законопроекты о помощи семьям, пожилым и тяжелобольным жителям.</p></div></li>
-      <li><div><h3>Реальные полномочия Гагаузской автономии</h3><p>Буду защищать их правовыми методами.</p></div></li>
-      <li><div><h3>Власть должна отвечать людям</h3><p>Ответы по существу и в установленные законом сроки.</p></div></li>
-      <li><div><h3>Дороги, тротуары, вода и освещение</h3><p>Контроль качества и стоимости ремонтов за публичные деньги.</p></div></li>
-      <li><div><h3>Будущее талантливой молодёжи Гагаузии</h3><p>Программа поддержки школьников, студентов и молодых специалистов.</p></div></li>
-    </ol>
-  </section>
-  </div>
 
   <section aria-labelledby="video">
     <h2 id="video">Следите за моей работой</h2>
@@ -977,13 +1186,14 @@
 
 <section class="vote" aria-labelledby="vote">
   <div class="wrap">
-    <h2 id="vote">Голосуй за Ивана Паню!</h2>
+    <h2 id="vote">Голосуй за Ивана Паня!</h2>
     <p class="date">15 ноября 2026 · ваш кандидат в бюллетене:</p>
     <div class="ballot">
       <img class="sym" src="img/logo.png" alt="Электоральный символ Ивана Пани — «ИП»" width="900" height="398">
       <span class="who">Иван Паня<small>Независимый кандидат</small></span>
-      <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#012147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="pb-stamp" aria-label="Отметка «Votat»">Votat</span>
     </div>
+    <p class="vote-foot">Ищите символ «ИП» — последняя строка</p>
   </div>
 </section>
 
@@ -1167,6 +1377,13 @@
       if (v.getAttribute('data-counted')) return;
       v.setAttribute('data-counted', '1');
       hit(v.getAttribute('data-track'), v.getAttribute('aria-label') || 'Видео', true);
+    });
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('details[data-track]'), function (d) {
+    d.addEventListener('toggle', function () {
+      if (!d.open || d.getAttribute('data-counted')) return;
+      d.setAttribute('data-counted', '1');
+      hit(d.getAttribute('data-track'), 'Программа: ' + d.querySelector('.pt').firstChild.textContent.trim(), true);
     });
   });
   document.addEventListener('click', function (e) {
