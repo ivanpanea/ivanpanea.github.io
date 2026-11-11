@@ -352,6 +352,16 @@
     font: 900 11px/1 Montserrat, Arial, sans-serif; color: var(--navy); text-transform: uppercase; transform: rotate(-14deg); }
   .pb-foot { margin: 0 -14px; padding: 14px 12px 16px; font: 900 17px/1.3 Montserrat, Arial, sans-serif; color: var(--gold); text-transform: uppercase; }
 
+
+  /* шапка: строка из бюллетеня */
+  .hero-ballot { display: block; padding: 14px 12px 12px; text-align: center; }
+  .hb-title { margin: 0; font: 900 18px/1.25 Montserrat, Arial, sans-serif; color: #fff; text-transform: uppercase; }
+  .hb-title span { display: block; margin-top: 3px; font-size: 14px; font-weight: 700; color: var(--gold); text-transform: none; }
+  .hero-ballot .pb-me { margin: 12px 0 0; background: #fff; text-align: left; }
+  .hb-foot { margin: 10px 0 0; font: 900 15px/1.3 Montserrat, Arial, sans-serif; color: var(--gold); text-transform: uppercase; }
+  .vote-foot { margin: 14px 0 0; font: 900 17px/1.3 Montserrat, Arial, sans-serif; color: var(--gold); text-transform: uppercase; }
+  .ballot .pb-stamp { background: #fff; }
+
   /* ================= Десктоп ================= */
   @media (min-width: 900px) {
     body { padding-bottom: 0; }
@@ -428,6 +438,13 @@
     .pb-stamp { width: 66px; height: 66px; font-size: 13px; }
     .pb-foot { margin: 0 -28px; font-size: 22px; padding: 18px 12px 22px; }
 
+    .hero-ballot { padding: 18px 20px 16px; }
+    .hb-title { font-size: 22px; }
+    .hb-title span { font-size: 16px; }
+    .hero-ballot .pb-sym { width: 110px; }
+    .hero-ballot .pb-who { font-size: 22px; }
+    .hero-ballot .pb-who small { font-size: 13px; }
+    .hb-foot { font-size: 17px; }
     /* соцсети сеткой 2×2 */
     .social { grid-template-columns: 1fr 1fr; max-width: 820px; }
 
@@ -469,9 +486,14 @@
     </div>
     <img class="photo" src="../img/ivan-panea.jpg" alt="Иван Паня" width="720" height="777">
     <div class="hero-bar"></div>
-    <div class="number">
-      <span class="n"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <p>Голосуй за Ивана Паню!<br><span>Выборы в Народное Собрание · 15 ноября 2026</span></p>
+    <div class="number hero-ballot">
+      <p class="hb-title">Голосуй за Ивана Паню!<span>Выборы в Народное Собрание · 15&nbsp;ноября 2026</span></p>
+      <div class="pb-me">
+        <img class="pb-sym" src="../img/logo.png" alt="Электоральный символ «ИП»" width="900" height="398">
+        <span class="pb-who">Иван Паня<small>Независимый кандидат</small></span>
+        <span class="pb-stamp" aria-label="Отметка «Votat»">Votat</span>
+      </div>
+      <p class="hb-foot">Ищите символ «ИП» — последняя строка</p>
     </div>
   </div>
   <div class="wrap promo">
@@ -1168,8 +1190,9 @@
     <div class="ballot">
       <img class="sym" src="../img/logo.png" alt="Электоральный символ Ивана Пани — «ИП»" width="900" height="398">
       <span class="who">Иван Паня<small>Независимый кандидат</small></span>
-      <span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="#012147" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="pb-stamp" aria-label="Отметка «Votat»">Votat</span>
     </div>
+    <p class="vote-foot">Ищите символ «ИП» — последняя строка</p>
   </div>
 </section>
 
